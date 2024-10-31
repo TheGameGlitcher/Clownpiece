@@ -81,9 +81,8 @@ namespace Clownpiece.Status
         private IEnumerable<BattleAction> OnPlayerDamageDealt(DamageEventArgs args)
         {
             if (base.Battle.BattleShouldEnd)
-            {
                 yield break;
-            }
+
             if (args.Cause == ActionCause.Card)
             {
                 this.NotifyActivating();

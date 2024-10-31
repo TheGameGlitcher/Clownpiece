@@ -73,7 +73,6 @@ namespace Clownpiece.Status
     [EntityLogic(typeof(DummyThreeBodiesSeDef))]
     public sealed class DummyThreeBodiesSe : ClownStatus
     {
-        public int counter = 1;
         protected override void OnAdded(Unit unit)
         {
             React(new ApplyStatusEffectAction<Firepower>(Owner, new int?(1), null, null, null, 0.2f, false));
@@ -82,7 +81,6 @@ namespace Clownpiece.Status
 
         private IEnumerable<BattleAction> OnPlayerTurnEnding(UnitEventArgs args)
         {
-
             yield break;
         }
     }

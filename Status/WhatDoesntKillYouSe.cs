@@ -77,8 +77,6 @@ namespace Clownpiece.Status
     public sealed class WhatDoesntKillYouSe : ClownStatus
     {
 
-        public int counter2;
-
         protected override void OnAdded(Unit unit)
         {
             this.ReactOwnerEvent<StatusEffectApplyEventArgs>(base.Battle.Player.StatusEffectAdded, new EventSequencedReactor<StatusEffectApplyEventArgs>(this.OnStatusEffectAdded));
@@ -86,6 +84,9 @@ namespace Clownpiece.Status
 
         private IEnumerable<BattleAction> OnStatusEffectAdded(StatusEffectApplyEventArgs args)
         {
+            if (base.Battle.BattleShouldEnd)
+                yield break;
+
             if (args.Effect.Type == StatusEffectType.Negative)
             {
                 this.NotifyActivating();

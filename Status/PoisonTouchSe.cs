@@ -74,7 +74,6 @@ namespace Clownpiece.Status
     [EntityLogic(typeof(PoisonTouchSeDef))]
     public sealed class PoisonTouchSe : ClownStatus
     {
-        public int counter = 1;
         protected override void OnAdded(Unit unit)
         {
             base.ReactOwnerEvent<StatisticalDamageEventArgs>(base.Owner.StatisticalTotalDamageReceived, new EventSequencedReactor<StatisticalDamageEventArgs>(this.OnStatisticalDamageReceived));
@@ -83,6 +82,9 @@ namespace Clownpiece.Status
 
         private IEnumerable<BattleAction> OnStatisticalDamageReceived(StatisticalDamageEventArgs args)
         {
+            if (base.Battle.BattleShouldEnd)
+                yield break;
+
             if (args.DamageSource != base.Owner && args.DamageSource.IsAlive)
             {
                 foreach (KeyValuePair<Unit, IReadOnlyList<DamageEventArgs>> keyValuePair in args.ArgsTable)
@@ -113,6 +115,9 @@ namespace Clownpiece.Status
 
         private IEnumerable<BattleAction> OnOwnerTurnStarted(UnitEventArgs args)
         {
+            if (base.Battle.BattleShouldEnd)
+                yield break;
+
             yield return new RemoveStatusEffectAction(this, true);
         }
     }

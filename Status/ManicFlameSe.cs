@@ -83,7 +83,6 @@ namespace Clownpiece.Status
         private IEnumerable<BattleAction> OnPlayerTurnStarting(UnitEventArgs args)
         {
             yield break;
-
         }
     }
 }

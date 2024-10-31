@@ -110,6 +110,9 @@ namespace Clownpiece.Status
 
         protected override void OnRemoved(Unit unit)
         {
+            if (base.Battle.BattleShouldEnd)
+                return;
+
             List<Card> cards = base.Battle.EnumerateAllCards().Where((Card card) => (card is ClownCard cCard) && (cCard.IsTransformed == true)).ToList<Card>();
             if (cards.Count > 0 && !(base.Owner.HasStatusEffect<LunaticTorchSe>()))
             {
@@ -133,6 +136,9 @@ namespace Clownpiece.Status
 
         private IEnumerable<BattleAction> OnAddCard(CardsEventArgs args)
         {
+            if (base.Battle.BattleShouldEnd)
+                yield break;
+
             List<Card> cards = base.Battle.EnumerateAllCards().Where((Card card) => (card is ClownCard cCard) && (cCard.CanTransform == true)).ToList<Card>();
             if (cards.Count > 0 && base.Owner.HasStatusEffect<LunaticTorchSe>())
             {
@@ -148,6 +154,9 @@ namespace Clownpiece.Status
 
         private IEnumerable<BattleAction> OnAddCardToDraw(CardsAddingToDrawZoneEventArgs args)
         {
+            if (base.Battle.BattleShouldEnd)
+                yield break;
+
             List<Card> cards = base.Battle.EnumerateAllCards().Where((Card card) => (card is ClownCard cCard) && (cCard.CanTransform == true)).ToList<Card>();
             if (cards.Count > 0 && base.Owner.HasStatusEffect<LunaticTorchSe>())
             {
@@ -162,11 +171,9 @@ namespace Clownpiece.Status
         }
         private IEnumerable<BattleAction> OnPlayerTurnEnding(UnitEventArgs args)
         {
-
             if (base.Battle.BattleShouldEnd)
-            {
                 yield break;
-            }
+
             foreach (EnemyUnit enemyUnit in base.Battle.EnemyGroup.Alives)
             {
                 if ((enemyUnit.IsAlive) && !(enemyUnit.HasStatusEffect<LunaticLightSe>()))
@@ -174,8 +181,6 @@ namespace Clownpiece.Status
                     yield return new ApplyStatusEffectAction<LunaticLightSe>(enemyUnit, new int?(1), null, null, null, 0.2f, false);
                 }
             }
-            IEnumerator<EnemyUnit> enumerator = null;
-            yield break;
         }
     }
 }

@@ -126,15 +126,20 @@ namespace Clownpiece.Status
 
         private IEnumerable<BattleAction> OnEnemyTurnStarting(UnitEventArgs args)
         {
-                Level--;
-                if (Level == 0)
-                    yield return new RemoveStatusEffectAction(this);
-   
+            if (base.Battle.BattleShouldEnd)
+                yield break;
 
+            Level--;
+
+            if (Level == 0)
+                yield return new RemoveStatusEffectAction(this);
         }
 
         private IEnumerable<BattleAction> OnPlayerTurnStarting(UnitEventArgs args)
         {
+            if (base.Battle.BattleShouldEnd)
+                yield break;
+
             EnemyUnit enemy = (EnemyUnit)this.Owner;
 
             this.randomAttack();
@@ -170,8 +175,6 @@ namespace Clownpiece.Status
 
             enemy.Intentions = intentions;
             enemy.NotifyIntentionsChanged();
-
-            yield break;
         }
 
 

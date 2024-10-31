@@ -80,12 +80,12 @@ namespace Clownpiece.Status
         }
         private IEnumerable<BattleAction> OnOwnerTurnStarted(UnitEventArgs args)
         {
+            if (base.Battle.BattleShouldEnd)
+                yield break;
+
             base.NotifyActivating();
             if (base.Battle.BattleMana.HasTrivial)
-            {
                 yield return ConvertManaAction.Purify(base.Battle.BattleMana, Level);
-            }
-            yield break;
         }
     }
 }

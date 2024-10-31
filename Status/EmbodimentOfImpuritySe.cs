@@ -80,7 +80,11 @@ namespace Clownpiece.Status
         }
         private IEnumerable<BattleAction> OnManaConsumed(ManaEventArgs args)
         {
+            if (base.Battle.BattleShouldEnd)
+                yield break;
+
             ManaGroup value = args.Value;
+
             if (value.Colorless > 0)
             {
                 base.NotifyActivating();

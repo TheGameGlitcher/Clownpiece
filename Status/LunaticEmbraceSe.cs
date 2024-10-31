@@ -89,6 +89,9 @@ namespace Clownpiece.Status
 
         private IEnumerable<BattleAction> OnPlayerTurnStarted(UnitEventArgs args)
         {
+            if (base.Battle.BattleShouldEnd)
+                yield break;
+
             if (base.Battle.DrawZone.Count > 0)
             {
                 for (int i = 1;  i <= base.Level && base.Battle.DrawZone.Count != 0 && base.Battle.HandZone.Count != base.Battle.MaxHand; i++)

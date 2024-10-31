@@ -72,7 +72,6 @@ namespace Clownpiece.Status
     [EntityLogic(typeof(ChaoticGrazeSeDef))]
     public sealed class ChaoticGrazeSe : ClownStatus
     {
-        public int counter = 1;
         protected override void OnAdded(Unit unit)
         {
             base.ReactOwnerEvent<UnitEventArgs>(base.Owner.TurnStarted, new EventSequencedReactor<UnitEventArgs>(this.OnOwnerTurnStarted));
@@ -80,6 +79,9 @@ namespace Clownpiece.Status
 
         private IEnumerable<BattleAction> OnOwnerTurnStarted(UnitEventArgs args)
         {
+            if (base.Battle.BattleShouldEnd)
+                yield break;
+
             this.Level = 1;
             base.NotifyActivating();
             yield return this.BuffAction<Graze>(this.Level);

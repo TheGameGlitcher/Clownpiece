@@ -105,6 +105,9 @@ namespace Clownpiece.Status
 
         private IEnumerable<BattleAction> OnEnemyStatusEffectAdded(StatusEffectApplyEventArgs args)
         {
+            if (base.Battle.BattleShouldEnd)
+                yield break;
+
             foreach (EnemyUnit enemy in base.Battle.AllAliveEnemies)
             {
                 if (args.Effect is TempFirepower)
@@ -135,6 +138,9 @@ namespace Clownpiece.Status
         }
         private IEnumerable<BattleAction> OnOwnerStatusEffectAdding(StatusEffectApplyEventArgs args)
         {
+            if (base.Battle.BattleShouldEnd)
+                yield break;
+
             StatusEffect effect = args.Effect;
             if (effect is FirepowerNegative || effect is TempFirepowerNegative)
             {
@@ -143,7 +149,6 @@ namespace Clownpiece.Status
                 yield return PerformAction.Sfx("Amulet", 0f);
                 yield return PerformAction.SePop(base.Owner, args.Effect.Name);
             }
-            yield break;
         }
     }
 }

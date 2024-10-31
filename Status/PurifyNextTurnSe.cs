@@ -73,7 +73,10 @@ namespace Clownpiece.Status
     [EntityLogic(typeof(PurifyNextTurnSeDef))]
     public sealed class PurifyNextTurnSe : ClownStatus
     {
-        public int counter = 1;
+        public PurifyNextTurnSe() : base()
+        {
+            Counter = 1;
+        }
         protected override void OnAdded(Unit unit)
         {
             base.ReactOwnerEvent<UnitEventArgs>(base.Battle.Player.TurnStarted, new EventSequencedReactor<UnitEventArgs>(this.OnPlayerTurnStarted), (GameEventPriority)99999);
@@ -82,21 +85,23 @@ namespace Clownpiece.Status
 
         private IEnumerable<BattleAction> OnPlayerTurnStarted(UnitEventArgs args)
         {
-            counter--;
+            if (base.Battle.BattleShouldEnd)
+                yield break;
+
+            Counter--;
 
             base.NotifyActivating();
             if (base.Battle.BattleMana.HasTrivial)
-            {
                 yield return ConvertManaAction.Purify(base.Battle.BattleMana, base.Level);
-            }
         }
 
         private void OnPlayerTurnEnding(UnitEventArgs args)
         {
-            if (counter == 0)
-            {
+            if (base.Battle.BattleShouldEnd)
+                return;
+
+            if (Counter == 0)
                 this.React(new RemoveStatusEffectAction(this, true, 0.1f));
-            }
         }
     }
 }

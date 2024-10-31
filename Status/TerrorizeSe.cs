@@ -117,16 +117,12 @@ namespace Clownpiece.Status
         private IEnumerable<BattleAction> OnOwnerTurnStarted(UnitEventArgs args)
         {
             if (base.Battle.BattleShouldEnd)
-            {
                 yield break;
-            }
 
             yield return new DamageAction(base.Battle.Player, base.Battle.Player, DamageInfo.HpLose(Value1), "Sacrifice");
 
             foreach (EnemyUnit enemy in base.Battle.EnemyGroup.Alives)
-            {
                 yield return new ApplyStatusEffectAction<Vulnerable>(enemy, Value2, Value2, null, null, 0.15f);
-            }
         }
     }
 }

@@ -90,6 +90,9 @@ namespace Clownpiece.Exhibits
 
             private IEnumerable<BattleAction> OnEnemyStatusEffectAdded(StatusEffectApplyEventArgs args)
             {
+                if (base.Battle.BattleShouldEnd)
+                    yield break;
+
                 if (args.Effect.Type == StatusEffectType.Negative)
                     yield return new ApplyStatusEffectAction<TempFirepower>(base.Battle.Player, new int?(Value1), null, null, null, 0.1f, true);
             }

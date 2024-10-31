@@ -92,6 +92,9 @@ namespace Clownpiece.Status
 
         protected override void OnRemoved(Unit unit)
         {
+            if (base.Battle.BattleShouldEnd)
+                return;
+
             base.React(new ApplyStatusEffectAction<FirepowerNegative>(Owner, Counter, null, null, null, 0.2f, false));
             Count = 5;
             Counter = 1;
@@ -100,9 +103,8 @@ namespace Clownpiece.Status
         private IEnumerable<BattleAction> OnOwnerTurnStarted(UnitEventArgs args)
         {
             if (base.Battle.BattleShouldEnd)
-            {
                 yield break;
-            }
+
             if (Count == 1)
             {
                 this.NotifyActivating();

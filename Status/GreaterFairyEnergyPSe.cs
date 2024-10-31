@@ -77,8 +77,6 @@ namespace Clownpiece.Status
     public sealed class GreaterFairyEnergyPSe : ClownStatus
     {
 
-        public int counter2;
-
         protected override void OnAdded(Unit unit)
         {
             base.ReactOwnerEvent<UnitEventArgs>(this.Owner.TurnEnded, new EventSequencedReactor<UnitEventArgs>(this.OnOwnerTurnEnded));
@@ -87,9 +85,7 @@ namespace Clownpiece.Status
         private IEnumerable<BattleAction> OnOwnerTurnEnded(UnitEventArgs args)
         {
             if (base.Battle.BattleShouldEnd)
-            {
                 yield break;
-            }
 
             List<Card> list = new List<Card>();
             for (int i = 0; i < Level; i++)

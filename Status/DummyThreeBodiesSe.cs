@@ -73,7 +73,10 @@ namespace Clownpiece.Status
     [EntityLogic(typeof(DummyLunacySeDef))]
     public sealed class DummyLunacySe : ClownStatus
     {
-        public int counter = 1;
+        public DummyLunacySe() : base()
+        {
+            Counter = 1;
+        }
         protected override void OnAdded(Unit unit)
         {
             React(new ApplyStatusEffectAction<Firepower>(Owner, new int?(1), null, null, null, 0.2f, false));
@@ -83,18 +86,12 @@ namespace Clownpiece.Status
         private IEnumerable<BattleAction> OnPlayerTurnEnding(UnitEventArgs args)
         {
             if (base.Battle.BattleShouldEnd)
-            {
                 yield break;
-            }
-            if (counter % 5 == 0)
-            {
+
+            if (Counter % 5 == 0)
                 yield return new ApplyStatusEffectAction<Firepower>(Owner, new int?(1), null, null, null, 0.2f, false);
-            }
 
-            counter++;
-
-            IEnumerator<EnemyUnit> enumerator = null;
-            yield break;
+            Counter++;
         }
     }
 }
