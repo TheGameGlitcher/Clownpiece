@@ -42,7 +42,7 @@ BlackButterfly:
     Name: "Black Butterfly"
     Description: "{FriendS}|Lunacy|: Transform into |Lunatic Black Butterfly|."
     ExtraDescription1: "{FriendP} Deal {Damage} damage to the enemy with the least life."
-    ExtraDescription2: "{FriendU} Deal {ultimateDmg} damage to the enemy with the least life. |Accurate|."
+    ExtraDescription2: "{FriendU} Deal {ultimateDmg} |Accurate| damage to the enemy with the least life."
     FlavorText: "Why wasn't she called Black Fairy?"
 
 LunaticBlackButterfly:
@@ -70,7 +70,7 @@ MoonQuake:
 UnderFloorboards:
     Name: "Under the Floorboards"
     Description: "Choose 1 of {Value1} Reimu cards to add to the hand. It |temporarily costs| {Mana}."
-    UpgradedDescription: "Choose 1 of {Value1} Reimu cards to add to the hand. It |temporarily costs| {Mana}.\nAdd a |Yen-Yang Orb| to the hand."
+    UpgradedDescription: "Choose 1 of {Value1} Reimu cards to add to the hand. It |temporarily costs| {Mana}.\nAdd a |Yin-Yang Orb| to the hand."
     FlavorText: "You'd be surprised what you can learn from under the floor. Fairy see, fairy do."
 
 LunaticTorchIgnition:
@@ -109,7 +109,7 @@ GracefulFairyDodging:
 ChaoticDanmakuDodging:
     Name: "Chaotic Danmaku Dodging"
     Description: "Gain {Value1} |Frail| and {Value1} |Vulnerable|.\nGain {Value2} |Graze|.\nDraw {Value3} cards."
-    UpgradedDescription: "Gain {Value1} |Frail| and {Value1} |Vulnerable|.\nGain {Value2} |Graze|.\nDraw {Value3} cards.\nAt the start of next turn, gain {Value4} |Graze| and draw {Value4} card{nextDraw:plural one='' other='s'} at the start of next turn."
+    UpgradedDescription: "Gain {Value1} |Frail| and {Value1} |Vulnerable|.\nGain {Value2} |Graze|.\nDraw {Value3} cards.\nAt the start of next turn, gain {Value4} |Graze| and draw {Value4} card{nextDraw:plural one='' other='s'}."
     FlavorText: "Does she look like a girl with a plan?"
 
 HecatiaOtherworld:

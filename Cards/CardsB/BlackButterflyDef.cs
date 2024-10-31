@@ -171,7 +171,7 @@ namespace Clownpiece.Cards.CardsB
                 base.Loyalty += base.UltimateCost;
                 base.UltimateUsed = true;
 
-                EnemyUnit target = Battle.EnemyGroup.Alives.Sample(GameRun.BattleRng);
+                EnemyUnit target = base.Battle.EnemyGroup.Alives.MinBy((EnemyUnit unit) => unit.Hp);
                 if (target != null)
                 {
                     yield return AttackAction(target, ultimateDmg, "BlackFairy2");

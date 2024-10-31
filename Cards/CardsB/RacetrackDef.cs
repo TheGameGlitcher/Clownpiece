@@ -130,14 +130,6 @@ namespace Clownpiece.Cards.CardsB
             Value3 = 1;
         }
 
-        public override bool DiscardCard
-        {
-            get
-            {
-                return true;
-            }
-        }
-
         private List<Card> allHand;
 
         public override Interaction Precondition()
@@ -162,22 +154,19 @@ namespace Clownpiece.Cards.CardsB
                 if (selectedCards != null)
                 {
                     yield return new DiscardManyAction(selectedCards);
-                    foreach (Card card2 in selectedCards)
-                    {
-                        card2.DecreaseTurnCost(base.Mana);
-                    }
                 }
             }
             else if (this.allHand.Count > 0)
             {
                 yield return new DiscardManyAction(this.allHand);
-                foreach (Card card2 in this.allHand)
-                {
-                    card2.DecreaseTurnCost(base.Mana);
-                }
 
             }
 
+            for (int i = 0; i < Value2; i++)
+            {
+                Card card = base.Battle.DrawZone[i];
+                card.DecreaseTurnCost(Mana);
+            }
             yield return new DrawManyCardAction(this.Value2);
         }
     }
