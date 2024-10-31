@@ -114,40 +114,25 @@ namespace Clownpiece.Cards.CardsB
     [EntityLogic(typeof(BusyScheduleDef))]
     public sealed class BusySchedule : ClownCard
     {
-        public int Special
+        public BlockInfo newBlock
         {
             get
             {
-                if (base.Battle == null)
+                if (this.Battle != null)
                 {
-                    return 0;
+                    return new BlockInfo(Block.Block + (base.Battle.TurnCardUsageHistory.Count) * Value1);
                 }
-                if (this.Playing)
+
+                else
                 {
-                    return base.Value1 * base.Battle.BattleMana.Amount;
+                    return Block;
                 }
-                return base.Value1 * this.Battle.TurnCardUsageHistory.Count;
             }
         }
-
-        public override int AdditionalBlock
-        {
-            get
-            {
-                return this.Special;
-            }
-        }
-
-
-
-        private bool Playing { get; set; }
 
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
-            this.Playing = true;
             yield return base.DefenseAction(true);
-            this.Playing = false;
-            yield break;
         }
 
     }

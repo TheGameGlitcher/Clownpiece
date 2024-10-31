@@ -120,7 +120,7 @@ namespace Clownpiece
 
         public override ModelOption LoadModelOptions()
         {
-            return new ModelOption(ResourceLoader.LoadSpriteAsync("Utsuho_Sprite.png", directorySource, ppu: 56));
+            return null;
         }
 
 

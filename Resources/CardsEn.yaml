@@ -59,12 +59,12 @@ ManiaCleansing:
 
 IntimidatingFlame:
     Name: "Indimidating Flame"
-    Description: "Gain {Block} |Block|.\nInflict {Value1} weak to self and inflict {Value2} |Temporary Firepower Down| to all enemies."
+    Description: "Gain {Block} |Block|.\nInflict {Value1} weak to self and inflict {Value2} |Temporary Firepower Down| to each enemy."
     FlavorText: "Fire scares even the biggest predators away."
 
 MoonQuake:
     Name: "Moon Quake"
-    Description: "Deal {Damage} damage and inflict {Value2} |Vulnerable| to all enemies.\nInflict {Value1} |Vulnerable| to self."
+    Description: "Deal {Damage} damage and inflict {Value2} |Vulnerable| to each enemy.\nInflict {Value1} |Vulnerable| to self."
     FlavorText: "Even the Moon has earthquakes."
 
 UnderFloorboards:
@@ -92,7 +92,7 @@ FireworksOfLunacy:
 
 BusySchedule:
     Name: "Busy Schedule"
-    Description: "Gain {Block} |Block|.\nGain {Value1} more for every card played this turn."
+    Description: "Gain {newBlock} |Block|.\n|Block| gained increases by {Value1} per card played this turn."
     FlavorText: "Maintaining Hell is hard work."
 
 GoddessHitFairy:
@@ -122,7 +122,7 @@ HecatiaOtherworld:
 HecatiaMoon:
     Name: "Hecatia, Tri-Bodied Goddess"
     Description: "{FriendS}|Moon Body|\n{FriendP} |Exile| up to {Value1} card{Value2:plural one='' other='s'} from the hand."
-    ExtraDescription2: "{FriendU} |Exile| {Value5} to {Value2} cards from hand. If there are more than {Value3} cards in exile, deal {newDmg} damage {Value4} times to all enemies. This damage increases by {Value6} per card in exile."
+    ExtraDescription2: "{FriendU} |Exile| {Value5} to {Value2} cards from hand. If there are more than {Value3} cards in exile, deal {newDmg} damage {Value4} times to each enemy. This damage increases by {Value6} per card in exile."
     ExtraDescription1: "{FriendA} Change bodies."
     FlavorText: "As the goddess of the Moon, its no wonder the Lunarians couldn't see her coming."
 
@@ -141,7 +141,7 @@ Blindside:
 
 EmbodimentOfImpurity:
     Name: "Embodiment Of Impurity"
-    Description: "Deal {Damage} damage to all enemies.\nGain {Value1} |Permanent Purify|.\nFor every <sprite=\"ManaSprite\"\ name=\"C\"> spent this turn, gain {Value2} |Reflection|."
+    Description: "Deal {Damage} damage to each enemy.\nGain {Value1} |Permanent Purify|.\nFor every <sprite=\"ManaSprite\"\ name=\"C\"> spent this turn, gain {Value2} |Reflection|."
     FlavorText: "Junko's purification turned Clownpiece into pure lifeforce. Wouldn't it be a shame to touch her and fall into Hell?"
 
 UndyingFlame:
@@ -156,7 +156,7 @@ BerserkLifeforce:
 
 Racetrack:
     Name: "Racetrack"
-    Description: "Discard {Value1} cards.\nDraw {Value2} cards, they |temporarily cost| {Value3} less."
+    Description: "Discard {Value1} cards.\nDraw {Value2} cards, they |temporarily cost| {Mana} less."
     FlavorText: "Which way, Brazil or Detroit?"
 
 AFairysPurity:
@@ -167,14 +167,14 @@ AFairysPurity:
 
 FairyGearSolid:
     Name: "Fairy Gear Solid"
-    Description: "Draw {Value1} card{Value1:plural one='' other='s'}. If {PlayerName} has |Weakness|, draw another.\nIf {PlayerName} has |Vulnerable|, gain {Value2} |Graze|."
+    Description: "Draw {Value1} card{Value1:plural one='' other='s'}. If {PlayerName} has |Weak|, draw another.\nIf {PlayerName} has |Vulnerable|, gain {Value2} |Graze|."
     FlavorText: "Hiding under a box is better than hiding under the floorboards."
 
 HellFairy:
     Name: "Hell Fairy"
     Description: "{FriendS}|Lunacy|: Transform into |Lunatic Hell Fairy|."
     ExtraDescription1: "{FriendP} Deal {Damage} damage to the enemy with the most life."
-    ExtraDescription2: "{FriendU} Deal {ultimateDmg} damage to all enemies {Value2} time{Value2:plural one='' other='s'}."
+    ExtraDescription2: "{FriendU} Deal {ultimateDmg} damage to each enemy {Value2} time{Value2:plural one='' other='s'}."
     FlavorText: "Ironically, some hell fairies are not associated with fire."
 
 LunaticHellFairy:
@@ -191,7 +191,7 @@ QuickPrick:
 
 ManicBurst:
     Name: "Manic Burst"
-    Description: "Inflict {Value1} |Mania| to all enemies."
+    Description: "Inflict {Value1} |Mania| to each enemy."
     FlavorText: "I'd rather die than let you debuff me!"
 
 FlamesOfMania:
@@ -206,7 +206,7 @@ PurestFairyEssence:
     
 ResidualImpurity:
     Name: "Residual Impurity"
-    Description: "Deal {Damage} damage.\nInflict |Poison| equal to the unblocked amount of damage dealt.\nWhen inflicted with a status, return {SelfName} to the hand."
+    Description: "Deal {Damage} damage.\nInflict |Poison| equal to the unblocked amount of damage dealt.\nWhen inflicted with a debuff, return {SelfName} to the hand."
     FlavorText: "The capital was left defenseless to the plague. Of fairies."
 
 TorchPureFlame:
@@ -216,7 +216,7 @@ TorchPureFlame:
 
 InnerStrength:
     Name: "Inner Strength"
-    Description: "Gain {Value1} |Firepower|.\nFor each of the following effects {PlayerName} has, gain {Value2} additional firepower:\n|Weak|, |Vulnerable|, |Lock On|, |Purify|."
+    Description: "Gain {Value1} |Firepower|.\nFor each of the following effects {PlayerName} has, gain {Value2} additional |Firepower|:\n|Weak|, |Vulnerable|, |Lock On|, |Purify|."
     FlavorText: "What doesn't kill you proves you're unkillable."
 
 HiddenApollo:
@@ -248,7 +248,7 @@ MonsterClown:
 
 GoddessDivineProtection:
     Name: "Goddess's Divine Protection"
-    Description: "Gain {Block} |Block|\n Gain {Value1} |Amulet|.\n|Block| is not lost at the start of your next turn."
+    Description: "Gain {Block} |Block|\nGain {Value1} |Amulet|.\n|Block| is not lost at the start of your next turn."
     FlavorText: "I've bestowed these gifts upon my servants."
 
 AsteroidLanding:
@@ -258,7 +258,7 @@ AsteroidLanding:
 
 HakureiMartialArts:
     Name: "Hakurei's Martial Arts"
-    Description: "Deal {Damage} damage.\nIf {PlayerName} has any |temporary firepower|, gain {Block} |Block|."
+    Description: "Deal {Damage} damage.\nIf {PlayerName} has |temporary firepower|, gain {Block} |Block|."
     FlavorText: "Watching the shrine maiden teaches you humility and brutality."
 
 StareIntoTheFlame:
@@ -268,7 +268,7 @@ StareIntoTheFlame:
 
 SanityIsOverrated:
     Name: "Sanity is Overrated"
-    Description: "Inflict {Value1} |Mania| to all enemies.\nGain {Value3} |Graze| and {Value2} |Static Charge|."
+    Description: "Inflict {Value1} |Mania| to each enemy.\nGain {Value3} |Graze| and {Value2} |Static Charge|."
     FlavorText: "Our time is ticking away..."
 
 HellsCalling:
@@ -319,7 +319,7 @@ GreaterFairyEnergy:
 
 Terrorize:
     Name: "Terrorize"
-    Description: "Lose {Value1} life.\nInflict {Value2} |Vulnerable| to all enemies."
+    Description: "Lose {Value1} life.\nInflict {Value2} |Vulnerable| to each enemy."
     FlavorText: "What do you mean a second tea ship has struck the harbor?"
 
 Mockery:
@@ -329,7 +329,7 @@ Mockery:
 
 StarAndStripe:
     Name: "Star and Stripe"
-    Description: "Deal {Damage} damage to all enemies {Value1} time{Value1:plural one='' other='s'}.\nIf this card is |Exiled|, lose {Value2} life."
+    Description: "Deal {Damage} damage to each enemy {Value1} time{Value1:plural one='' other='s'}.\nIf this card is |Exiled|, lose {Value2} life."
     FlavorText: "Just imagine the stripes among the stars and pretend they're there."
 
 PureLifeforce:
@@ -364,13 +364,13 @@ FairySwarm:
 MoonFairy:
     Name: "Moon Fairy"
     Description: "{FriendS}|Lunacy|: Transform into |Lunatic Moon Fairy|."
-    ExtraDescription1: "{FriendP} Deal {Damage} damage to all enemies."
+    ExtraDescription1: "{FriendP} Deal {Damage} damage to each enemy."
     ExtraDescription2: "{FriendU} Immediately deal {Damage} damage.\nRandomly |Purify| {Value1} card{Value1:plural one='' other='s'} in hand."
     FlavorText: "The only fairy type native to the Moon before the invasion."
 
 LunaticMoonFairy:
     Name: "Lunatic Moon Fairy"
     Description: "{FriendS}{SelfName}'s damage increases by {Value1} per unspeant <sprite=\"ManaSprite\"\ name=\"C\"> or per |Purified| card in play, excluding exiled."
-    ExtraDescription1: "{FriendP} Deal {newDmg} damage to all enemies."
+    ExtraDescription1: "{FriendP} Deal {newDmg} damage to each enemy."
     ExtraDescription2: "{FriendA} |Purify| all cards in hand. For every {Value2} cards |Purified| this way, gain {Value3} |Permanent Purify|."
     FlavorText: "Moon Fairy has been driven to lunacy!"

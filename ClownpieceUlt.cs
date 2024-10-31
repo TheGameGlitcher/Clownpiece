@@ -113,7 +113,7 @@ namespace Clownpiece
 
         public override Sprite LoadSprite()
         {
-            return ResourceLoader.LoadSprite("ClownpiecePlaceholder.png", embeddedSource);
+            return ResourceLoader.LoadSprite("ClownpieceUlt.png", embeddedSource);
         }
 
         public override UltimateSkillConfig MakeConfig()
