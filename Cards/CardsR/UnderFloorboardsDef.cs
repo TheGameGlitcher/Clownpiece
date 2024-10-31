@@ -1,0 +1,148 @@
+using LBoL.Base;
+using LBoL.Core;
+using LBoL.ConfigData;
+using LBoL.Core.Cards;
+using LBoLEntitySideloader.Attributes;
+using LBoLEntitySideloader.Entities;
+using LBoLEntitySideloader.Resource;
+using LBoLEntitySideloader;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using LBoL.Core.Battle;
+using LBoL.Core.StatusEffects;
+using LBoL.Core.Units;
+using Clownpiece.Status;
+using LBoL.Core.Battle.BattleActions;
+using LBoL.EntityLib.Cards.Character.Cirno.Friend;
+using LBoL.EntityLib.Cards.Character.Reimu;
+using LBoL.Core.Randoms;
+using LBoL.EntityLib.Cards.Character.Marisa;
+using LBoL.Core.Battle.Interactions;
+using LBoL.EntityLib.JadeBoxes;
+using System.Security.Cryptography;
+using UnityEngine.InputSystem.Controls;
+using Clownpiece.CustomClasses;
+
+namespace Clownpiece.Cards.CardsR
+{
+    public sealed class UnderFloorboardsDef : CardTemplate
+    {
+        public override IdContainer GetId()
+        {
+            return nameof(UnderFloorboards);
+        }
+
+        public override CardImages LoadCardImages()
+        {
+            return null;
+        }
+
+        public override LocalizationOption LoadLocalization()
+        {
+            var loc = new GlobalLocalization(BepinexPlugin.embeddedSource);
+            loc.LocalizationFiles.AddLocaleFile(Locale.En, "CardsEn.yaml");
+            return loc;
+        }
+
+        public override CardConfig MakeConfig()
+        {
+            var cardConfig = new CardConfig(
+            Index: BepinexPlugin.sequenceTable.Next(typeof(CardConfig)),
+            Id: "",
+            Order: 10,
+            AutoPerform: true,
+            Perform: new string[0][],
+            GunName: "Simple1",
+            GunNameBurst: null,
+            DebugLevel: 0,
+            Revealable: false,
+
+            IsPooled: true,
+            FindInBattle: true,
+
+            HideMesuem: false,
+            IsUpgradable: true,
+            Rarity: Rarity.Uncommon,
+            Type: CardType.Skill,
+            TargetType: TargetType.Nobody,
+            Colors: new List<ManaColor>() { ManaColor.Red },
+            IsXCost: false,
+            Cost: new ManaGroup() { Red = 1, Any = 1 },
+            UpgradedCost: null,
+            MoneyCost: null,
+            Damage: null,
+            UpgradedDamage: null,
+            Block: null,
+            UpgradedBlock: null,
+            Shield: null,
+            UpgradedShield: null,
+            Value1: 3,
+            UpgradedValue1: null,
+            Value2: null,
+            UpgradedValue2: null,
+            Mana: new ManaGroup() { },
+            UpgradedMana: null,
+            Scry: null,
+            UpgradedScry: null,
+
+            ToolPlayableTimes: null,
+
+            Loyalty: null,
+            UpgradedLoyalty: null,
+            PassiveCost: null,
+            UpgradedPassiveCost: null,
+            ActiveCost: null,
+            UpgradedActiveCost: null,
+            UltimateCost: null,
+            UpgradedUltimateCost: null,
+
+            Keywords: Keyword.Exile,
+            UpgradedKeywords: Keyword.Exile,
+            EmptyDescription: false,
+            RelativeKeyword: Keyword.TempMorph,
+            UpgradedRelativeKeyword: Keyword.TempMorph,
+
+            RelativeEffects: new List<string>() { },
+            UpgradedRelativeEffects: new List<string>() { },
+            RelativeCards: new List<string>() { },
+            UpgradedRelativeCards: new List<string>() { "YinyangCard" },
+
+            Owner: "Clownpiece",
+            ImageId: "",
+            UpgradeImageId: "",
+
+            Unfinished: true,
+            Illustrator: null,
+            SubIllustrator: new List<string>() { }
+         );
+
+
+            return cardConfig;
+        }
+
+    }
+    [EntityLogic(typeof(UnderFloorboardsDef))]
+    public sealed class UnderFloorboards : ClownCard
+    {
+        protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
+        {
+            Card[] cardArray = base.Battle.RollCards(new CardWeightTable(RarityWeightTable.BattleCard, OwnerWeightTable.AllOnes, CardTypeWeightTable.CanBeLoot, false), Value1, (CardConfig config) => config.Owner == "Reimu");
+            MiniSelectCardInteraction selectCardInteraction = new MiniSelectCardInteraction((IEnumerable<Card>)cardArray);
+            selectCardInteraction.Source = (GameEntity)this;
+            MiniSelectCardInteraction interaction = selectCardInteraction;
+            yield return (BattleAction)new InteractionAction((Interaction)interaction);
+
+            Card selectedCard = interaction.SelectedCard;
+            selectedCard.SetTurnCost(this.Mana);
+            yield return (BattleAction)new AddCardsToHandAction(new Card[1]{selectedCard});
+
+            interaction = (MiniSelectCardInteraction)null;
+
+            if (this.IsUpgraded)
+            {
+                yield return (BattleAction)new AddCardsToHandAction((IEnumerable<Card>)Library.CreateCards<YinyangCard>(1));
+            }
+        }
+    }
+}
