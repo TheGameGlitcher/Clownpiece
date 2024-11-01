@@ -69,7 +69,7 @@ namespace Clownpiece.Cards.CardsB
             Cost: new ManaGroup() { Any = 2 },
             UpgradedCost: null,
             MoneyCost: null,
-            Damage: 10,
+            Damage: 12,
             UpgradedDamage: 15,
             Block: null,
             UpgradedBlock: null,

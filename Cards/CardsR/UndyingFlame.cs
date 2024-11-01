@@ -71,7 +71,7 @@ namespace Clownpiece.Cards.CardsR
             Shield: null,
             UpgradedShield: null,
             Value1: 1,
-            UpgradedValue1: 2,
+            UpgradedValue1: 1,
             Value2: 1,
             UpgradedValue2: null,
             Mana: new ManaGroup() { Any = 1},
@@ -136,10 +136,10 @@ namespace Clownpiece.Cards.CardsR
                     }
                     i++;
                 }
-
-                yield return AttackAction(selector.SelectedEnemy);
-                yield return new ApplyStatusEffectAction<Vulnerable>(selector.SelectedEnemy, Value1, Value1);
             }
+
+            yield return AttackAction(selector.SelectedEnemy);
+            yield return new ApplyStatusEffectAction<Vulnerable>(selector.SelectedEnemy, Value1, Value1);
         }
     }
 }

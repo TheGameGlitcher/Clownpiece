@@ -57,7 +57,7 @@ namespace Clownpiece.Cards.CardsB
             DebugLevel: 0,
             Revealable: false,
 
-            IsPooled: true,
+            IsPooled: false,
             FindInBattle: true,
 
             HideMesuem: false,

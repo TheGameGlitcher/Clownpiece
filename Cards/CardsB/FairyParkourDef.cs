@@ -79,8 +79,8 @@ namespace Clownpiece.Cards.CardsB
             UpgradedShield: null,
             Value1: 3,
             UpgradedValue1: 4,
-            Value2: 1,
-            UpgradedValue2: null,
+            Value2: 5,
+            UpgradedValue2: 6,
             Mana: new ManaGroup() { Any = 1 },
             UpgradedMana: null,
             Scry: null,
@@ -127,7 +127,7 @@ namespace Clownpiece.Cards.CardsB
     {
         public FairyParkour() : base()
         {
-            Value3 = 5;
+            Value3 = 1;
         }
 
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
@@ -135,8 +135,8 @@ namespace Clownpiece.Cards.CardsB
             yield return new DrawManyCardAction(Value1);
 
             List<Card> list2 = (from card in base.Battle.HandZone where card != this select card).ToList<Card>();
-            if (list2.Count < Value3)
-                yield return new ApplyStatusEffectAction<Graze>(base.Battle.Player, Value2, Value2, Value2);
+            if (list2.Count < Value2)
+                yield return new ApplyStatusEffectAction<Graze>(base.Battle.Player, Value3, Value3, Value3);
 
         }
     }

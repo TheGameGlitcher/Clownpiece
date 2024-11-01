@@ -64,7 +64,7 @@ namespace Clownpiece.Cards.CardsR
             Colors: new List<ManaColor>() { ManaColor.Red },
             IsXCost: false,
             Cost: new ManaGroup() { Red = 2, Any = 2 },
-            UpgradedCost: null,
+            UpgradedCost: new ManaGroup() { Red = 1, Any = 2 },
             MoneyCost: null,
             Damage: null,
             UpgradedDamage: null,

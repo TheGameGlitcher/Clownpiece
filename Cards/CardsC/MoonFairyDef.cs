@@ -77,8 +77,8 @@ namespace Clownpiece.Cards.CardsB
             UpgradedBlock: null,
             Shield: null,
             UpgradedShield: null,
-            Value1: 2,
-            UpgradedValue1: null,
+            Value1: 1,
+            UpgradedValue1: 2,
             Value2: null,
             UpgradedValue2: null,
             Mana: null,
@@ -88,8 +88,8 @@ namespace Clownpiece.Cards.CardsB
 
             ToolPlayableTimes: null,
 
-            Loyalty: 5,
-            UpgradedLoyalty: 6,
+            Loyalty: 4,
+            UpgradedLoyalty: 5,
             PassiveCost: 1,
             UpgradedPassiveCost: null,
             ActiveCost: null,

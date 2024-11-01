@@ -140,8 +140,11 @@ namespace Clownpiece.Cards.CardsB
 
                 if (this.Battle != null)
                 {
-                    if (base.Battle.BattleMana.Colorless > 0)
-                        totalDmg = totalDmg + (Value1 * base.Battle.BattleMana.Colorless);
+                    if (base.Battle.Player.HasStatusEffect<PermaPurifySe>())
+                    {
+                        StatusEffect status = base.Battle.Player.GetStatusEffect<PermaPurifySe>();
+                        totalDmg = totalDmg + (Value1 * status.Level);
+                    }
 
                     List<Card> list = (from card in base.Battle.EnumerateAllCardsButExile() where card.IsPurified select card).ToList<Card>();
                     if (list.Count > 0)

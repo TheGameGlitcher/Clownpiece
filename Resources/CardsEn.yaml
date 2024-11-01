@@ -59,12 +59,12 @@ ManiaCleansing:
 
 IntimidatingFlame:
     Name: "Indimidating Flame"
-    Description: "Gain {Block} |Block|.\nInflict {Value1} weak to self and inflict {Value2} |Temporary Firepower Down| to each enemy."
+    Description: "Gain {Block} |Block|.\nApply {Value1} |Weak| to self and apply {Value2} |Temporary Firepower Down| to each enemy."
     FlavorText: "Fire scares even the biggest predators away."
 
 MoonQuake:
     Name: "Moon Quake"
-    Description: "Deal {Damage} damage and inflict {Value2} |Vulnerable| to each enemy.\nInflict {Value1} |Vulnerable| to self."
+    Description: "Deal {Damage} damage and apply {Value2} |Vulnerable| to each enemy.\nApply {Value1} |Vulnerable| to self."
     FlavorText: "Even the Moon has earthquakes."
 
 UnderFloorboards:
@@ -81,7 +81,7 @@ LunaticTorchIgnition:
 StatueOfLunacy:
     Name: "Statue of Lunacy"
     Description: "|Lunacy|: Tranform into |Fireworks of Lunacy|.\nGain {Block} |Block| and {Value1} |Reflection|.\nDiscard up to {Value2} card{Value2:plural one='' other='s'}. Gain {Block} |Block| and {Value1} |Reflection| for each card discarded."
-    UpgeadedDescription: "|Lunacy|: Tranform into |Fireworks of Lunacy|.\nGain {Shield} barrier and {Value1} |Reflection|.\nDiscard up to {Value2} card{Value2:plural one='' other='s'}. Gain {Shield} barrier and {Value1} |Reflection| for each card discarded."
+    UpgradedDescription: "|Lunacy|: Tranform into |Fireworks of Lunacy|.\nGain {Shield} barrier and {Value1} |Reflection|.\nDiscard up to {Value2} card{Value2:plural one='' other='s'}. Gain {Shield} barrier and {Value1} |Reflection| for each card discarded."
     FlavorText: "The statue stands tall to all who threaten it."
 
 FireworksOfLunacy:
@@ -135,8 +135,8 @@ HecatiaEarth:
 
 Blindside:
     Name: "Blindside"
-    Description: "Inflict {Value1} |Weak| and |Vulnerable|."
-    UpgradedDescription: "Inflict {Value1} |Weak| and |Vulnerable|.\nDraw {Value2} card{Value2:plural one='' other='s'}."
+    Description: "Apply {Value1} |Weak| and |Vulnerable|."
+    UpgradedDescription: "Apply {Value1} |Weak| and |Vulnerable|.\nDraw {Value2} card{Value2:plural one='' other='s'}."
     FlavorText: "She's just a fairy, what is she going to do?"
 
 EmbodimentOfImpurity:
@@ -146,7 +146,7 @@ EmbodimentOfImpurity:
 
 UndyingFlame:
     Name: "Undying Flame"
-    Description: "Deal {Damage} damage.\nInflict {Value1} |Vulnerable|.\nPut {Value2} random attack card{Value2:plural one='' other='s'} from the draw pile into hand, {Value2:plural one='it' other='they'} |temporarily cost{Value2:plural one='s' other=''}| {Mana}."
+    Description: "Deal {Damage} damage.\nApply {Value1} |Vulnerable|.\nPut {Value2} random attack card{Value2:plural one='' other='s'} from the draw pile into hand, {Value2:plural one='it' other='they'} |temporarily cost{Value2:plural one='s' other=''}| {Mana}."
     FlavorText: "Spirits of the flame, burn them to ash!"
 
 BerserkLifeforce:
@@ -191,7 +191,7 @@ QuickPrick:
 
 ManicBurst:
     Name: "Manic Burst"
-    Description: "Inflict {Value1} |Mania| to each enemy."
+    Description: "Apply {Value1} |Mania| to each enemy."
     FlavorText: "I'd rather die than let you debuff me!"
 
 FlamesOfMania:
@@ -206,12 +206,12 @@ PurestFairyEssence:
     
 ResidualImpurity:
     Name: "Residual Impurity"
-    Description: "Deal {Damage} damage.\nInflict |Poison| equal to the unblocked amount of damage dealt.\nWhen inflicted with a debuff, return {SelfName} to the hand."
+    Description: "Deal {Damage} damage.\nApply |Poison| equal to the unblocked amount of damage dealt.\nWhen applyed with a debuff, return {SelfName} to the hand."
     FlavorText: "The capital was left defenseless to the plague. Of fairies."
 
 TorchPureFlame:
     Name: "The Torch's Pure Flame"
-    Description: "Gain {Value1} |Permanent Purify|.\nWhenever you deal damage, inflict {Value2} |Poison| and |Lock On|."
+    Description: "Gain {Value1} |Permanent Purify|.\nWhenever you deal damage, apply {Value2} |Poison| and |Lock On|."
     FlavorText: "May the light of her torch guide the impure to Hell."
 
 InnerStrength:
@@ -226,7 +226,7 @@ HiddenApollo:
 
 FairyParkour:
     Name: "Fairy Parkour"
-    Description: "Draw {Value1} cards.\nIf you have less than {Value3} cards in hand, gain {Value2} |Graze|."
+    Description: "Draw {Value1} cards.\nIf you have less than {Value2} cards in hand, gain {Value3} |Graze|."
     FlavorText: "Using wings in parkour is cheating."
 
 LunaticEmbrace:
@@ -237,13 +237,13 @@ LunaticEmbrace:
 HellsInferno:
     Name: "Hell's Inferno"
     Description: "Add {Value1} {Value1:plural one='|Flame|' other='|Flames|'} to hand."
-    UpgradeDescription: "Add {Value1} {Value1:plural one='|Flame|' other='|Flames|'} to hand.\nDraw {Value2} cards."
+    UpgradedDescription: "Add {Value1} {Value1:plural one='|Flame|' other='|Flames|'} to hand.\nDraw {Value2} card{Value2:plural one='' other='s'}."
     FlavorText: "Hell's heat is no sweat for this fairy!"
 
 MonsterClown:
     Name: "Monster Clown"
-    Description: "Deal {Damage} damage.\nInflict {Value1} |Weak|, |Vulnerable|, |Lock On|, |Poison|, |Temporary Firepower Down|."
-    UpgradedDescription: "Deal {Damage} damage {Value2} times.\nInflict {Value1} |Weak|, |Vulnerable|, |Lock On|, |Poison|, |Temporary Firepower Down|."
+    Description: "Deal {Damage} damage.\nApply {Value1} |Weak|, |Vulnerable|, |Lock On|, |Poison|, |Temporary Firepower Down|."
+    UpgradedDescription: "Deal {Damage} damage {Value2} times.\nApply {Value1} |Weak|, |Vulnerable|, |Lock On|, |Poison|, |Temporary Firepower Down|."
     FlavorText: "Clowns are so feared, even humans run from them."
 
 GoddessDivineProtection:
@@ -258,32 +258,32 @@ AsteroidLanding:
 
 HakureiMartialArts:
     Name: "Hakurei's Martial Arts"
-    Description: "Deal {Damage} damage.\nIf {PlayerName} has |temporary firepower|, gain {Block} |Block|."
+    Description: "Deal {Damage} damage.\nIf {PlayerName} has |Temporary Firepower|, gain {Block} |Block|."
     FlavorText: "Watching the shrine maiden teaches you humility and brutality."
 
 StareIntoTheFlame:
     Name: "Stare Into the Flame"
-    Description: "Inflict {Value1} |Mania|.\nInflict {Value2} |Lock On|."
+    Description: "Apply {Value1} |Mania|.\nApply {Value2} |Lock On|."
     FlavorText: "Delightful insanity!"
 
 SanityIsOverrated:
     Name: "Sanity is Overrated"
-    Description: "Inflict {Value1} |Mania| to each enemy.\nGain {Value3} |Graze| and {Value2} |Static Charge|."
+    Description: "Apply {Value1} |Mania| to each enemy.\nGain {Value3} |Graze| and {Value2} |Static Charge|."
     FlavorText: "Our time is ticking away..."
 
 HellsCalling:
     Name: "Hell's Calling"
-    Description: "Inflict {Value1} |Mania|.\nGain {Block} |Block|."
+    Description: "Apply {Value1} |Mania|.\nGain {Block} |Block|."
     FlavorText: "The flames echo in the night."
 
-EnterTheColleseum:
-    Name: "Enter the Colleseum"
-    Description: "Gain {Value2} |temporary firepower| and {Value3} |Lock On|.\nInflict {Value1} |Mania| and {Value4} |Lock On|"
+EnterTheColosseum:
+    Name: "Enter the Colosseum"
+    Description: "Gain {Value2} |Temporary Firepower| and {Value3} |Lock On|.\nApply {Value1} |Mania| and {Value4} |Lock On|"
     FlavorText: "This tense atmosphere is befitting of Hell!"
 
 MindBreak:
     Name: "Mind Break"
-    Description: "Deal {Damage} damage.\nInflict {Value1} |Mania| and {Value2} |temporary firepower down|."
+    Description: "Deal {Damage} damage.\nApply {Value1} |Mania| and {Value2} |Temporary Firepower down|."
     FlavorText: "Drown in your sorrows!"
 
 SenseAggression:
@@ -293,12 +293,12 @@ SenseAggression:
 
 Bloodlust:
     Name: "Bloodlust"
-    Description: "Inflict {Value3} |Vulnerable|.\nGain {Value4} |Vulnerable|.\nDraw {Value1} card{Value1:plural one='' other='s'}.\nIf an enemy intends to attack, gain {Value2} |temporary firepower|."
+    Description: "Apply {Value3} |Vulnerable|.\nGain {Value4} |Vulnerable|.\nDraw {Value1} card{Value1:plural one='' other='s'}.\nIf an enemy intends to attack, gain {Value2} |Temporary Firepower|."
     FlavorText: "It's time to let'er rip!"
 
 ContinuousWarfare:
     Name: "Continuous Warfare"
-    Description: "Deal {Damage} damage.\nInflict {Value1} |Lock On|.\nGain {Value2} |Firepower|.\nIf an enemy intends to attack, shuffle a {SelfName} into the discard pile."
+    Description: "Deal {Damage} damage.\nApply {Value1} |Lock On|.\nGain {Value2} |Firepower|.\nIf an enemy intends to attack, shuffle a {SelfName} into the discard pile."
     FlavorText: "From paper soldiers, to bodies on beach."
 
 HitAndRun:
@@ -319,7 +319,7 @@ GreaterFairyEnergy:
 
 Terrorize:
     Name: "Terrorize"
-    Description: "Lose {Value1} life.\nInflict {Value2} |Vulnerable| to each enemy."
+    Description: "Lose {Value1} life and apply {Value2} |Vulnerable| to each enemy.\n At the start of {PlayerName}'s turn, repeat this effect."
     FlavorText: "What do you mean a second tea ship has struck the harbor?"
 
 Mockery:
@@ -365,12 +365,12 @@ MoonFairy:
     Name: "Moon Fairy"
     Description: "{FriendS}|Lunacy|: Transform into |Lunatic Moon Fairy|."
     ExtraDescription1: "{FriendP} Deal {Damage} damage to each enemy."
-    ExtraDescription2: "{FriendU} Immediately deal {Damage} damage.\nRandomly |Purify| {Value1} card{Value1:plural one='' other='s'} in hand."
+    ExtraDescription2: "{FriendU} Immediately deal damage.\nRandomly |Purify| {Value1} card{Value1:plural one='' other='s'} in hand."
     FlavorText: "The only fairy type native to the Moon before the invasion."
 
 LunaticMoonFairy:
     Name: "Lunatic Moon Fairy"
-    Description: "{FriendS}{SelfName}'s damage increases by {Value1} per unspeant <sprite=\"ManaSprite\"\ name=\"C\"> or per |Purified| card in play, excluding exiled."
+    Description: "{FriendS}{SelfName}'s damage increases by {Value1} per stack of |Permanent Purify| or per |Purified| card in play, excluding exiled."
     ExtraDescription1: "{FriendP} Deal {newDmg} damage to each enemy."
     ExtraDescription2: "{FriendA} |Purify| all cards in hand. For every {Value2} cards |Purified| this way, gain {Value3} |Permanent Purify|."
     FlavorText: "Moon Fairy has been driven to lunacy!"

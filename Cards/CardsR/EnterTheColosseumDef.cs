@@ -21,11 +21,11 @@ using Clownpiece.Cards.CardsB;
 
 namespace Clownpiece.Cards.CardsR
 {
-    public sealed class EnterTheColleseumDef : CardTemplate
+    public sealed class EnterTheColosseumDef : CardTemplate
     {
         public override IdContainer GetId()
         {
-            return nameof(EnterTheColleseum);
+            return nameof(EnterTheColosseum);
         }
 
         public override CardImages LoadCardImages()
@@ -117,10 +117,10 @@ namespace Clownpiece.Cards.CardsR
         }
 
     }
-    [EntityLogic(typeof(EnterTheColleseumDef))]
-    public sealed class EnterTheColleseum : ClownCard
+    [EntityLogic(typeof(EnterTheColosseumDef))]
+    public sealed class EnterTheColosseum : ClownCard
     {
-        public EnterTheColleseum() : base()
+        public EnterTheColosseum() : base()
         {
             Value3 = 2;
             Value4 = 2;

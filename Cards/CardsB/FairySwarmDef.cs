@@ -62,7 +62,7 @@ namespace Clownpiece.Cards.CardsB
             UpgradedCost: null,
             MoneyCost: null,
             Damage: 14,
-            UpgradedDamage: null,
+            UpgradedDamage: 18,
             Block: null,
             UpgradedBlock: null,
             Shield: null,
