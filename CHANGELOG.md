@@ -11,7 +11,7 @@
 - Terrorize's description was made more clear.
 - Added upgrade effects for some cards that didn't have them.
  - Hell's Inferno now costs RR base. Hell's Inferno+ retains the default R.
- - Berserk Lifeforce+ now costs 1RR.
+ - Berserk Lifeforce+ now costs 2R.
  - Fairy Swarm+ now deals 18 damage.
 - Increased the card limit of Fairy Parkour+ to 6 from 5 to compensate for the extra draw.
 - Increased Earth Hecatia's barrier scaling per unspent mana from 2(3) to 3(4).
