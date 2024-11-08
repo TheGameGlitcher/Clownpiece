@@ -2,7 +2,7 @@
 - Fixed various yaml errors.
 - Nerfed Torch of Mania to activate once per turn instead of on every debuff inflict.
 - Fixed Residual Impurity's return effect causing errors if a card is currently in the queue.
-# Look for 0.2.0 coming soon! Featuring ClownpieceA rework and an act 1 boss.
+- **Look for 0.2.0 coming soon! Featuring ClownpieceA rework and an act 1 boss.**
 
 ## Verison 0.1.3
 - Fixed various yaml errors.
