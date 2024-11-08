@@ -100,8 +100,8 @@ namespace Clownpiece.Cards.CardsB
             Keywords: Keyword.Friend,
             UpgradedKeywords: Keyword.Friend,
             EmptyDescription: false,
-            RelativeKeyword: Keyword.None,
-            UpgradedRelativeKeyword: Keyword.None,
+            RelativeKeyword: Keyword.Purified,
+            UpgradedRelativeKeyword: Keyword.Purified,
 
             RelativeEffects: new List<string>() { },
             UpgradedRelativeEffects: new List<string>() { },
@@ -194,9 +194,8 @@ namespace Clownpiece.Cards.CardsB
         public override IEnumerable<BattleAction> GetPassiveActions()
         {
             if (!base.Summoned || base.Battle.BattleShouldEnd)
-            {
                 yield break;
-            }
+
             base.NotifyActivating();
             base.Loyalty += base.PassiveCost;
             for (int i = 0; i < this.Battle.FriendPassiveTimes && !this.Battle.BattleShouldEnd; ++i)

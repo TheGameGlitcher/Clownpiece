@@ -81,20 +81,35 @@ namespace Clownpiece.Exhibits
         [EntityLogic(typeof(TorchOfManiaDef))]
         public sealed class TorchOfMania : ShiningExhibit
         {
+            public bool isFirstTrigger = true;
             protected override void OnEnterBattle()
             {
                 this.NotifyActivating();
+                this.ReactBattleEvent<UnitEventArgs>(base.Battle.Player.TurnStarted, this.OnPlayerTurnStarting);
                 foreach (Unit allAliveEnemy in this.Battle.AllAliveEnemies)
                     this.ReactBattleEvent<StatusEffectApplyEventArgs>(allAliveEnemy.StatusEffectAdded, new EventSequencedReactor<StatusEffectApplyEventArgs>(this.OnEnemyStatusEffectAdded));
             }
 
+            public IEnumerable<BattleAction> OnPlayerTurnStarting(UnitEventArgs args)
+            {
+                isFirstTrigger = true;
+                yield break;
+            }
+
             private IEnumerable<BattleAction> OnEnemyStatusEffectAdded(StatusEffectApplyEventArgs args)
             {
+                if (isFirstTrigger == false)
+                    yield break;
+
                 if (base.Battle.BattleShouldEnd)
                     yield break;
 
                 if (args.Effect.Type == StatusEffectType.Negative)
+                {
+                    this.NotifyActivating();
                     yield return new ApplyStatusEffectAction<TempFirepower>(base.Battle.Player, new int?(Value1), null, null, null, 0.1f, true);
+                    isFirstTrigger = false;
+                }
             }
         }
     }

@@ -128,7 +128,7 @@ namespace Clownpiece.Cards.CardsR
 
         private IEnumerable<BattleAction> OnStatusEffectAdding(StatusEffectApplyEventArgs args)
         {
-            if (args.Effect.Type == StatusEffectType.Negative)
+            if (args.Effect.Type == StatusEffectType.Negative && base.Zone == CardZone.Discard && base.Battle.HandZone.Count < base.Battle.MaxHand)
             {
                 yield return new MoveCardAction(this, CardZone.Hand);
             }
@@ -136,9 +136,9 @@ namespace Clownpiece.Cards.CardsR
         private IEnumerable<BattleAction> OnPlayerDamageDealt(DamageEventArgs args)
         {
             if (base.Battle.BattleShouldEnd)
-            {
                 yield break;
-            }
+
+
             if (args.Cause == ActionCause.Card && args.ActionSource == this)
             {
                 DamageInfo damageInfo = args.DamageInfo;

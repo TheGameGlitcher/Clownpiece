@@ -81,7 +81,7 @@ LunaticTorchIgnition:
 StatueOfLunacy:
     Name: "Statue of Lunacy"
     Description: "|Lunacy|: Tranform into |Fireworks of Lunacy|.\nGain {Block} |Block| and {Value1} |Reflection|.\nDiscard up to {Value2} card{Value2:plural one='' other='s'}. Gain {Block} |Block| and {Value1} |Reflection| for each card discarded."
-    UpgradedDescription: "|Lunacy|: Tranform into |Fireworks of Lunacy|.\nGain {Shield} barrier and {Value1} |Reflection|.\nDiscard up to {Value2} card{Value2:plural one='' other='s'}. Gain {Shield} barrier and {Value1} |Reflection| for each card discarded."
+    UpgradedDescription: "|Lunacy|: Tranform into |Fireworks of Lunacy|.\nGain {Shield} |Barrier| and {Value1} |Reflection|.\nDiscard up to {Value2} card{Value2:plural one='' other='s'}. Gain {Shield} |Barrier| and {Value1} |Reflection| for each card discarded."
     FlavorText: "The statue stands tall to all who threaten it."
 
 FireworksOfLunacy:
@@ -206,7 +206,7 @@ PurestFairyEssence:
     
 ResidualImpurity:
     Name: "Residual Impurity"
-    Description: "Deal {Damage} damage.\nApply |Poison| equal to the unblocked amount of damage dealt.\nWhen applyed with a debuff, return {SelfName} to the hand."
+    Description: "Deal {Damage} damage.\nApply |Poison| equal to the unblocked amount of damage dealt.\nWhen afflicted with a debuff, return {SelfName} from the discard pile to the hand."
     FlavorText: "The capital was left defenseless to the plague. Of fairies."
 
 TorchPureFlame:
@@ -308,7 +308,7 @@ HitAndRun:
 
 WhatDoesntKillYou:
     Name: "What Doesn't Kill You"
-    Description: "Whenever {PlayerName} is aflicted with a debuff, draw {Value1} card{Value1:plural one='' other='s'}."
+    Description: "Whenever {PlayerName} is afflicted with a debuff, draw {Value1} card{Value1:plural one='' other='s'}."
     FlavorText: "Technically nothing can kill a fairy."
 
 GreaterFairyEnergy:
@@ -319,7 +319,7 @@ GreaterFairyEnergy:
 
 Terrorize:
     Name: "Terrorize"
-    Description: "Lose {Value1} life and apply {Value2} |Vulnerable| to each enemy.\n At the start of {PlayerName}'s turn, repeat this effect."
+    Description: "Lose {Value1} life and apply {Value2} |Vulnerable| to each enemy.\nAt the start of {PlayerName}'s turn, repeat this effect."
     FlavorText: "What do you mean a second tea ship has struck the harbor?"
 
 Mockery:
@@ -365,12 +365,12 @@ MoonFairy:
     Name: "Moon Fairy"
     Description: "{FriendS}|Lunacy|: Transform into |Lunatic Moon Fairy|."
     ExtraDescription1: "{FriendP} Deal {Damage} damage to each enemy."
-    ExtraDescription2: "{FriendU} Immediately deal damage.\nRandomly |Purify| {Value1} card{Value1:plural one='' other='s'} in hand."
+    ExtraDescription2: "{FriendU} Immediately deal damage.\n{Value1} {Value1:plural one='random card in the hand gains' other='random cards in the hand gain'} |Pure|."
     FlavorText: "The only fairy type native to the Moon before the invasion."
 
 LunaticMoonFairy:
     Name: "Lunatic Moon Fairy"
     Description: "{FriendS}{SelfName}'s damage increases by {Value1} per stack of |Permanent Purify| or per |Purified| card in play, excluding exiled."
     ExtraDescription1: "{FriendP} Deal {newDmg} damage to each enemy."
-    ExtraDescription2: "{FriendA} |Purify| all cards in hand. For every {Value2} cards |Purified| this way, gain {Value3} |Permanent Purify|."
+    ExtraDescription2: "{FriendA} |Purify| the hand. For every {Value2} cards |Purified| this way, gain {Value3} |Permanent Purify|."
     FlavorText: "Moon Fairy has been driven to lunacy!"

@@ -1,3 +1,9 @@
+## Version 0.1.4
+- Fixed various yaml errors.
+- Nerfed Torch of Mania to activate once per turn instead of on every debuff inflict.
+- Fixed Residual Impurity's return effect causing errors if a card is currently in the queue.
+# Look for 0.2.0 coming soon! Featuring ClownpieceA rework and an act 1 boss.
+
 ## Verison 0.1.3
 - Fixed various yaml errors.
 - Decreased Undying Flame's upgrade Vulnerable count from 2 to 1.
@@ -10,9 +16,9 @@
 - Removed Chaotic Danmaku Dodging from the card pool. Now it can only be obtained through Luantic Torch as intended.
 - Terrorize's description was made more clear.
 - Added upgrade effects for some cards that didn't have them.
- - Hell's Inferno now costs RR base. Hell's Inferno+ retains the default R.
- - Berserk Lifeforce+ now costs 2R.
- - Fairy Swarm+ now deals 18 damage.
+  - Hell's Inferno now costs RR base. Hell's Inferno+ retains the default R.
+  - Berserk Lifeforce+ now costs 2R.
+  - Fairy Swarm+ now deals 18 damage.
 - Increased the card limit of Fairy Parkour+ to 6 from 5 to compensate for the extra draw.
 - Increased Earth Hecatia's barrier scaling per unspent mana from 2(3) to 3(4).
 - Lowered the cost of Flames of Mania+ to RR from 1RR.

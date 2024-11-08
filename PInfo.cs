@@ -7,7 +7,7 @@ namespace Clownpiece
         // each loaded plugin needs to have a unique GUID. usually author+generalCategory+Name is good enough
         public const string GUID = "gameglitcher.character.clownpiece";
         public const string Name = "Clownpiece";
-        public const string version = "0.1.3";
+        public const string version = "0.1.4";
         public static readonly Harmony harmony = new Harmony(GUID);
 
     }

@@ -1,6 +1,6 @@
 {
   "name": "Clownpiece",
-  "version_number": "0.1.3",
+  "version_number": "0.1.4",
   "website_url": "https://github.com/TheGameGlitcher/Clownpiece/tree/master",
   "description": "Adds Clownpiece as a character. Includes starter exhibits, character specific cards, and risk-reward gameplay.",
   "dependencies": [ "BepInEx-BepInExPack-5.4.2100", "TeamNeo-Sideloader-0.9.7000" ]
