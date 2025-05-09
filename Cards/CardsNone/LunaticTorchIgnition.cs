@@ -27,7 +27,9 @@ namespace Clownpiece.Cards.CardsR
 
         public override CardImages LoadCardImages()
         {
-            return null;
+            var imgs = new CardImages(BepinexPlugin.embeddedSource);
+            imgs.AutoLoad(this, extension: ".png");
+            return imgs;
         }
 
         public override LocalizationOption LoadLocalization()
@@ -51,7 +53,7 @@ namespace Clownpiece.Cards.CardsR
             Revealable: false,
 
             IsPooled: false,
-            FindInBattle: true,
+            FindInBattle: false,
 
             HideMesuem: false,
             IsUpgradable: true,
@@ -62,6 +64,8 @@ namespace Clownpiece.Cards.CardsR
             IsXCost: false,
             Cost: new ManaGroup() { Any = 1 },
             UpgradedCost: new ManaGroup() { },
+            Kicker: null,
+            UpgradedKicker: null,
             MoneyCost: null,
             Damage: null,
             UpgradedDamage: null,
@@ -86,6 +90,8 @@ namespace Clownpiece.Cards.CardsR
             UpgradedPassiveCost: null,
             ActiveCost: null,
             UpgradedActiveCost: null,
+            ActiveCost2: null,
+            UpgradedActiveCost2: null,
             UltimateCost: null,
             UpgradedUltimateCost: null,
 
@@ -104,8 +110,8 @@ namespace Clownpiece.Cards.CardsR
             ImageId: "",
             UpgradeImageId: "",
 
-            Unfinished: true,
-            Illustrator: null,
+            Unfinished: false,
+            Illustrator: "Radal",
             SubIllustrator: new List<string>() { }
          );
 
@@ -120,7 +126,6 @@ namespace Clownpiece.Cards.CardsR
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
             yield return new ApplyStatusEffectAction<LunaticTorchSe>(base.Battle.Player, new int?(this.Value1), null, null, null, 0f, true);
-            yield break;
         }
     }
 }

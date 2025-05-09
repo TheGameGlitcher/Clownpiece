@@ -1,7 +1,7 @@
 ClownpieceUltA:
     Title: ""
     Content: "Lunatic Torch Relay"
-    Description: "Deal {Damage} damage to all enemies.\nIf |Lunatic Torch| is active, trigger the |f:Passive Skill| of each summoned |Teammate| in hand."
+    Description: "Deal {Damage} damage to all enemies.\nTrigger the |f:Passive Skill| of each summoned |Teammate| in hand."
 
 ClownpieceUltB:
     Title: "Hell Sign"

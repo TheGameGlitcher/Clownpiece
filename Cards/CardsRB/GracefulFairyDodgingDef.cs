@@ -22,8 +22,9 @@ using LBoL.EntityLib.StatusEffects.Basic;
 using LBoL.Core.StatusEffects;
 using System.Reflection;
 using Clownpiece.CustomClasses;
+using Clownpiece.Cards;
 
-namespace Clownpiece.Cards.CardsB
+namespace Clownpiece.Cards.LunaticCards.NonTeammateCards
 {
     public sealed class GracefulFairyDodgingDef : CardTemplate
     {
@@ -34,7 +35,9 @@ namespace Clownpiece.Cards.CardsB
 
         public override CardImages LoadCardImages()
         {
-            return null;
+            var imgs = new CardImages(BepinexPlugin.embeddedSource);
+            imgs.AutoLoad(this, extension: ".png");
+            return imgs;
         }
 
         public override LocalizationOption LoadLocalization()
@@ -69,6 +72,8 @@ namespace Clownpiece.Cards.CardsB
             IsXCost: false,
             Cost: new ManaGroup() { Black = 1, Red = 1 },
             UpgradedCost: new ManaGroup() { Hybrid = 1, HybridColor = 7, Any = 1 },
+            Kicker: null,
+            UpgradedKicker: null,
             MoneyCost: null,
             Damage: null,
             UpgradedDamage: null,
@@ -93,6 +98,8 @@ namespace Clownpiece.Cards.CardsB
             UpgradedPassiveCost: null,
             ActiveCost: null,
             UpgradedActiveCost: null,
+            ActiveCost2: null,
+            UpgradedActiveCost2: null,
             UltimateCost: null,
             UpgradedUltimateCost: null,
 
@@ -111,8 +118,8 @@ namespace Clownpiece.Cards.CardsB
             ImageId: "",
             UpgradeImageId: "",
 
-            Unfinished: true,
-            Illustrator: null,
+            Unfinished: false,
+            Illustrator: "Radal",
             SubIllustrator: new List<string>() { }
          );
 

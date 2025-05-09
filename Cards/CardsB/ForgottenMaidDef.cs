@@ -31,7 +31,9 @@ namespace Clownpiece.Cards.CardsR
 
         public override CardImages LoadCardImages()
         {
-            return null;
+            var imgs = new CardImages(BepinexPlugin.embeddedSource);
+            imgs.AutoLoad(this, extension: ".png");
+            return imgs;
         }
 
         public override LocalizationOption LoadLocalization()
@@ -51,13 +53,13 @@ namespace Clownpiece.Cards.CardsR
             Perform: new string[0][],
             GunName: "Simple1",
             GunNameBurst: null,
-            DebugLevel: 0,
+            DebugLevel: 3,
             Revealable: false,
 
-            IsPooled: true,
-            FindInBattle: true,
+            IsPooled: false,
+            FindInBattle: false,
 
-            HideMesuem: false,
+            HideMesuem: true,
             IsUpgradable: true,
             Rarity: Rarity.Rare,
             Type: CardType.Skill,
@@ -66,6 +68,8 @@ namespace Clownpiece.Cards.CardsR
             IsXCost: false,
             Cost: new ManaGroup() { Black = 2, Any = 3 },
             UpgradedCost: new ManaGroup() { Black = 1, Any = 3 },
+            Kicker: null,
+            UpgradedKicker: null,
             MoneyCost: null,
             Damage: null,
             UpgradedDamage: null,
@@ -90,6 +94,8 @@ namespace Clownpiece.Cards.CardsR
             UpgradedPassiveCost: null,
             ActiveCost: null,
             UpgradedActiveCost: null,
+            ActiveCost2: null,
+            UpgradedActiveCost2: null,
             UltimateCost: null,
             UpgradedUltimateCost: null,
 

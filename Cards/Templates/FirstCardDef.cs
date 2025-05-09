@@ -57,6 +57,8 @@ namespace Clownpiece.Cards.Templates
             IsXCost: false,
             Cost: new ManaGroup() { Red = 1, White = 1 },
             UpgradedCost: null,
+            Kicker: null,
+            UpgradedKicker: null,
             MoneyCost: null,
             Damage: 7,
             UpgradedDamage: null,
@@ -80,7 +82,9 @@ namespace Clownpiece.Cards.Templates
             PassiveCost: null,
             UpgradedPassiveCost: null,
             ActiveCost: null,
+            ActiveCost2: null,
             UpgradedActiveCost: null,
+            UpgradedActiveCost2: null,
             UltimateCost: null,
             UpgradedUltimateCost: null,
 
@@ -99,7 +103,7 @@ namespace Clownpiece.Cards.Templates
             ImageId: "",
             UpgradeImageId: "",
 
-            Unfinished: false,
+            Unfinished: true,
             Illustrator: null,
             SubIllustrator: new List<string>() { }
          );

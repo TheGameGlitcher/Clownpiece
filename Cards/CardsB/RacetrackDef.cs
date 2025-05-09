@@ -35,7 +35,9 @@ namespace Clownpiece.Cards.CardsB
 
         public override CardImages LoadCardImages()
         {
-            return null;
+            var imgs = new CardImages(BepinexPlugin.embeddedSource);
+            imgs.AutoLoad(this, extension: ".png");
+            return imgs;
         }
 
         public override LocalizationOption LoadLocalization()
@@ -70,6 +72,8 @@ namespace Clownpiece.Cards.CardsB
             IsXCost: false,
             Cost: new ManaGroup() { Black = 1, Any = 2 },
             UpgradedCost: new ManaGroup() { Black = 1, Any = 1 },
+            Kicker: null,
+            UpgradedKicker: null,
             MoneyCost: null,
             Damage: null,
             UpgradedDamage: null,
@@ -94,6 +98,8 @@ namespace Clownpiece.Cards.CardsB
             UpgradedPassiveCost: null,
             ActiveCost: null,
             UpgradedActiveCost: null,
+            ActiveCost2: null,
+            UpgradedActiveCost2: null,
             UltimateCost: null,
             UpgradedUltimateCost: null,
 
@@ -112,7 +118,7 @@ namespace Clownpiece.Cards.CardsB
             ImageId: "",
             UpgradeImageId: "",
 
-            Unfinished: true,
+            Unfinished: false,
             Illustrator: null,
             SubIllustrator: new List<string>() { }
          );

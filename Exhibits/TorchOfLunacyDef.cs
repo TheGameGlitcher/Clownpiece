@@ -83,6 +83,7 @@ namespace Clownpiece.Exhibits
             protected override void OnEnterBattle()
             {
                 this.ReactBattleEvent<UnitEventArgs>(this.Battle.Player.TurnStarted, new EventSequencedReactor<UnitEventArgs>(this.OnPlayerTurnStarted));
+                this.Active = true;
             }
 
             private IEnumerable<BattleAction> OnPlayerTurnStarted(GameEventArgs args)
@@ -91,6 +92,8 @@ namespace Clownpiece.Exhibits
                 {
                     this.NotifyActivating();
                     yield return (BattleAction)new AddCardsToHandAction((IEnumerable<Card>)Library.CreateCards<LunaticTorchIgnition>(this.Value1));
+                    this.Active = false;
+                    this.Blackout = true;
                 }
             }
         }

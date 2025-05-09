@@ -36,7 +36,9 @@ namespace Clownpiece.Cards.CardsB
 
         public override CardImages LoadCardImages()
         {
-            return null;
+            var imgs = new CardImages(BepinexPlugin.embeddedSource);
+            imgs.AutoLoad(this, extension: ".png");
+            return imgs;
         }
 
         public override LocalizationOption LoadLocalization()
@@ -64,13 +66,15 @@ namespace Clownpiece.Cards.CardsB
 
             HideMesuem: false,
             IsUpgradable: true,
-            Rarity: Rarity.Uncommon,
+            Rarity: Rarity.Rare,
             Type: CardType.Friend,
             TargetType: TargetType.Nobody,
             Colors: new List<ManaColor>() { ManaColor.Red, ManaColor.White, ManaColor.Blue },
             IsXCost: false,
             Cost: new ManaGroup() { Any = 1, Red = 1, White = 1, Blue = 1 },
             UpgradedCost: null,
+            Kicker: null,
+            UpgradedKicker: null,
             MoneyCost: null,
             Damage: 20,
             UpgradedDamage: 25,
@@ -94,15 +98,17 @@ namespace Clownpiece.Cards.CardsB
             PassiveCost: 1,
             UpgradedPassiveCost: null,
             ActiveCost: -1,
+            ActiveCost2: null,
             UpgradedActiveCost: null,
+            UpgradedActiveCost2: null,
             UltimateCost: -3,
             UpgradedUltimateCost: null,
 
-            Keywords: Keyword.Friend | Keyword.Accuracy,
-            UpgradedKeywords: Keyword.Friend | Keyword.Accuracy,
+            Keywords: Keyword.Friend,
+            UpgradedKeywords: Keyword.Friend,
             EmptyDescription: false,
-            RelativeKeyword: Keyword.None,
-            UpgradedRelativeKeyword: Keyword.None,
+            RelativeKeyword: Keyword.Accuracy,
+            UpgradedRelativeKeyword: Keyword.Accuracy,
 
             RelativeEffects: new List<string>() { "DummyThreeBodiesSe", "Firepower" },
             UpgradedRelativeEffects: new List<string>() { "DummyThreeBodiesSe", "Firepower" },
@@ -113,8 +119,8 @@ namespace Clownpiece.Cards.CardsB
             ImageId: "",
             UpgradeImageId: "",
 
-            Unfinished: true,
-            Illustrator: null,
+            Unfinished: false,
+            Illustrator: "Radal",
             SubIllustrator: new List<string>() { }
          );
 

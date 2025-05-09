@@ -5,8 +5,8 @@ LunaticTorchSe:
 
 LunaticLightSe:
     Name: "Lunatic Light"
-    Brief: "Enemies gain {Value1} |Firepower| every {Value2} turns."
-    Description: "{OwnerName} gains {Value1} |Firepower| every {Value2} turns."
+    Brief: "Magical light shines over everyone.\nEnemies gain {Value1} |Firepower| every {Value2} turns."
+    Description: "Magical light shines over everyone.\n{OwnerName} gains {Value1} |Firepower| every {Value2} turns."
 
 DummyLunacySe:
     Name: "Lunacy"
@@ -105,4 +105,27 @@ TerrorizeSe:
     Name: "Terrorize"
     Brief: "At the start of {PlayerName}'s turn, lose {Value1} life.\nInflict {Value2} |Vulnerable| to all enemies."
     Description: "At the start of {PlayerName}'s turn, lose {Value1} life.\nInflict {Value2} |Vulnerable| to all enemies."
-    
+
+LunaticTorchBossSe:
+    Name: "Lunatic Torch"
+    Description: "The stolen torch shines with a peculiar light. All enemies are driven to |Madness|."
+
+ManicTorchBossSe:
+    Name: "Lunatic Torch -Manic-"
+    Description: "The stolen torch shines with a peculiar light. All enemies are driven to |Madness|."
+
+PureTorchBossSe:
+    Name: "Lunatic Torch -Pure-"
+    Description: "The stolen torch shines with a peculiar light. All enemies are driven to |Madness|."
+
+LunaticBossSe:
+    Name: "Lunacy"
+    Description: "Magical light shines over everyone. Driven to madness, {OwnerName}'s actions are amplified.\nGain {Mana} at the start of {PlayerName}'s turn."
+
+UnstableTorchBossSe:
+    Name: "Unstable Lunatic Torch"
+    Description: "The stolen torch's light has become erratic. All enemies are driven to |Madness|.\nGain {Mana} at the start of {PlayerName}'s turn."
+
+ManiaBossSe:
+    Name: "Mania"
+    Description: "{PlayerName} can't play defense cards {Duration:plural one='until end of turn' other='for the next % turns'}."

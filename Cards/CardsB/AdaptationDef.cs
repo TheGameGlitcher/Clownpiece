@@ -21,6 +21,7 @@ using LBoL.EntityLib.Cards.Neutral.Blue;
 using LBoL.EntityLib.StatusEffects;
 using Clownpiece.CustomClasses;
 using LBoL.Core.StatusEffects;
+using Clownpiece.Cards.LunaticCards.NonTeammateCards;
 
 namespace Clownpiece.Cards.CardsB
 {
@@ -33,7 +34,9 @@ namespace Clownpiece.Cards.CardsB
 
         public override CardImages LoadCardImages()
         {
-            return null;
+            var imgs = new CardImages(BepinexPlugin.embeddedSource);
+            imgs.AutoLoad(this, extension: ".png");
+            return imgs;
         }
 
         public override LocalizationOption LoadLocalization()
@@ -68,6 +71,8 @@ namespace Clownpiece.Cards.CardsB
             IsXCost: false,
             Cost: new ManaGroup() { Black = 1, Any = 1 },
             UpgradedCost: new ManaGroup() { Any = 2 },
+            Kicker: null,
+            UpgradedKicker: null,
             MoneyCost: null,
             Damage: null,
             UpgradedDamage: null,
@@ -91,7 +96,9 @@ namespace Clownpiece.Cards.CardsB
             PassiveCost: null,
             UpgradedPassiveCost: null,
             ActiveCost: null,
+            ActiveCost2: null,
             UpgradedActiveCost: null,
+            UpgradedActiveCost2: null,
             UltimateCost: null,
             UpgradedUltimateCost: null,
 
@@ -110,8 +117,8 @@ namespace Clownpiece.Cards.CardsB
             ImageId: "",
             UpgradeImageId: "",
 
-            Unfinished: true,
-            Illustrator: null,
+            Unfinished: false,
+            Illustrator: "Radal",
             SubIllustrator: new List<string>() { }
          );
 
@@ -136,8 +143,8 @@ namespace Clownpiece.Cards.CardsB
             Adaptation first = list[0];
             Adaptation second = list[1];
 
-            first.ShowWhichDescription = 1;
-            second.ShowWhichDescription = 2;
+            first.ChoiceCardIndicator = 1;
+            second.ChoiceCardIndicator = 2;
 
             first.SetBattle(this.Battle);
             second.SetBattle(this.Battle);

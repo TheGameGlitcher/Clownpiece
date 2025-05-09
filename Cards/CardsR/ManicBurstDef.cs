@@ -29,7 +29,9 @@ namespace Clownpiece.Cards.CardsR
 
         public override CardImages LoadCardImages()
         {
-            return null;
+            var imgs = new CardImages(BepinexPlugin.embeddedSource);
+            imgs.AutoLoad(this, extension: ".png");
+            return imgs;
         }
 
         public override LocalizationOption LoadLocalization()
@@ -64,6 +66,8 @@ namespace Clownpiece.Cards.CardsR
             IsXCost: false,
             Cost: new ManaGroup() { Red = 1, Any = 1 },
             UpgradedCost: null,
+            Kicker: null,
+            UpgradedKicker: null,
             MoneyCost: null,
             Damage: null,
             UpgradedDamage: null,
@@ -88,6 +92,8 @@ namespace Clownpiece.Cards.CardsR
             UpgradedPassiveCost: null,
             ActiveCost: null,
             UpgradedActiveCost: null,
+            ActiveCost2: null,
+            UpgradedActiveCost2: null,
             UltimateCost: null,
             UpgradedUltimateCost: null,
 
@@ -106,7 +112,7 @@ namespace Clownpiece.Cards.CardsR
             ImageId: "",
             UpgradeImageId: "",
 
-            Unfinished: true,
+            Unfinished: false,
             Illustrator: null,
             SubIllustrator: new List<string>() { }
          );
@@ -126,13 +132,10 @@ namespace Clownpiece.Cards.CardsR
                 if (enemyUnit.IsAlive)
                 {
                     if (base.Battle.Player.HasStatusEffect<ManicFlameSe>())
-                    {
                         yield return new ApplyStatusEffectAction<PermaManiaSe>(enemyUnit, 1, null, null, null, 0.1f);
-                    }
+
                     else
-                    {
                         yield return new ApplyStatusEffectAction<ManiaSe>(enemyUnit, Value1, null, null, null, 0.1f);
-                    }
                 }
             }
         }

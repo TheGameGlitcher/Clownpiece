@@ -21,6 +21,7 @@ using Clownpiece.Cards.CardsB;
 using LBoL.EntityLib.StatusEffects.Enemy;
 using LBoL.Presentation.UI.Panels;
 using Clownpiece.CustomClasses;
+using LBoL.Presentation.UI;
 
 
 
@@ -51,6 +52,7 @@ namespace Clownpiece.Status
         {
             var statusEffectConfig = new StatusEffectConfig(
                             Id: "",
+                            ImageId: null,
                             Index: 0,
                             Order: 10,
                             Type: StatusEffectType.Special,
@@ -87,9 +89,15 @@ namespace Clownpiece.Status
             this.ReactOwnerEvent<CardsEventArgs>(this.Battle.CardsAddedToExile, this.OnAddCard);
             this.ReactOwnerEvent<CardsAddingToDrawZoneEventArgs>(this.Battle.CardsAddedToDrawZone, this.OnAddCardToDraw);
 
+            React(PerformAction.Chat(base.Battle.Player, "Hey, fairies!\nLet's crank up the speed!", 2.2f, 0f, 0.1f));
+
             List<Card> cards = base.Battle.EnumerateAllCards().Where((Card card) => (card is ClownCard cCard) && (cCard.CanTransform == true)).ToList<Card>();
+
             if (cards.Count > 0 && base.Owner.HasStatusEffect<LunaticTorchSe>())
             {
+                UiManager.GetPanel<PlayBoard>().CancelTargetSelecting(true);
+                UiManager.GetPanel<PlayBoard>().RewindRequests();
+
                 foreach (ClownCard sourceCard in cards)
                 {
                     Card card = Library.CreateCard(sourceCard.TransformTo, sourceCard.IsUpgraded);

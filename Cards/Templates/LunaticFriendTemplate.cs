@@ -69,6 +69,8 @@ namespace Clownpiece.Cards.CardsB
             IsXCost: false,
             Cost: new ManaGroup() { },
             UpgradedCost: null,
+            Kicker: null,
+            UpgradedKicker: null,
             MoneyCost: null,
             Damage: null,
             UpgradedDamage: null,
@@ -92,7 +94,9 @@ namespace Clownpiece.Cards.CardsB
             PassiveCost: 1,
             UpgradedPassiveCost: null,
             ActiveCost: -4,
+            ActiveCost2: null,
             UpgradedActiveCost: null,
+            UpgradedActiveCost2: null,
             UltimateCost: null,
             UpgradedUltimateCost: null,
 

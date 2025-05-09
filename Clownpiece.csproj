@@ -325,11 +325,13 @@
 
     <ItemGroup>
       <None Remove="resources\CardsEn.yaml" />
+      <None Remove="resources\EnemyUnitEn.yaml" />
       <None Remove="resources\ExhibitEn.yaml" />
       <None Remove="resources\PlayerUnitEn.yaml" />
       <None Remove="Resources\StatusEffectEn.yaml" />
       <None Remove="resources\UltimateSkillEn.yaml" />
       <None Remove="resources\UnitModelEn.yaml" />
+      <None Remove="resources\UnitNameEn.yaml" />
     </ItemGroup>
 
 

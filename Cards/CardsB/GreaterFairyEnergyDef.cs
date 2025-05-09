@@ -28,7 +28,9 @@ namespace Clownpiece.Cards.CardsR
 
         public override CardImages LoadCardImages()
         {
-            return null;
+            var imgs = new CardImages(BepinexPlugin.embeddedSource);
+            imgs.AutoLoad(this, extension: ".png");
+            return imgs;
         }
 
         public override LocalizationOption LoadLocalization()
@@ -63,6 +65,8 @@ namespace Clownpiece.Cards.CardsR
             IsXCost: false,
             Cost: new ManaGroup() { Black = 2, Any = 2 },
             UpgradedCost: new ManaGroup() { Black = 2, Any = 1 },
+            Kicker: null,
+            UpgradedKicker: null,
             MoneyCost: null,
             Damage: null,
             UpgradedDamage: null,
@@ -87,6 +91,8 @@ namespace Clownpiece.Cards.CardsR
             UpgradedPassiveCost: null,
             ActiveCost: null,
             UpgradedActiveCost: null,
+            ActiveCost2: null,
+            UpgradedActiveCost2: null,
             UltimateCost: null,
             UpgradedUltimateCost: null,
 
@@ -105,8 +111,8 @@ namespace Clownpiece.Cards.CardsR
             ImageId: "",
             UpgradeImageId: "",
 
-            Unfinished: true,
-            Illustrator: null,
+            Unfinished: false,
+            Illustrator: "Radal",
             SubIllustrator: new List<string>() { }
          );
 
@@ -120,14 +126,13 @@ namespace Clownpiece.Cards.CardsR
     {
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
+            yield return PerformAction.Chat(Battle.Player, "I'll absorb these jewels of light!", 1.5f, 0f, 0f);
+
             if (this.IsUpgraded)
-            {
                 yield return this.BuffAction<GreaterFairyEnergyPSe>(Value1);
-            }
+
             else
-            {
                 yield return this.BuffAction<GreaterFairyEnergyBSe>(Value1);
-            }
         }
     }
 }

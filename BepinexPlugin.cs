@@ -71,7 +71,6 @@ using LBoL.EntityLib.Stages.NormalStages;
 using LBoL.EntityLib.StatusEffects.Basic;
 using LBoL.EntityLib.StatusEffects.Cirno;
 using LBoL.EntityLib.StatusEffects.Enemy;
-using LBoL.EntityLib.StatusEffects.Enemy.SeijaItems;
 using LBoL.EntityLib.StatusEffects.Marisa;
 using LBoL.EntityLib.StatusEffects.Neutral;
 using LBoL.EntityLib.StatusEffects.Neutral.Black;
@@ -112,6 +111,7 @@ using Untitled;
 using Untitled.ConfigDataBuilder;
 using Untitled.ConfigDataBuilder.Base;
 using Debug = UnityEngine.Debug;
+using static Clownpiece.Boss.ClownpieceBossSelectorDef;
 
 
 namespace Clownpiece
@@ -149,6 +149,9 @@ namespace Clownpiece
 
             if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey(AddWatermark.API.GUID))
                 WatermarkWrapper.ActivateWatermark();
+
+            Func<Sprite> getSprite = () => ResourceLoader.LoadSprite("BossIcon.png", embeddedSource);
+            EnemyUnitTemplate.AddBossNodeIcon(nameof(ClownpieceBossSelector), getSprite);
         }
 
         private void OnDestroy()

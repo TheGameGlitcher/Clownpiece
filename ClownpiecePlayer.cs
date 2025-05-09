@@ -11,6 +11,11 @@ using LBoLEntitySideloader.Utils;
 using System.Collections.Generic;
 using UnityEngine;
 using static Clownpiece.BepinexPlugin;
+using static Clownpiece.Boss.ClownpieceBossSpawnerDef;
+using System;
+using LBoL.Presentation;
+
+
 
 
 
@@ -18,8 +23,6 @@ namespace Clownpiece
 {
     public sealed class ClownpiecePlayerDef : PlayerUnitTemplate
     {
-        //public static DirectorySource dir = new DirectorySource(PluginInfo.GUID, "Utsuho");
-
         public static string name = nameof(Clownpiece);
 
         public override IdContainer GetId() => nameof(Clownpiece);
@@ -58,8 +61,6 @@ namespace Clownpiece
             sprites.SetSelectionCircleIcon(() => selectionCircleIconLoading);
             sprites.SetInRunAvatarPic(() => avatarLoading);
 
-
-            //sprites.AutoLoad("", (s) => ResourceLoader.LoadSprite(s, directorySource, ppu: 100, 1, FilterMode.Bilinear, generateMipMaps: true), (s) => ResourceLoader.LoadSpriteAsync(s, BepinexPlugin.directorySource), PlayerImages.UseSame.StandAndDeck);
             sprites.SetCardImprint(() => imprint);
 
             return sprites;
@@ -74,18 +75,22 @@ namespace Clownpiece
             ShowOrder: 6,
             Order: 0,
             UnlockLevel: 0,
-            ModleName: "",
+            ModleName: "Clownpiece",
             NarrativeColor: "#3f7ab0",
             IsSelectable: true,
+            HasHomeName: false,
             MaxHp: 80,
             InitialMana: new ManaGroup() { Red = 2, Black = 2 },
+            BasicRingOrder: 4,
+            LeftColor: ManaColor.Red,
+            RightColor: ManaColor.Black,
             InitialMoney: 10,
             InitialPower: 0,
             UltimateSkillA: "ClownpieceUltA",
             UltimateSkillB: "ClownpieceUltB",
             ExhibitA: "TorchOfLunacy",
             ExhibitB: "TorchOfMania",
-            DeckA: new List<string> { "Shoot", "Shoot", "Boundary", "Boundary", "TorchBullet", "TorchBullet", "LunarShield", "LunarShield", "LunarShield", "BlackButterfly" },
+            DeckA: new List<string> { "Shoot", "Shoot", "Boundary", "Boundary", "TorchBullet", "TorchBullet", "LunarShield", "LunarShield", "LunarShield", "ButterflyBackup" },
             DeckB: new List<string> { "Shoot", "Shoot", "Boundary", "Boundary", "LunarSlam", "LunarSlam", "FlameWall", "FlameWall", "FlameWall", "UndyingFlame" },
             DifficultyA: 3,
             DifficultyB: 3
@@ -99,7 +104,7 @@ namespace Clownpiece
 
         public override EikiSummonInfo AssociateEikiSummon()
         {
-            return null;
+            return new EikiSummonInfo(typeof(ClownpieceBossSpawner));
         }
 
     }
@@ -107,10 +112,8 @@ namespace Clownpiece
     public sealed class ClownpieceModelDef : UnitModelTemplate
     {
 
-
         public override IdContainer GetId() => new ClownpiecePlayerDef().UniqueId;
 
-        //public override LocalizationOption LoadLocalization() => new DirectLocalization(new Dictionary<string, object>() { { "Default", "Clownpiece" }, { "Short", "Clownpiece" } });
         public override LocalizationOption LoadLocalization()
         {
             var loc = new GlobalLocalization(embeddedSource);
@@ -120,7 +123,7 @@ namespace Clownpiece
 
         public override ModelOption LoadModelOptions()
         {
-            return null;
+            return new ModelOption(ResourcesHelper.LoadSpineUnitAsync("Clownpiece"));
         }
 
 

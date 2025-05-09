@@ -1,0 +1,35 @@
+WhiteFairyBoss:
+    Name: "Sunflower Fairy"
+    Title: "Eager Fairy"
+    Move:
+    - "Twin Barrage"
+    - "Floret Fractal"
+    - "Focus Light"
+    - "Blinding Sunlight"
+    - "Borrowed Magic"
+    - "Unstable Magic"
+    - "Lunatic Blast"
+    - "Manic Wave"
+    - "Pure Quake"
+
+BlackFairyBoss:
+    Name: "Black Butterfly"
+    Title: "Shy Fairy"
+    Move:
+    - "Twin Barrage"
+    - "Floret Fractal"
+    - "Focus Light"
+    - "Sickly Residue"
+    - "Borrowed Magic"
+    - "Unstable Magic"
+    - "Lunatic Blast"
+    - "Manic Wave"
+    - "Pure Quake"
+
+ClownpieceBossSpawner:
+    Name: "Clownpiece Boss Spawner"
+    Title: "Debug Object"
+
+ClownpieceBossSelector:
+    Name: "Clownpiece Boss Selector"
+    Title: "Debug Object"

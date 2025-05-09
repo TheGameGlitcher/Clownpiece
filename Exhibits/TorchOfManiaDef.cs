@@ -18,6 +18,7 @@ using Clownpiece.Status;
 using LBoL.Core.StatusEffects;
 using UnityEngine;
 using Mono.Cecil;
+using LBoL.Presentation;
 
 namespace Clownpiece.Exhibits
 {
@@ -42,6 +43,7 @@ namespace Clownpiece.Exhibits
             Func<string, Sprite> wrap = (s) => ResourceLoader.LoadSprite(folder + GetId() + s + ".png", BepinexPlugin.embeddedSource);
 
             exhibitSprites.main = wrap("");
+            exhibitSprites.customSprites.Add("Inactive", wrap("_Inactive"));
 
             return exhibitSprites;
         }
@@ -82,6 +84,7 @@ namespace Clownpiece.Exhibits
         public sealed class TorchOfMania : ShiningExhibit
         {
             public bool isFirstTrigger = true;
+
             protected override void OnEnterBattle()
             {
                 this.NotifyActivating();
@@ -93,15 +96,13 @@ namespace Clownpiece.Exhibits
             public IEnumerable<BattleAction> OnPlayerTurnStarting(UnitEventArgs args)
             {
                 isFirstTrigger = true;
+                this.Active = true;
                 yield break;
             }
 
             private IEnumerable<BattleAction> OnEnemyStatusEffectAdded(StatusEffectApplyEventArgs args)
             {
-                if (isFirstTrigger == false)
-                    yield break;
-
-                if (base.Battle.BattleShouldEnd)
+                if (isFirstTrigger == false || base.Battle.BattleShouldEnd)
                     yield break;
 
                 if (args.Effect.Type == StatusEffectType.Negative)
@@ -109,6 +110,8 @@ namespace Clownpiece.Exhibits
                     this.NotifyActivating();
                     yield return new ApplyStatusEffectAction<TempFirepower>(base.Battle.Player, new int?(Value1), null, null, null, 0.1f, true);
                     isFirstTrigger = false;
+                    this.NotifyChanged();
+                    this.Active = false;
                 }
             }
         }

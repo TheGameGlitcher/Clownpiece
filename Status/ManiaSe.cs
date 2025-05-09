@@ -49,6 +49,7 @@ namespace Clownpiece.Status
         {
             var statusEffectConfig = new StatusEffectConfig(
                             Id: "",
+                            ImageId: null,
                             Index: 0,
                             Order: 10,
                             Type: StatusEffectType.Negative,

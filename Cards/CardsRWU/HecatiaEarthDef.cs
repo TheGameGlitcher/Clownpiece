@@ -36,7 +36,9 @@ namespace Clownpiece.Cards.CardsB
 
         public override CardImages LoadCardImages()
         {
-            return null;
+            var imgs = new CardImages(BepinexPlugin.embeddedSource);
+            imgs.AutoLoad(this, extension: ".png");
+            return imgs;
         }
 
         public override LocalizationOption LoadLocalization()
@@ -60,17 +62,19 @@ namespace Clownpiece.Cards.CardsB
             Revealable: false,
 
             IsPooled: false,
-            FindInBattle: true,
+            FindInBattle: false,
 
             HideMesuem: false,
             IsUpgradable: true,
-            Rarity: Rarity.Uncommon,
+            Rarity: Rarity.Rare,
             Type: CardType.Friend,
             TargetType: TargetType.Nobody,
             Colors: new List<ManaColor>() { ManaColor.Red, ManaColor.White, ManaColor.Blue },
             IsXCost: false,
             Cost: new ManaGroup() { Any = 1, Red = 1, White = 1, Blue = 1 },
             UpgradedCost: null,
+            Kicker: null,
+            UpgradedKicker: null,
             MoneyCost: null,
             Damage: 10,
             UpgradedDamage: null,
@@ -94,7 +98,9 @@ namespace Clownpiece.Cards.CardsB
             PassiveCost: 1,
             UpgradedPassiveCost: null,
             ActiveCost: -1,
+            ActiveCost2: null,
             UpgradedActiveCost: null,
+            UpgradedActiveCost2: null,
             UltimateCost: -3,
             UpgradedUltimateCost: null,
 
@@ -113,8 +119,8 @@ namespace Clownpiece.Cards.CardsB
             ImageId: "",
             UpgradeImageId: "",
 
-            Unfinished: true,
-            Illustrator: null,
+            Unfinished: false,
+            Illustrator: "Radal",
             SubIllustrator: new List<string>() { }
          );
 

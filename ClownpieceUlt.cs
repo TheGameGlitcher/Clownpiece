@@ -33,7 +33,7 @@ namespace Clownpiece
 
         public override Sprite LoadSprite()
         {
-            return ResourceLoader.LoadSprite("ClownpieceUlt.png", embeddedSource);
+            return ResourceLoader.LoadSprite("ClownpieceUltA.png", embeddedSource);
         }
 
         public override UltimateSkillConfig MakeConfig()
@@ -71,23 +71,26 @@ namespace Clownpiece
             /*var bgGo = StageTemplate.TryGetEnvObject(NewBackgrounds.ghibliDeez);
 
             bgGo.SetActive(true);
-            GameMaster.Instance.StartCoroutine(DeactivateDeez(bgGo));
-
-            yield return PerformAction.Spell(Owner, new ClownpieceUltADef().UniqueId);*/
+            GameMaster.Instance.StartCoroutine(DeactivateDeez(bgGo));*/
             yield return PerformAction.Spell(Battle.Player, "ClownpieceUltA");
             yield return new DamageAction(base.Owner, Battle.EnemyGroup.Alives, this.Damage, base.GunName, GunType.Single);
-            if (base.Owner.HasStatusEffect<LunaticTorchSe>())
+            if (!this.Battle.BattleShouldEnd)
             {
-                if (!this.Battle.BattleShouldEnd)
+                List<Card> teammates = this.Battle.HandZone.Where<Card>((Func<Card, bool>)(card => card.CardType == CardType.Friend && card.Summoned)).ToList<Card>();
+
+                if (teammates.Count == 0)
+                    yield return PerformAction.Chat(Battle.Player, "Fairies! More-\n...Where is everyone?", 2f, 0f, 0f);
+
+                else
+                    yield return PerformAction.Chat(Battle.Player, "Fairies! More damnaku! More!", 2f, 0f, 0f);
+
+                foreach (Card card in teammates)
                 {
-                    foreach (Card card in this.Battle.HandZone.Where<Card>((Func<Card, bool>)(card => card.CardType == CardType.Friend && card.Summoned)).ToList<Card>())
+                    IEnumerable<BattleAction> passiveActions = card.GetPassiveActions();
+                    if (passiveActions != null)
                     {
-                        IEnumerable<BattleAction> passiveActions = card.GetPassiveActions();
-                        if (passiveActions != null)
-                        {
-                            foreach (BattleAction battleAction in passiveActions)
-                                yield return battleAction;
-                        }
+                        foreach (BattleAction battleAction in passiveActions)
+                            yield return battleAction;
                     }
                 }
             }
@@ -113,7 +116,7 @@ namespace Clownpiece
 
         public override Sprite LoadSprite()
         {
-            return ResourceLoader.LoadSprite("ClownpieceUlt.png", embeddedSource);
+            return ResourceLoader.LoadSprite("ClownpieceUltB.png", embeddedSource);
         }
 
         public override UltimateSkillConfig MakeConfig()
@@ -155,6 +158,7 @@ namespace Clownpiece
 
             yield return PerformAction.Spell(Owner, new ClownpieceUltADef().UniqueId);*/
             yield return PerformAction.Spell(Battle.Player, "ClownpieceUltB");
+            yield return PerformAction.Chat(Battle.Player, "Welcome to the world of madness!", 2f, 0f, 0f);
             yield return new DamageAction(base.Owner, selector.GetEnemy(base.Battle), Damage, this.GunName, GunType.Single);
         }
     }

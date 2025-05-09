@@ -1,6 +1,5 @@
 ﻿using System;
 using LBoL.Core.Cards;
-using LBoL.Core;
 
 
 namespace Clownpiece.CustomClasses
