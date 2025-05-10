@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Text;
 using LBoL.Core.Battle;
 using Clownpiece.CustomClasses;
+using LBoL.Core.Battle.BattleActions;
 
 namespace Clownpiece.Cards.CardsB
 {
@@ -120,13 +121,13 @@ namespace Clownpiece.Cards.CardsB
     [EntityLogic(typeof(BusyScheduleDef))]
     public sealed class BusySchedule : ClownCard
     {
-        public BlockInfo newBlock
+        public BlockInfo NewBlock
         {
             get
             {
                 if (this.Battle != null)
                 {
-                    return new BlockInfo(Block.Block + (base.Battle.TurnCardUsageHistory.Count) * Value1);
+                    return new BlockInfo(Block.Block + (base.Battle.TurnCardUsageHistory.Count * Value1));
                 }
 
                 else
@@ -138,7 +139,7 @@ namespace Clownpiece.Cards.CardsB
 
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
-            yield return base.DefenseAction(true);
+            yield return new CastBlockShieldAction(base.Battle.Player, NewBlock);
         }
 
     }

@@ -66,7 +66,7 @@ namespace Clownpiece.Cards.CardsRB
             HideMesuem: false,
             IsUpgradable: true,
             Rarity: Rarity.Uncommon,
-            Type: CardType.Skill,
+            Type: CardType.Attack,
             TargetType: TargetType.SingleEnemy,
             Colors: new List<ManaColor>() { ManaColor.Black, ManaColor.Red },
             IsXCost: false,

@@ -92,7 +92,7 @@ FireworksOfLunacy:
 
 BusySchedule:
     Name: "Busy Schedule"
-    Description: "Gain {newBlock} |Block|.\n|Block| gained increases by {Value1} per card played this turn."
+    Description: "Gain {NewBlock} |Block|.\n|Block| gained increases by {Value1} per card played this turn."
     FlavorText: "Maintaining Hell is hard work."
 
 GoddessHitFairy:
@@ -377,41 +377,49 @@ LunaticMoonFairy:
 ButterflyBackup:
     Name: "Butterfly Backup"
     Description: "|Lunacy|: Transform into |Lunatic Support|.\nAdd {Value1} |Black Butterfl{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "|Lunacy|: Transform into |Lunatic Support|.\nAdd {Value1} |Black Butterfl{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
     FlavorText: "Not as strong as -Fairies' Great Rampage- but some support is better than nothing." 
 
 LunaticSupport:
-    Name: "Luantic Support"
+    Name: "Lunatic Support"
     Description: "Add {Value1} |Lunatic Black Butterfl{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "Add {Value1} |Lunatic Black Butterfl{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
     FlavorText: "Lunacy should draw more fairies, not less, but the number is reduced for the player's sanity."
 
 HellsNature:
     Name: "Hell's Nature"
     Description: "|Lunacy|: Transform into |Hell's Lunacy|.\nAdd {Value1} |Hell Fair{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "|Lunacy|: Transform into |Hell's Lunacy|.\nAdd {Value1} |Hell Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
     FlavorText: "Technically Hell is a type of nature."
 
 HellsLunacy:
     Name: "Hell's Lunacy"
     Description: "Add {Value1} |Lunatic Hell Fair{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "Add {Value1} |Lunatic Hell Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
     FlavorText: "How can a Hell Fairy become lunatic?"
 
 LunarSupport:
     Name: "Lunar Support"
     Description: "|Lunacy|: Transform into |Moon of Lunacy|.\nAdd {Value1} |Moon Fair{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "|Lunacy|: Transform into |Moon of Lunacy|.\nAdd {Value1} |Moon Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
     FlavorText: "Fairies used to live on the moon before the invasion."
 
 MoonOfLunacy:
     Name: "Moon of Lunacy"
     Description: "Add {Value1} |Lunatic Moon Fair{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "Add {Value1} |Lunatic Moon Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
     FlavorText: "Even Moon Fairies have a chaotic side. Take back the moon!"
 
 NaturesDefense:
     Name: "Nature's Defense"
     Description: "|Lunacy|: Transform into |Solar Phalanx|.\nAdd {Value1} |Sunflower Fair{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "|Lunacy|: Transform into |Solar Phalanx|.\nAdd {Value1} |Sunflower Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
     FlavorText: "Sponsored by Yuuka."
 
 SolarPhalanx:
     Name: "Solar Phalanx"
     Description: "Add {Value1} |Lunatic Sunflower Fair{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "Add {Value1} |Lunatic Sunflower Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
     FlavorText: "Now THIS is what I call a defense!"
 
 SunflowerFairy:
@@ -430,11 +438,13 @@ LunaticSunflowerFairy:
 DreamsOfPlaytime:
     Name: "Dreams of Playtime"
     Description: "Add {Value1} |Dream World Fair{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "Add {Value1} |Dream World Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
     FlavorText: "Wouldn't playing in your dreams get tiring?"
 
 NightmaresOfLunacy:
     Name: "Nightmares of Lunacy"
     Description: "Add {Value1} |Lunatic Dream World Fair{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "Add {Value1} |Lunatic Dream World Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
     FlavorText: "No nightmare can scare me, Hecatia's favorite hell fairy!"
 
 DreamWorldFairy:

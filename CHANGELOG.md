@@ -1,4 +1,14 @@
-## Version 2.0.0
+## Version 0.2.1
+- Fixed a typo in the version number of the previous changelog.
+- Fixed the descriptions of Butterfly Backup, Lunatic Support, Hell's Nature, Hell's Lunacy, Lunar Support, Moon of Lunacy, Nature's Defense, Solar Phalanx, Dreams of Playtime and Nightmares of Lunacy to properly reference the upgraded teammate versions.
+- Fixed a typo in the name of Lunatic Support.
+- Added an upgrade effect for The Torch's Pure Flame.
+- Added an upgrade effect for What Doesn't Kill You.
+- Changed Hit and Run's card type from Skill to Attack, as intended.
+- Changed Moon Quake's card type from Defense to Attack, as intended.
+- Fixed Busy Schedule's increased block gain effect not properly giving extra block.
+
+## Version 0.2.0
 This will be the last major update for a while as I focus on other things, unless something catastrophic happens. Of course I'll still fix bugs and do balance changes regardless.
 
 - Updated Lunatic Torch to now rewind the card queue during the transformation process to avoid softlocks.
