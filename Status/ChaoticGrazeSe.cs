@@ -83,7 +83,6 @@ namespace Clownpiece.Status
             if (base.Battle.BattleShouldEnd)
                 yield break;
 
-            this.Level = 1;
             base.NotifyActivating();
             yield return this.BuffAction<Graze>(this.Level);
             yield return new RemoveStatusEffectAction(this, true, 0.1f);

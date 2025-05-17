@@ -161,8 +161,8 @@ Racetrack:
 
 AFairysPurity:
     Name: "A Fairy's Purity"
-    Description: "Exile {Value1} card{Value1:plural one='' other='s'} from the hand.\nGain {Value2} |Amulet|."
-    UpgradedDescription: "Exile {Value1} card{Value1:plural one='' other='s'} from the hand, draw and discard pile.\nGain {Value2} |Amulet|."
+    Description: "Exile up to {Value1} card{Value1:plural one='' other='s'} from the hand.\nGain {Value2} |Amulet|."
+    UpgradedDescription: "Exile up to {Value1} card{Value1:plural one='' other='s'} from the hand, draw and discard pile.\nGain {Value2} |Amulet|."
     FlavorText: "A fairy's purity is unlike the Moon's."
 
 FairyGearSolid:

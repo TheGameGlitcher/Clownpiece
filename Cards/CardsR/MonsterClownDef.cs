@@ -61,8 +61,8 @@ namespace Clownpiece.Cards.CardsR
             HideMesuem: false,
             IsUpgradable: true,
             Rarity: Rarity.Rare,
-            Type: CardType.Skill,
-            TargetType: TargetType.AllEnemies,
+            Type: CardType.Attack,
+            TargetType: TargetType.SingleEnemy,
             Colors: new List<ManaColor>() { ManaColor.Red },
             IsXCost: false,
             Cost: new ManaGroup() { Red = 3 },
@@ -128,6 +128,8 @@ namespace Clownpiece.Cards.CardsR
     {
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
+            EnemyUnit enemy = selector.SelectedEnemy;
+
             if (this.IsUpgraded)
             {
                 for (int i = 1; i <= Value2; i++)
@@ -135,19 +137,17 @@ namespace Clownpiece.Cards.CardsR
                     yield return AttackAction(selector);
                 }
             }
+
             else
             {
                 yield return AttackAction(selector);
             }
 
-            foreach (EnemyUnit enemy in base.Battle.AllAliveEnemies)
-            {
-                yield return new ApplyStatusEffectAction<Weak>(enemy, Value1, Value1, null, null, 0.15f);
-                yield return new ApplyStatusEffectAction<Vulnerable>(enemy, Value1, Value1, null, null, 0.15f);
-                yield return new ApplyStatusEffectAction<LockedOn>(enemy, Value1, Value1, null, null, 0.15f);
-                yield return new ApplyStatusEffectAction<Poison>(enemy, Value1, Value1, null, null, 0.15f);
-                yield return new ApplyStatusEffectAction<TempFirepowerNegative>(enemy, Value1, Value1, null, null, 0.15f);
-            }
+            yield return new ApplyStatusEffectAction<Weak>(enemy, Value1, Value1, null, null, 0.15f);
+            yield return new ApplyStatusEffectAction<Vulnerable>(enemy, Value1, Value1, null, null, 0.15f);
+            yield return new ApplyStatusEffectAction<LockedOn>(enemy, Value1, Value1, null, null, 0.15f);
+            yield return new ApplyStatusEffectAction<Poison>(enemy, Value1, Value1, null, null, 0.15f);
+            yield return new ApplyStatusEffectAction<TempFirepowerNegative>(enemy, Value1, Value1, null, null, 0.15f);
         }
     }
 }

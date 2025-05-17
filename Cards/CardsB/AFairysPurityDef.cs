@@ -137,18 +137,17 @@ namespace Clownpiece.Cards.CardsB
             {
                 List<Card> list = (from card in base.Battle.HandZone.Concat(base.Battle.DrawZoneToShow).Concat(base.Battle.DiscardZone) where card != this select card).ToList<Card>();
                 if (!list.Empty<Card>())
-                {
                     return new SelectCardInteraction(0, this.Value1, list, SelectedCardHandling.DoNothing);
-                }
+
                 return null;
             }
+
             else
             {
                 List<Card> list2 = (from card in base.Battle.HandZone where card != this select card).ToList<Card>();
                 if (!list2.Empty<Card>())
-                {
                     return new SelectHandInteraction(0, this.Value1, list2);
-                }
+
                 return null;
             }
         }
@@ -163,8 +162,8 @@ namespace Clownpiece.Cards.CardsB
                     yield return new ExileManyCardAction(readOnlyList);
                 }
             }
+
             yield return this.BuffAction<Amulet>(this.Value2);
-            yield break;
         }
     }
 }

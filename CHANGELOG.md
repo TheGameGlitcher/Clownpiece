@@ -1,3 +1,12 @@
+## Version 0.2.2
+- Fixed Chaotic Draw and Chaotic Graze setting their level to 1 before activating their effect.
+- Changed Monster Clown's card type from Skill to Attack, as intended.
+- Fixed Monster Clown targeting all enemies instead of a selected one.
+- Reduced the barrier gained from Back Butterfly's ultimate from 6(8) to 5(6).
+- Increased the damage of Lunatic Black Butterfly from 7(8) to 8(9).
+- Included even more yaml fixes.
+
+
 ## Version 0.2.1
 - Fixed a typo in the version number of the previous changelog.
 - Fixed the descriptions of Butterfly Backup, Lunatic Support, Hell's Nature, Hell's Lunacy, Lunar Support, Moon of Lunacy, Nature's Defense, Solar Phalanx, Dreams of Playtime and Nightmares of Lunacy to properly reference the upgraded teammate versions.
