@@ -4,7 +4,7 @@
 - Fixed Monster Clown targeting all enemies instead of a selected one.
 - Reduced the barrier gained from Back Butterfly's ultimate from 6(8) to 5(6).
 - Increased the damage of Lunatic Black Butterfly from 7(8) to 8(9).
-- Included even more yaml fixes.
+- Included more yaml fixes.
 
 
 ## Version 0.2.1
