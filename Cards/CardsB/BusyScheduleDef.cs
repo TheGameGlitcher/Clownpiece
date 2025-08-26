@@ -1,17 +1,18 @@
-﻿using LBoL.Base;
-using LBoL.Core;
+﻿using Clownpiece.CustomClasses;
+using Clownpiece.Localization;
+using LBoL.Base;
 using LBoL.ConfigData;
+using LBoL.Core;
+using LBoL.Core.Battle;
+using LBoL.Core.Battle.BattleActions;
 using LBoL.Core.Cards;
+using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
-using LBoLEntitySideloader;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using LBoL.Core.Battle;
-using Clownpiece.CustomClasses;
-using LBoL.Core.Battle.BattleActions;
 
 namespace Clownpiece.Cards.CardsB
 {
@@ -31,9 +32,7 @@ namespace Clownpiece.Cards.CardsB
 
         public override LocalizationOption LoadLocalization()
         {
-            var loc = new GlobalLocalization(BepinexPlugin.embeddedSource);
-            loc.LocalizationFiles.AddLocaleFile(Locale.En, "CardsEn.yaml");
-            return loc;
+            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()

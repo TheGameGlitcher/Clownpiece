@@ -1,9 +1,0 @@
-TorchOfLunacy:
-    Name: "Torch of Lunacy"
-    Description: "Adds {BaseMana} to the mana base. Cards unique to |Clownpiece| are added to the card pool.\nAt the start of {PlayerName}'s first turn each combat, add a |Lunatic Torch Ignition| to the hand."
-    FlavorText: "Clownpiece's signature tool made by Hecatia. Please don't stare into the flame."
-
-TorchOfMania:
-    Name: "Torch of Mania"
-    Description: "Adds {BaseMana} to the mana base. Cards unique to |Clownpiece| are added to the card pool.\nWhenever an enemy gains a debuff for the first time each turn, gain {Value1} |Temporary Firepower|."
-    FlavorText: "Mania and Lunacy are synonyms, but here they are treated differently. Don't look into this flame either."

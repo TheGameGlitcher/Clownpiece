@@ -159,7 +159,5 @@ namespace Clownpiece
             if (harmony != null)
                 harmony.UnpatchSelf();
         }
-
-
     }
 }

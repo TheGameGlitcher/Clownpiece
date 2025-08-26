@@ -1,24 +1,25 @@
-﻿using LBoL.ConfigData;
-using LBoL.Core.Battle.BattleActions;
-using LBoL.Core.Battle;
-using LBoL.Core.Cards;
+﻿using Clownpiece.Localization;
+using Clownpiece.Status;
+using JetBrains.Annotations;
+using LBoL.Base;
+using LBoL.ConfigData;
 using LBoL.Core;
+using LBoL.Core.Battle;
+using LBoL.Core.Battle.BattleActions;
+using LBoL.Core.Cards;
+using LBoL.Core.StatusEffects;
+using LBoL.Core.Units;
 using LBoL.EntityLib.Exhibits;
+using LBoL.Presentation;
 using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
+using Mono.Cecil;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using LBoL.Base;
-using LBoL.Core.Units;
-using JetBrains.Annotations;
-using Clownpiece.Status;
-using LBoL.Core.StatusEffects;
 using UnityEngine;
-using Mono.Cecil;
-using LBoL.Presentation;
 
 namespace Clownpiece.Exhibits
 {
@@ -31,9 +32,7 @@ namespace Clownpiece.Exhibits
 
         public override LocalizationOption LoadLocalization()
         {
-            var loc = new GlobalLocalization(BepinexPlugin.embeddedSource);
-            loc.LocalizationFiles.AddLocaleFile(Locale.En, "ExhibitEn.yaml");
-            return loc;
+            return ClownpieceLocalization.ExhibitsBatchLoc.AddEntity(this);
         }
 
         public override ExhibitSprites LoadSprite()

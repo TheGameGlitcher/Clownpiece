@@ -1,22 +1,23 @@
+using Clownpiece.Localization;
+using Clownpiece.Status;
 using LBoL.Base;
 using LBoL.ConfigData;
-using LBoL.Core.Battle.BattleActions;
+using LBoL.Core;
 using LBoL.Core.Battle;
+using LBoL.Core.Battle.BattleActions;
 using LBoL.Core.Cards;
 using LBoL.Core.Units;
-using LBoL.Core;
+using LBoL.EntityLib.Cards.Character.Cirno;
+using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
-using LBoLEntitySideloader;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using static Clownpiece.BepinexPlugin;
-using Clownpiece.Status;
-using System;
-using System.Linq;
-using LBoL.EntityLib.Cards.Character.Cirno;
 
 namespace Clownpiece
 {
@@ -26,9 +27,7 @@ namespace Clownpiece
 
         public override LocalizationOption LoadLocalization()
         {
-            var gl = new GlobalLocalization(directorySource);
-            gl.DiscoverAndLoadLocFiles(this);
-            return gl;
+            return ClownpieceLocalization.UltimateSkillsBatchLoc.AddEntity(this);
         }
 
         public override Sprite LoadSprite()
@@ -109,9 +108,7 @@ namespace Clownpiece
 
         public override LocalizationOption LoadLocalization()
         {
-            var loc = new GlobalLocalization(embeddedSource);
-            loc.LocalizationFiles.AddLocaleFile(Locale.En, "UltimateSkillEn.yaml");
-            return loc;
+            return ClownpieceLocalization.UltimateSkillsBatchLoc.AddEntity(this);
         }
 
         public override Sprite LoadSprite()

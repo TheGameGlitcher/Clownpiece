@@ -18,4 +18,4 @@ Special Thanks:
 - Intoxicated Kid for helping me make Shiki Eiki summon two enemies correctly
 - Everyone else on the discord who were a part of the design process of this mod. There's too many names to remember, so don't feel left out!
 
-As this is my first mod, please don't expect this to be vanilla tier quality. Though, I'm not scared of feedback. The more the merrier!
+WARNING: This is my first mod and will be kept up for archival purposes. Although I welcome feedback, please do not expect this to be a very high quality mod. I'm doing my best.

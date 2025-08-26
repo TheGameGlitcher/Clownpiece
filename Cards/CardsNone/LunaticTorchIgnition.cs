@@ -1,9 +1,16 @@
-﻿using Clownpiece.Cards.Templates;
+﻿using Clownpiece.Cards.LunaticCards.LunaticFairyTeammates;
+using Clownpiece.Cards.Templates;
+using Clownpiece.CustomClasses;
+using Clownpiece.Localization;
+using Clownpiece.Status;
 using LBoL.Base;
 using LBoL.ConfigData;
-using LBoL.Core.Battle;
 using LBoL.Core;
+using LBoL.Core.Battle;
+using LBoL.Core.Battle.BattleActions;
 using LBoL.Core.Cards;
+using LBoL.Core.StatusEffects;
+using LBoL.Core.Units;
 using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
@@ -11,12 +18,8 @@ using LBoLEntitySideloader.Resource;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using LBoL.Core.Battle.BattleActions;
-using LBoL.Core.StatusEffects;
-using Clownpiece.Status;
-using Clownpiece.CustomClasses;
 
-namespace Clownpiece.Cards.CardsR
+namespace Clownpiece.Cards.CardsNone
 {
     public sealed class LunaticTorchIgnitionDef : CardTemplate
     {
@@ -34,9 +37,7 @@ namespace Clownpiece.Cards.CardsR
 
         public override LocalizationOption LoadLocalization()
         {
-            var loc = new GlobalLocalization(BepinexPlugin.embeddedSource);
-            loc.LocalizationFiles.AddLocaleFile(Locale.En, "CardsEn.yaml");
-            return loc;
+            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()
@@ -62,7 +63,7 @@ namespace Clownpiece.Cards.CardsR
             TargetType: TargetType.Self,
             Colors: new List<ManaColor>() { },
             IsXCost: false,
-            Cost: new ManaGroup() { Any = 1 },
+            Cost: new ManaGroup() { },
             UpgradedCost: new ManaGroup() { },
             Kicker: null,
             UpgradedKicker: null,
@@ -75,8 +76,8 @@ namespace Clownpiece.Cards.CardsR
             UpgradedShield: null,
             Value1: 1,
             UpgradedValue1: null,
-            Value2: null,
-            UpgradedValue2: null,
+            Value2: 0,
+            UpgradedValue2: 2,
             Mana: null,
             UpgradedMana: null,
             Scry: null,
@@ -102,7 +103,7 @@ namespace Clownpiece.Cards.CardsR
             UpgradedRelativeKeyword: Keyword.None,
 
             RelativeEffects: new List<string>() { "LunaticTorchSe" },
-            UpgradedRelativeEffects: new List<string>() { "LunaticTorchSe" },
+            UpgradedRelativeEffects: new List<string>() { "LunaticTorchSe", "Firepower" },
             RelativeCards: new List<string>() { },
             UpgradedRelativeCards: new List<string>() { },
 
@@ -123,9 +124,23 @@ namespace Clownpiece.Cards.CardsR
     [EntityLogic(typeof(LunaticTorchIgnitionDef))]
     public sealed class LunaticTorchIgnition : ClownCard
     {
+        public LunaticTorchIgnition() : base()
+        {
+            Value3 = 1;
+        }
+
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
-            yield return new ApplyStatusEffectAction<LunaticTorchSe>(base.Battle.Player, new int?(this.Value1), null, null, null, 0f, true);
+            IEnumerable<EnemyUnit> enemies = base.Battle.AllAliveEnemies;
+
+            yield return new ApplyStatusEffectAction<LunaticTorchSe>(base.Battle.Player, Value1, null, null, null, 0f, true);
+
+            yield return new ApplyStatusEffectAction<Firepower>(base.Battle.Player, Value2, null, null, null, 0f, true);
+
+            foreach (EnemyUnit enemy in enemies)
+            {
+                yield return new ApplyStatusEffectAction<Firepower>(enemy, Value3, null, null, null, 0f, true);
+            }
         }
     }
 }

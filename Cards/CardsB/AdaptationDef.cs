@@ -22,6 +22,7 @@ using LBoL.EntityLib.StatusEffects;
 using Clownpiece.CustomClasses;
 using LBoL.Core.StatusEffects;
 using Clownpiece.Cards.LunaticCards.NonTeammateCards;
+using Clownpiece.Localization;
 
 namespace Clownpiece.Cards.CardsB
 {
@@ -41,9 +42,7 @@ namespace Clownpiece.Cards.CardsB
 
         public override LocalizationOption LoadLocalization()
         {
-            var loc = new GlobalLocalization(BepinexPlugin.embeddedSource);
-            loc.LocalizationFiles.AddLocaleFile(Locale.En, "CardsEn.yaml");
-            return loc;
+            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()

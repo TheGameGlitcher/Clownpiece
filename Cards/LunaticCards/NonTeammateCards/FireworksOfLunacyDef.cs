@@ -1,22 +1,23 @@
-﻿using Clownpiece.Cards.Templates;
+﻿using Clownpiece.Cards.CardsB;
+using Clownpiece.Cards.Templates;
+using Clownpiece.CustomClasses;
+using Clownpiece.Localization;
 using LBoL.Base;
 using LBoL.ConfigData;
-using LBoL.Core.Battle;
 using LBoL.Core;
+using LBoL.Core.Battle;
+using LBoL.Core.Battle.BattleActions;
+using LBoL.Core.Battle.Interactions;
 using LBoL.Core.Cards;
+using LBoL.EntityLib.StatusEffects.Basic;
 using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using LBoL.Core.Battle.BattleActions;
-using LBoL.Core.Battle.Interactions;
-using LBoL.EntityLib.StatusEffects.Basic;
 using System.Linq;
-using Clownpiece.CustomClasses;
-using Clownpiece.Cards.CardsB;
+using System.Text;
 
 namespace Clownpiece.Cards.LunaticCards.NonTeammateCards
 {
@@ -36,9 +37,7 @@ namespace Clownpiece.Cards.LunaticCards.NonTeammateCards
 
         public override LocalizationOption LoadLocalization()
         {
-            var loc = new GlobalLocalization(BepinexPlugin.embeddedSource);
-            loc.LocalizationFiles.AddLocaleFile(Locale.En, "CardsEn.yaml");
-            return loc;
+            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()

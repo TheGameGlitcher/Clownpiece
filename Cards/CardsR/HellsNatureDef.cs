@@ -1,28 +1,29 @@
+using Clownpiece.Cards.FairyTeammates;
+using Clownpiece.Cards.LunaticCards.NonTeammateCards;
 using Clownpiece.Cards.Templates;
+using Clownpiece.CustomClasses;
+using Clownpiece.Localization;
 using LBoL.Base;
+using LBoL.Base.Extensions;
 using LBoL.ConfigData;
-using LBoL.Core.Battle;
 using LBoL.Core;
+using LBoL.Core.Battle;
+using LBoL.Core.Battle.BattleActions;
+using LBoL.Core.Battle.Interactions;
 using LBoL.Core.Cards;
+using LBoL.EntityLib.Cards.Character.Cirno;
+using LBoL.EntityLib.Cards.Character.Reimu;
+using LBoL.EntityLib.Cards.Neutral.Blue;
+using LBoL.EntityLib.Cards.Neutral.TwoColor;
+using LBoL.EntityLib.StatusEffects.Basic;
 using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using LBoL.Base.Extensions;
-using LBoL.Core.Battle.Interactions;
 using System.Linq;
-using LBoL.Core.Battle.BattleActions;
-using LBoL.EntityLib.Cards.Character.Cirno;
-using LBoL.EntityLib.Cards.Neutral.TwoColor;
-using LBoL.EntityLib.Cards.Neutral.Blue;
-using LBoL.EntityLib.StatusEffects.Basic;
-using Clownpiece.CustomClasses;
-using LBoL.EntityLib.Cards.Character.Reimu;
-using Clownpiece.Cards.LunaticCards.NonTeammateCards;
-using Clownpiece.Cards.FairyTeammates;
+using System.Text;
 
 namespace Clownpiece.Cards.CardsR
 {
@@ -43,9 +44,7 @@ namespace Clownpiece.Cards.CardsR
 
         public override LocalizationOption LoadLocalization()
         {
-            var loc = new GlobalLocalization(BepinexPlugin.embeddedSource);
-            loc.LocalizationFiles.AddLocaleFile(Locale.En, "CardsEn.yaml");
-            return loc;
+            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()

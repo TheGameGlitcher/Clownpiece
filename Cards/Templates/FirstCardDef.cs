@@ -1,4 +1,5 @@
-﻿using LBoL.Base;
+﻿using Clownpiece.Localization;
+using LBoL.Base;
 using LBoL.ConfigData;
 using LBoL.Core.Cards;
 using LBoLEntitySideloader;
@@ -27,9 +28,7 @@ namespace Clownpiece.Cards.Templates
 
         public override LocalizationOption LoadLocalization()
         {
-            var loc = new GlobalLocalization(BepinexPlugin.embeddedSource);
-            loc.LocalizationFiles.AddLocaleFile(LBoL.Core.Locale.En, "CardsEn.yaml");
-            return loc;
+            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()

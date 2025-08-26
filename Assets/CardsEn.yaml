@@ -1,0 +1,467 @@
+FirstCard:
+    Name: "First Card"
+    Description: "Deal {Damage} damage {Value1} time{Value1:plural one='' other='s'}."
+    FlavorText: "My first modded card. Horray!"
+
+TemplateFriend:
+    Name: "Teammate Template"
+    Description: "Test card used to copy-paste code."
+    FlavorText: "How are you reading this?!"
+
+LunaticFriendTemplate:
+    Name: "Lunatic Friend Template"
+    Description: "Test card used to copy-paste code."
+    FlavorText: "How area you reading this?!"
+
+TorchBullet:
+    Name: "Torch Bullet"
+    Description: "Deal {Damage} damage."
+    FlavorText: "A flame projectile would hurt anyone."
+
+LunarShield:
+    Name: "Lunar Shield"
+    Description: "Gain {Block} |Block|."
+    FlavorText: "The Moon can block anything. Not to be confused with Lunarians."
+
+LunarSlam:
+    Name: "Lunar Slam"
+    Description: "Deal {Damage} damage."
+    FlavorText: "Being hit with the Moon has to hurt."
+
+FlameWall:
+    Name: "Flame Wall"
+    Description: "Gain {Block} |Block|."
+    FlavorText: "Wave the torch to keep the animals at bay."
+
+LunaticTime:
+    Name: "It's Lunatic Time!"
+    Description: "Basically a placeholder card now."
+    FlavorText: "This card has been outmoded, maybe I'll make it something in the future."
+
+BlackButterfly:
+    Name: "Black Butterfly"
+    Description: "{FriendS}|Lunacy|: Transform into |Lunatic Black Butterfly|."
+    ExtraDescription1: "{FriendP}Deal {Damage} damage to the enemy with the least life."
+    ExtraDescription2: "{FriendU}Gain {Shield} |Barrier|."
+    FlavorText: "Why wasn't she called Black Fairy?"
+
+LunaticBlackButterfly:
+    Name: "Lunatic Black Butterfly"
+    Description: "{FriendS}|Expel|: Lose {Value2} life and gain {Shield} |Barrier|."
+    ExtraDescription1: "{FriendP}Deal {Damage} damage to a random enemy."
+    ExtraDescription2: "{FriendA}All enemies lose {activeDmg} life."
+    FlavorText: "Black Butterfly has been driven to lunacy!"
+
+ManiaCleansing:
+    Name: "Mania Cleansing"
+    Description: "Removes and reverses the effects of |Lunatic Torch|."
+    FlavorText: "The mayhem getting too out of hand? Hit undo!"
+
+IntimidatingFlame:
+    Name: "Indimidating Flame"
+    Description: "Gain {Block} |Block|.\nApply {Value1} |Weak| to self and apply {Value2} |Temporary Firepower Down| to each enemy."
+    FlavorText: "Fire scares even the biggest predators away."
+
+MoonQuake:
+    Name: "Moon Quake"
+    Description: "Deal {Damage} damage and apply {Value2} |Vulnerable| to each enemy.\nApply {Value1} |Vulnerable| to self."
+    FlavorText: "Even the Moon has earthquakes."
+
+UnderFloorboards:
+    Name: "Under the Floorboards"
+    Description: "Choose 1 of {Value1} Reimu cards to add to the hand. It |temporarily costs| {Mana}."
+    UpgradedDescription: "Choose 1 of {Value1} Reimu cards to add to the hand. It |temporarily costs| {Mana}.\nAdd a |Yin-Yang Orb| to the hand."
+    FlavorText: "You'd be surprised what you can learn from under the floor. Fairy see, fairy do."
+
+LunaticTorchIgnition:
+    Name: "Lunatic Torch Ignition"
+    Description: "Gain |Lunatic Torch|."
+    UpgradedDescription: "Gain |Lunatic Torch|.\nGain {Value2} |Firepower|.\nAll enemies gain {Value3} |Firepower|."
+    FlavorText: "Spark the flames of lunacy at your own risk."
+
+StatueOfLunacy:
+    Name: "Statue of Lunacy"
+    Description: "|Lunacy|: Tranform into |Fireworks of Lunacy|.\nGain {Block} |Block| and {Value1} |Reflection|.\nDiscard up to {Value2} card{Value2:plural one='' other='s'}. Gain {Block} |Block| and {Value1} |Reflection| for each card discarded."
+    UpgradedDescription: "|Lunacy|: Tranform into |Fireworks of Lunacy|.\nGain {Shield} |Barrier| and {Value1} |Reflection|.\nDiscard up to {Value2} card{Value2:plural one='' other='s'}. Gain {Shield} |Barrier| and {Value1} |Reflection| for each card discarded."
+    FlavorText: "The statue stands tall to all who threaten it."
+
+FireworksOfLunacy:
+    Name: "Fireworks of Lunacy"
+    Description: "Lose {Value1} life. Deal {Damage} damage twice.\nDiscard up to {Value2} card{Value2:plural one='' other='s'}. Deal damage an aditional time for each card discarded."
+    UpgradedDescription: "Lose {Value1} life. Deal {Damage} damage twice.\nDiscard up to {Value2} card{Value2:plural one='' other='s'}. Deal damage an aditional time for each card discarded."
+    FlavorText: "Out of the darkness brighter than a thousand suns."
+
+BusySchedule:
+    Name: "Busy Schedule"
+    Description: "Gain {NewBlock} |Block|.\n|Block| gained increases by {Value1} per card played this turn."
+    FlavorText: "Maintaining Hell is hard work."
+
+GoddessHitFairy:
+    Name: "Goddess's Hit Fairy"
+    Description: "Deal {Damage} damage.\nApply {Value1} |Lock On|."
+    UpgradedDescription: "Deal {Damage} damage.\nApply {Value1} |Lock On|. If the enemy has |Vulnerable|, apply {Value2} more |Lock On|."
+    FlavorText: "I'll handle this Mrs. President."
+
+GracefulFairyDodging:
+    Name: "Graceful Fairy Dodging"
+    Description: "|Lunacy|: Transform into |Chaotic Danmaku Dodging|\nGain {Value1} |Graze|.\nDraw {Value2} card{Value2:plural one='' other='s'}.\nGain {Value3} |Reflection|."
+    FlavorText: "Fairies tend to float where ever the wind takes them."
+
+ChaoticDanmakuDodging:
+    Name: "Chaotic Danmaku Dodging"
+    Description: "Gain {Value1} |Frail| and {Value1} |Vulnerable|.\nGain {Value2} |Graze|.\nDraw {Value3} cards."
+    UpgradedDescription: "Gain {Value1} |Frail| and {Value1} |Vulnerable|.\nGain {Value2} |Graze|.\nDraw {Value3} cards.\nAt the start of next turn, gain {Value4} |Graze| and draw {Value4} card{nextDraw:plural one='' other='s'}."
+    FlavorText: "Does she look like a girl with a plan?"
+
+HecatiaOtherworld:
+    Name: "Hecatia, Tri-Bodied Goddess"
+    Description: "{FriendS}|Otherworld Body|\n{FriendP} Gain {Value1} |Firepower|."
+    ExtraDescription3: "{FriendU}Deal {Damage} damage to all enemies. |Accurate|"
+    ExtraDescription1: "{FriendA}Change bodies."
+    FlavorText: "As the goddess of Otherworlds, Hecatia technically has rule over Gensokyo and the Dream World as well."
+
+HecatiaMoon:
+    Name: "Hecatia, Tri-Bodied Goddess"
+    Description: "{FriendS}|Moon Body|\n{FriendP} |Exile| up to {Value1} card{Value2:plural one='' other='s'} from the hand."
+    ExtraDescription3: "{FriendU}|Exile| {Value5} to {Value2} cards from hand. If there are more than {Value3} cards in exile, deal {newDmg} damage {Value4} times to each enemy. This damage increases by {Value6} per card in exile."
+    ExtraDescription1: "{FriendA}Change bodies."
+    FlavorText: "As the goddess of the Moon, its no wonder the Lunarians couldn't see her coming."
+
+HecatiaEarth:
+    Name: "Hecatia, Tri-Bodied Goddess"
+    Description: "{FriendS}|Earth Body|\n{FriendP} Gain {Mana}."
+    ExtraDescription3: "{FriendU}Gain {newShield} |Barrier|. This value increases by {Value1} per unspent mana."
+    ExtraDescription1: "{FriendA}Change bodies."
+    FlavorText: "As the goddess of the Earth, she rules the Outside World too. I wonder if she stole her clothes from a modern store."
+
+Blindside:
+    Name: "Blindside"
+    Description: "Apply {Value1} |Weak| and |Vulnerable|."
+    UpgradedDescription: "Apply {Value1} |Weak| and |Vulnerable|.\nDraw {Value2} card{Value2:plural one='' other='s'}."
+    FlavorText: "She's just a fairy, what is she going to do?"
+
+EmbodimentOfImpurity:
+    Name: "Embodiment Of Impurity"
+    Description: "Deal {Damage} damage to each enemy.\nGain {Value1} |Permanent Purify|.\nFor every <sprite=\"ManaSprite\"\ name=\"C\"> spent this turn, gain {Value2} |Reflection|."
+    FlavorText: "Junko's purification turned Clownpiece into pure lifeforce. Wouldn't it be a shame to touch her and fall into Hell?"
+
+UndyingFlame:
+    Name: "Undying Flame"
+    Description: "Deal {Damage} damage.\nApply {Value1} |Vulnerable|.\nPut {Value2} random attack card{Value2:plural one='' other='s'} from the draw pile into hand, {Value2:plural one='it' other='they'} |temporarily cost{Value2:plural one='s' other=''}| {Mana}."
+    FlavorText: "Spirits of the flame, burn them to ash!"
+
+BerserkLifeforce:
+    Name: "Berserk Lifeforce"
+    Description: "All units gain |Might Makes Right!|"
+    FlavorText: "The greatest enemy to the Red, White and Blue: Pure Red."
+
+Racetrack:
+    Name: "Racetrack"
+    Description: "Discard {Value1} cards.\nDraw {Value2} cards, they |temporarily cost| {Mana} less."
+    FlavorText: "Which way, Brazil or Detroit?"
+
+AFairysPurity:
+    Name: "A Fairy's Purity"
+    Description: "Exile up to {Value1} card{Value1:plural one='' other='s'} from the hand.\nGain {Value2} |Amulet|."
+    UpgradedDescription: "Exile up to {Value1} card{Value1:plural one='' other='s'} from the hand, draw and discard pile.\nGain {Value2} |Amulet|."
+    FlavorText: "A fairy's purity is unlike the Moon's."
+
+FairyGearSolid:
+    Name: "Fairy Gear Solid"
+    Description: "Draw {Value1} card{Value1:plural one='' other='s'}. If {PlayerName} has |Weak|, draw another.\nIf {PlayerName} has |Vulnerable|, gain {Value2} |Graze|."
+    FlavorText: "Hiding under a box is better than hiding under the floorboards."
+
+HellFairy:
+    Name: "Hell Fairy"
+    Description: "{FriendS}|Lunacy|: Transform into |Lunatic Hell Fairy|."
+    ExtraDescription1: "{FriendP}Deal {Damage} damage to the enemy with the most life {Value2} time{Value2:plural one='' other='s'}."
+    ExtraDescription2: "{FriendU}Gain {Value1} |Firepower|."
+    FlavorText: "Ironically, some hell fairies are not associated with fire."
+
+LunaticHellFairy:
+    Name: "Lunatic Hell Fairy"
+    Description: "{FriendP}Deal {Damage} damage to a random enemy {Value2} time{Value2:plural one='' other='s'}."
+    ExtraDescription1: "{FriendA}Deal {activeDmg} damage to a random enemy {Value5} time{Value2:plural one='' other='s'}.\nFor every {Value7} unblocked instances of damage, lose {Value6} |Firepower|."
+    FlavorText: "Hell Fairy has been driven to lunacy!"
+
+QuickPrick:
+    Name: "Quick Prick"
+    Description: "Deal {Damage} damage {Value1} times.\nIf the enemy has |Vulnerable|, deal that damage an additional time."
+    FlavorText: "Blue's Clues? Never heard of it."
+
+ManicBurst:
+    Name: "Manic Burst"
+    Description: "Apply {Value1} |Mania| to each enemy."
+    FlavorText: "I'd rather die than let you debuff me!"
+
+FlamesOfMania:
+    Name: "Flames of Mania"
+    Description: "Gain |Manic Flame|."
+    FlavorText: "We put |Mania| in your |Mania|!"
+
+PurestFairyEssence:
+    Name: "Essence of the Purest Fairy"
+    Description: "Gain {Value1} |Purify|.\nGain {Block} |Block|.\nUntil the start of next turn, apply {Value2} |Poison| and {Value3} |Lock On| to the next enemy that attacks {PlayerName}."
+    FlavorText: "If the Moon can't handle her essence, what hope do you have?"
+    
+ResidualImpurity:
+    Name: "Residual Impurity"
+    Description: "Deal {Damage} damage.\nApply |Poison| equal to the unblocked amount of damage dealt.\nWhen afflicted with a debuff, return {SelfName} from the discard pile to the hand."
+    FlavorText: "The capital was left defenseless to the plague. Of fairies."
+
+TorchPureFlame:
+    Name: "The Torch's Pure Flame"
+    Description: "Gain {Value1} |Permanent Purify|.\nWhenever you deal damage, apply {Value2} |Poison| and |Lock On|."
+    FlavorText: "May the light of her torch guide the impure to Hell."
+
+InnerStrength:
+    Name: "Inner Strength"
+    Description: "Gain {Value1} |Firepower|.\nFor each of the following effects {PlayerName} has, gain {Value2} additional |Firepower|:\n|Weak|, |Vulnerable|, |Lock On|, |Purify|."
+    FlavorText: "What doesn't kill you proves you're unkillable."
+
+HiddenApollo:
+    Name: "Hidden Apollo"
+    Description: "|Exile| your hand.\nFor each card exiled, draw that many cards next turn and gain that much |Temporary Firepower|."
+    FlavorText: "The dark side of the moon houses many gifts of fantasy."
+
+FairyParkour:
+    Name: "Fairy Parkour"
+    Description: "Draw {Value1} cards.\nIf you have less than {Value2} cards in hand, gain {Value3} |Graze|."
+    FlavorText: "Using wings in parkour is cheating."
+
+LunaticEmbrace:
+    Name: "Lunatic Embrace"
+    Description: "At the start of {PlayerName}'s turn, draw {Value1} card{Value1:plural one='' other='s'}. It |temporarily costs| {Mana}."
+    FlavorText: "Insanity is no excuse for bad manners."
+
+HellsInferno:
+    Name: "Hell's Inferno"
+    Description: "Add {Value1} {Value1:plural one='|Flame|' other='|Flames|'} to hand."
+    UpgradedDescription: "Add {Value1} {Value1:plural one='|Flame|' other='|Flames|'} to hand.\nDraw {Value2} card{Value2:plural one='' other='s'}."
+    FlavorText: "Hell's heat is no sweat for this fairy!"
+
+MonsterClown:
+    Name: "Monster Clown"
+    Description: "Deal {Damage} damage.\nApply {Value1} |Weak|, |Vulnerable|, |Lock On|, |Poison|, |Temporary Firepower Down|."
+    UpgradedDescription: "Deal {Damage} damage {Value2} times.\nApply {Value1} |Weak|, |Vulnerable|, |Lock On|, |Poison|, |Temporary Firepower Down|."
+    FlavorText: "Clowns are so feared, even humans run from them."
+
+GoddessDivineProtection:
+    Name: "Goddess's Divine Protection"
+    Description: "Gain {Block} |Block|\nGain {Value1} |Amulet|.\n|Block| is not lost at the start of your next turn."
+    FlavorText: "I've bestowed these gifts upon my servants."
+
+AsteroidLanding:
+    Name: "Asteroid Landing"
+    Description: "|Exile| up to {Value2} card{Value2:plural one='' other='s'} from hand.\nDeal {Damage} damage.\nGain {Value1} |Vulnerable|."
+    FlavorText: "What killed the dinosaurs? Me!!!"
+
+HakureiMartialArts:
+    Name: "Hakurei's Martial Arts"
+    Description: "Deal {Damage} damage.\nIf {PlayerName} has |Temporary Firepower|, gain {Block} |Block|."
+    FlavorText: "Watching the shrine maiden teaches you humility and brutality."
+
+StareIntoTheFlame:
+    Name: "Stare Into the Flame"
+    Description: "Apply {Value1} |Mania|.\nApply {Value2} |Lock On|."
+    FlavorText: "Delightful insanity!"
+
+SanityIsOverrated:
+    Name: "Sanity is Overrated"
+    Description: "Apply {Value1} |Mania| to each enemy.\nGain {Value3} |Graze| and {Value2} |Static Charge|."
+    FlavorText: "Our time is ticking away..."
+
+HellsCalling:
+    Name: "Hell's Calling"
+    Description: "Apply {Value1} |Mania|.\nGain {Block} |Block|."
+    FlavorText: "The flames echo in the night."
+
+EnterTheColosseum:
+    Name: "Enter the Colosseum"
+    Description: "Gain {Value2} |Temporary Firepower| and {Value3} |Lock On|.\nApply {Value1} |Mania| and {Value4} |Lock On|"
+    FlavorText: "This tense atmosphere is befitting of Hell!"
+
+MindBreak:
+    Name: "Mind Break"
+    Description: "Deal {Damage} damage.\nApply {Value1} |Mania| and {Value2} |Temporary Firepower down|."
+    FlavorText: "Drown in your sorrows!"
+
+SenseAggression:
+    Name: "Sense Aggression"
+    Description: "Draw {Value1} card{Value1:plural one='' other='s'}.\nIf an enemy intends to attack, gain {Block} |Block|."
+    FlavorText: "My senses are tingling..."
+
+Bloodlust:
+    Name: "Bloodlust"
+    Description: "Apply {Value3} |Vulnerable|.\nGain {Value4} |Vulnerable|.\nDraw {Value1} card{Value1:plural one='' other='s'}.\nIf an enemy intends to attack, gain {Value2} |Temporary Firepower|."
+    FlavorText: "It's time to let'er rip!"
+
+ContinuousWarfare:
+    Name: "Continuous Warfare"
+    Description: "Deal {Damage} damage.\nApply {Value1} |Lock On|.\nGain {Value2} |Firepower|.\nIf an enemy intends to attack, shuffle a {SelfName} into the discard pile."
+    FlavorText: "From paper soldiers, to bodies on beach."
+
+HitAndRun:
+    Name: "Hit and Run"
+    Description: "Deal {Damage} damage.\nIf an enemy intends to attack, gain {Value1} |Graze|."
+    FlavorText: "It's the fairy's code to pull pranks and flee."
+
+WhatDoesntKillYou:
+    Name: "What Doesn't Kill You"
+    Description: "Whenever {PlayerName} is afflicted with a debuff, draw {Value1} card{Value1:plural one='' other='s'}."
+    FlavorText: "Technically nothing can kill a fairy."
+
+GreaterFairyEnergy:
+    Name: "Greater Fairy Energy"
+    Description: "At the end of your turn, add an |Occult| to the discard pile. It has |Replenish|."
+    UpgradedDescription: "At the end of your turn, add a |Rainbow| to the discard pile. It has |Replenish|."
+    FlavorText: "This fairy has some real big energy."
+
+Terrorize:
+    Name: "Terrorize"
+    Description: "Lose {Value1} life and apply {Value2} |Vulnerable| to each enemy.\nAt the start of {PlayerName}'s turn, repeat this effect."
+    FlavorText: "What do you mean a second tea ship has struck the harbor?"
+
+Mockery:
+    Name: "Mockery"
+    Description: "Gain {Value1} |Lock On|.\nDraw {Value2} cards. They |temporarily cost| {Mana} less."
+    FlavorText: "Grr... I'm not like that ice fairy!"
+
+StarAndStripe:
+    Name: "Star and Stripe"
+    Description: "Deal {Damage} damage to each enemy {Value1} time{Value1:plural one='' other='s'}.\nIf this card is |Exiled|, lose {Value2} life."
+    FlavorText: "Just imagine the stripes among the stars and pretend they're there."
+
+PureLifeforce:
+    Name: "Pure Lifeforce"
+    Description: "Choose {Value1} card{Value1:plural one='' other='s'} in hand.\n{Value1:plural one='It costs' other='They cost'} {Mana} for the rest of combat, then {Value1:plural one='is' other='are'} discarded."
+    FlavorText: "The only weakness of the Moon are fairies... and astronauts."
+
+Adaptation:
+    Name: "Adaptation"
+    Description: "|Lunacy|: Transform into |Mutation|.\n|Choose|: Gain {Value1} |Lock On| and {Value2} |Graze|, or gain {Block} |Block| and {Value3} |Weak|."
+    ExtraDescription1: "Gain {Value1} |Lock On| and {Value2} |Graze|."
+    ExtraDescription2: "Gain {Block} |Block| and {Value3} |Weak|."
+    FlavorText: "Improvise, adapt, overcome."
+
+Mutation:
+    Name: "Mutation"
+    Description: "|Choose|: Deal {Damage} damage {Value2} time{Value2:plural one='' other='s'} and gain {Value1} |Lock On|, or gain {Block} |Block|, {Value3} |Weak| and {Value4} |Graze|."
+    ExtraDescription1: "Deal {Damage} damage {Value2} time{Value2:plural one='' other='s'} and gain {Value1} |Lock On|."
+    ExtraDescription2: "Gain {Block} |Block|, {Value3} |Weak| and {Value4} |Graze|."
+    FlavorText: "Hecatia says to stay away from radiation. I wonder why?"
+
+ForgottenMaid:
+    Name: "Forgotten Maid"
+    Description: "Choose {Value1} of {Value2} teammates to add to hand {Value3} times.\nChosen teammates enter hand summoned."
+    FlavorText: "It's amazing what connections you can make around the shrine."
+
+FairySwarm:
+    Name: "Fairy Swarm"
+    Description: "Deal {Damage} damage.\nAll teammates in hand gain {Value1} |Unity|."
+    FlavorText: "Together, they can match even a goddess.\n(Allegedly)"
+
+MoonFairy:
+    Name: "Moon Fairy"
+    Description: "{FriendS}|Lunacy|: Transform into |Lunatic Moon Fairy|."
+    ExtraDescription1: "{FriendP}Deal {Damage} damage to each enemy."
+    ExtraDescription2: "{FriendU}Immediately deal damage.\n{Value1} {Value1:plural one='random card in the hand gains' other='random cards in the hand gain'} |Pure|."
+    FlavorText: "The only fairy type native to the Moon before the invasion."
+
+LunaticMoonFairy:
+    Name: "Lunatic Moon Fairy"
+    Description: "{FriendS}{SelfName}'s damage increases by {Value1} per stack of |Permanent Purify| or per |Purified| card in play, excluding exiled."
+    ExtraDescription1: "{FriendP}Deal {newDmg} damage to each enemy."
+    ExtraDescription2: "{FriendA}|Purify| the hand. For every {Value2} cards |Purified| this way, gain {Value3} |Permanent Purify|."
+    FlavorText: "Moon Fairy has been driven to lunacy!"
+
+ButterflyBackup:
+    Name: "Butterfly Backup"
+    Description: "|Lunacy|: Transform into |Lunatic Support|.\nAdd {Value1} |Black Butterfl{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "|Lunacy|: Transform into |Lunatic Support|.\nAdd {Value1} |Black Butterfl{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    FlavorText: "Not as strong as -Fairies' Great Rampage- but some support is better than nothing." 
+
+LunaticSupport:
+    Name: "Lunatic Support"
+    Description: "Add {Value1} |Lunatic Black Butterfl{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "Add {Value1} |Lunatic Black Butterfl{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    FlavorText: "Lunacy should draw more fairies, not less, but the number is reduced for the player's sanity."
+
+HellsNature:
+    Name: "Hell's Nature"
+    Description: "|Lunacy|: Transform into |Hell's Lunacy|.\nAdd {Value1} |Hell Fair{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "|Lunacy|: Transform into |Hell's Lunacy|.\nAdd {Value1} |Hell Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    FlavorText: "Technically Hell is a type of nature."
+
+HellsLunacy:
+    Name: "Hell's Lunacy"
+    Description: "Add {Value1} |Lunatic Hell Fair{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "Add {Value1} |Lunatic Hell Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    FlavorText: "How can a Hell Fairy become lunatic?"
+
+LunarSupport:
+    Name: "Lunar Support"
+    Description: "|Lunacy|: Transform into |Moon of Lunacy|.\nAdd {Value1} |Moon Fair{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "|Lunacy|: Transform into |Moon of Lunacy|.\nAdd {Value1} |Moon Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    FlavorText: "Fairies used to live on the moon before the invasion."
+
+MoonOfLunacy:
+    Name: "Moon of Lunacy"
+    Description: "Add {Value1} |Lunatic Moon Fair{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "Add {Value1} |Lunatic Moon Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    FlavorText: "Even Moon Fairies have a chaotic side. Take back the moon!"
+
+NaturesDefense:
+    Name: "Nature's Defense"
+    Description: "|Lunacy|: Transform into |Solar Phalanx|.\nAdd {Value1} |Sunflower Fair{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "|Lunacy|: Transform into |Solar Phalanx|.\nAdd {Value1} |Sunflower Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    FlavorText: "Sponsored by Yuuka."
+
+SolarPhalanx:
+    Name: "Solar Phalanx"
+    Description: "Add {Value1} |Lunatic Sunflower Fair{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "Add {Value1} |Lunatic Sunflower Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    FlavorText: "Now THIS is what I call a defense!"
+
+SunflowerFairy:
+    Name: "Sunflower Fairy"
+    Description: "{FriendS}|Lunacy|: Transform into |Lunatic Sunflower Fairy|."
+    ExtraDescription1: "{FriendP}Gain {Block} |Block|."
+    ExtraDescription2: "{FriendU}Gain {Value1} |Spirit|."
+    FlavorText: "Cousins to the Black Butterfies."
+
+LunaticSunflowerFairy:
+    Name: "Lunatic Sunflower Fairy"
+    Description: "{FriendP}Gain {Block} |Block|."
+    ExtraDescription1: "{FriendA}Lose all |Barrier| and gain half that much |Block|."
+    FlavorText: "A Black Butterfly and Sunflower Fairy borrowed something from me. Hope it goes well."
+
+DreamsOfPlaytime:
+    Name: "Dreams of Playtime"
+    Description: "Add {Value1} |Dream World Fair{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "Add {Value1} |Dream World Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    FlavorText: "Wouldn't playing in your dreams get tiring?"
+
+NightmaresOfLunacy:
+    Name: "Nightmares of Lunacy"
+    Description: "Add {Value1} |Lunatic Dream World Fair{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "Add {Value1} |Lunatic Dream World Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    FlavorText: "No nightmare can scare me, Hecatia's favorite hell fairy!"
+
+DreamWorldFairy:
+    Name: "Dream World Fairy"
+    Description: "{FriendS}|Lunacy|: Transform into |Lunatic Dream World Fairy|."
+    ExtraDescription1: "{FriendP}|Dream| {Value1} card{Value1:plural one='' other='s'}."
+    ExtraDescription2: "{FriendU}Return up to {Value2} |Dream Card{Value2:plural one='' other='s'}| from the discard pile to the hand."
+    FlavorText: "Even the dreams of fairies are dangerous. This one escaped the Dream World. Who's dream is it?"
+
+LunaticDreamWorldFairy:
+    Name: "Lunatic Dream World Fairy"
+    Description: "{FriendP}|Dream| {Value1} card{Value1:plural one='' other='s'}."
+    ExtraDescription1: "{FriendA}|Dream| cards equal to half of the number of cards in the draw pile.\nIf there are more than {Value2} |Dream Card{Value2:plural one='' other='s'}|, add a |Nightmare| to the discard pile."
+    FlavorText: "Which fairy is this? It doesn't matter, she's still helping me!"
+
+MixedMadness:
+    Name: "Mixed Madness"
+    Description: "Gain |Lunatic Torch|.\nIf |Lunatic Torch| is active, draw {Value3} card{Value3:plural one='' other='s'}.\nApply {Value2} |Mania|."
+    FlavorText: "Mixing different kinds of flames is dangerous, says Miss Hecatia."

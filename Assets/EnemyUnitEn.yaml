@@ -1,0 +1,83 @@
+WhiteFairyBoss:
+    Name: "Sunflower Fairy"
+    Title: "Eager Fairy"
+    Move:
+    - "Twin Barrage"
+    - "Floret Fractal"
+    - "Focus Light"
+    - "Blinding Sunlight"
+    - "Borrowed Magic"
+    - "Unstable Magic"
+    - "Lunatic Blast"
+    - "Manic Wave"
+    - "Pure Quake"
+
+    Dialogue1A: "Let's play with this while we can!"
+    Dialogue2A: "Let's swap!"
+    Dialogue3A: "No, no, do it like this!"
+    Dialogue4A: "Seriously, are you even trying? Watch me!"
+    Dialogue5A: "Give me that!"
+
+    Dialogue1B: "Let's go!\nLet's go!"
+    Dialogue2B: "Sure, we can swap."
+    Dialogue3B: "Come on, I was just getting started!"
+    Dialogue4B: "I was doing just fine, look at her health!"
+    Dialogue5B: "Wait, I'm not done yet!"
+
+    Dialogue1C: "Let's see what this thing can really do!"
+
+    Dialogue1D: "Don't worry, I can handle this!"
+
+    Dialogue1E: "Purple is a cute color... eat it!"
+    Dialogue2E: "Red should be the most dangerous, right?"
+    Dialogue3E: "Bet you didn't expect this!"
+
+    Dialogue1F: "Let's go!\nI'm not scared!"
+    Dialogue2F: "I won't back down!"
+    Dialogue3F: "I'll win for both of us!"
+
+BlackFairyBoss:
+    Name: "Black Butterfly"
+    Title: "Shy Fairy"
+    Move:
+    - "Twin Barrage"
+    - "Floret Fractal"
+    - "Focus Light"
+    - "Sickly Residue"
+    - "Borrowed Magic"
+    - "Unstable Magic"
+    - "Lunatic Blast"
+    - "Manic Wave"
+    - "Pure Quake"
+
+    Dialogue1A: "Let's see what this does...!"
+    Dialogue2A: "Can I try?"
+    Dialogue3A: "Do you even know what you're doing...?"
+    Dialogue4A: "Let me show you how to win this!"
+    Dialogue5A: "Give me that!"
+
+    Dialogue1B: "Be careful..."
+    Dialogue2B: "You can't beat both of us!"
+    Dialogue3B: "I was doing my best..."
+    Dialogue4B: "I'm trying more than you are!"
+    Dialogue5B: "Wait, I'm not done yet!"
+
+    Dialogue1C: "Let's see what this thing can really do!"
+
+    Dialogue1D: "Guess I have to try harder..."
+
+    Dialogue1E: "I hope this works!"
+    Dialogue2E: "She said this one was the most dangerous!"
+    Dialogue3E: "This white flame looks weird..."
+
+    Dialogue1F: "Please, go away!"
+    Dialogue2F: "This torch is looking scary, but oh well!"
+    Dialogue3F: "I can't lose now!"
+
+ClownpieceBossSpawner:
+    Name: "Clownpiece Boss Spawner"
+    Title: "Debug Object"
+
+ClownpieceBossSelector:
+    Name: "Clownpiece Boss Selector"
+    Title: "Debug Object"

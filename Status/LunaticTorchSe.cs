@@ -1,27 +1,28 @@
-﻿using LBoL.Base;
+﻿using Clownpiece.Cards.CardsB;
+using Clownpiece.CustomClasses;
+using Clownpiece.Localization;
+using LBoL.Base;
+using LBoL.Base.Extensions;
 using LBoL.ConfigData;
+using LBoL.Core;
+using LBoL.Core.Battle;
+using LBoL.Core.Battle.BattleActions;
+using LBoL.Core.Cards;
+using LBoL.Core.StatusEffects;
+using LBoL.Core.Units;
+using LBoL.EntityLib.Cards.Enemy;
+using LBoL.EntityLib.StatusEffects.Enemy;
+using LBoL.Presentation.UI;
+using LBoL.Presentation.UI.Panels;
+using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
-using LBoLEntitySideloader;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using static Clownpiece.BepinexPlugin;
-using LBoL.Core.Battle.BattleActions;
-using LBoL.Core.Battle;
-using LBoL.Core.StatusEffects;
-using LBoL.Core;
-using LBoL.Core.Cards;
-using LBoL.Core.Units;
-using System.Linq;
-using LBoL.Base.Extensions;
-using LBoL.EntityLib.Cards.Enemy;
-using System;
-using Clownpiece.Cards.CardsB;
-using LBoL.EntityLib.StatusEffects.Enemy;
-using LBoL.Presentation.UI.Panels;
-using Clownpiece.CustomClasses;
-using LBoL.Presentation.UI;
 
 
 
@@ -37,9 +38,7 @@ namespace Clownpiece.Status
         [DontOverwrite]
         public override LocalizationOption LoadLocalization()
         {
-            var loc = new GlobalLocalization(embeddedSource);
-            loc.LocalizationFiles.AddLocaleFile(Locale.En, "StatusEffectEn.yaml");
-            return loc;
+            return ClownpieceLocalization.StatusEffectsBatchLoc.AddEntity(this);
         }
 
         [DontOverwrite]

@@ -1,0 +1,15 @@
+Clownpiece:
+    Default: "Clownpiece"
+    Short: "Clownpiece"
+
+ClownpieceBossSelector:
+    Default: "Clownpiece?"
+    Short: "Clownpiece?"
+
+WhiteFairyBoss:
+    Default: "Sunflower Fairy"
+    Short: "Sunflower Fairy"
+
+BlackFairyBoss:
+    Default: "Black Butterfly"
+    Short: "Black Butterfly"

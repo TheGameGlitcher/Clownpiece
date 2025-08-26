@@ -1,9 +1,14 @@
 ﻿using Clownpiece.Cards.Templates;
+using Clownpiece.CustomClasses;
+using Clownpiece.Localization;
+using Clownpiece.Status;
 using LBoL.Base;
 using LBoL.ConfigData;
-using LBoL.Core.Battle;
 using LBoL.Core;
+using LBoL.Core.Battle;
+using LBoL.Core.Battle.BattleActions;
 using LBoL.Core.Cards;
+using LBoL.Core.StatusEffects;
 using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
@@ -11,13 +16,9 @@ using LBoLEntitySideloader.Resource;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using LBoL.Core.Battle.BattleActions;
-using LBoL.Core.StatusEffects;
-using Clownpiece.Status;
 using Unity.IO.LowLevel.Unsafe;
-using Clownpiece.CustomClasses;
 
-namespace Clownpiece.Cards.CardsR
+namespace Clownpiece.Cards.CardsRBG
 {
     public sealed class ManiaCleansingDef : CardTemplate
     {
@@ -35,9 +36,7 @@ namespace Clownpiece.Cards.CardsR
 
         public override LocalizationOption LoadLocalization()
         {
-            var loc = new GlobalLocalization(BepinexPlugin.embeddedSource);
-            loc.LocalizationFiles.AddLocaleFile(Locale.En, "CardsEn.yaml");
-            return loc;
+            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()

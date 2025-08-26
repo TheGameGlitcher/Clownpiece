@@ -1,24 +1,25 @@
-﻿using LBoL.Base;
-using LBoL.Core;
+﻿using Clownpiece.CustomClasses;
+using Clownpiece.Localization;
+using Clownpiece.Status;
+using LBoL.Base;
 using LBoL.ConfigData;
+using LBoL.Core;
+using LBoL.Core.Battle;
+using LBoL.Core.Battle.BattleActions;
 using LBoL.Core.Cards;
+using LBoL.Core.StatusEffects;
+using LBoL.Core.Units;
+using LBoL.EntityLib.Cards.Character.Cirno.Friend;
+using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
-using LBoLEntitySideloader;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using LBoL.Core.Battle;
-using LBoL.Core.StatusEffects;
-using LBoL.Core.Units;
-using Clownpiece.Status;
-using LBoL.Core.Battle.BattleActions;
-using LBoL.EntityLib.Cards.Character.Cirno.Friend;
 using System.Runtime.CompilerServices;
-using Clownpiece.CustomClasses;
+using System.Text;
 
-namespace Clownpiece.Cards.CardsR
+namespace Clownpiece.Cards.CardsRB
 {
     public sealed class MoonQuakeDef : CardTemplate
     {
@@ -36,9 +37,7 @@ namespace Clownpiece.Cards.CardsR
 
         public override LocalizationOption LoadLocalization()
         {
-            var loc = new GlobalLocalization(BepinexPlugin.embeddedSource);
-            loc.LocalizationFiles.AddLocaleFile(Locale.En, "CardsEn.yaml");
-            return loc;
+            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()
@@ -139,10 +138,11 @@ namespace Clownpiece.Cards.CardsR
             {
                 if (enemyUnit.IsAlive)
                 {
-                    yield return new ApplyStatusEffectAction<Vulnerable>(enemyUnit, new int?(this.Value2), this.Value2, null, null, 0.1f, true);
+                    yield return new ApplyStatusEffectAction<Vulnerable>(enemyUnit, Value2, Value2, null, null, 0.1f, true);
                 }
             }
-            yield return this.DebuffAction<Vulnerable>(base.Battle.Player, 0, base.Value1, 0, 0, false, 0.1f);
+
+            yield return new ApplyStatusEffectAction<Vulnerable>(base.Battle.Player, Value1, Value1, null, null, 0.1f, true);
         }
     }
 }

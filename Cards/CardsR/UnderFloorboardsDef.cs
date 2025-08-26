@@ -1,28 +1,29 @@
+using Clownpiece.CustomClasses;
+using Clownpiece.Localization;
+using Clownpiece.Status;
 using LBoL.Base;
-using LBoL.Core;
 using LBoL.ConfigData;
+using LBoL.Core;
+using LBoL.Core.Battle;
+using LBoL.Core.Battle.BattleActions;
+using LBoL.Core.Battle.Interactions;
 using LBoL.Core.Cards;
+using LBoL.Core.Randoms;
+using LBoL.Core.StatusEffects;
+using LBoL.Core.Units;
+using LBoL.EntityLib.Cards.Character.Cirno.Friend;
+using LBoL.EntityLib.Cards.Character.Marisa;
+using LBoL.EntityLib.Cards.Character.Reimu;
+using LBoL.EntityLib.JadeBoxes;
+using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
-using LBoLEntitySideloader;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using LBoL.Core.Battle;
-using LBoL.Core.StatusEffects;
-using LBoL.Core.Units;
-using Clownpiece.Status;
-using LBoL.Core.Battle.BattleActions;
-using LBoL.EntityLib.Cards.Character.Cirno.Friend;
-using LBoL.EntityLib.Cards.Character.Reimu;
-using LBoL.Core.Randoms;
-using LBoL.EntityLib.Cards.Character.Marisa;
-using LBoL.Core.Battle.Interactions;
-using LBoL.EntityLib.JadeBoxes;
 using System.Security.Cryptography;
+using System.Text;
 using UnityEngine.InputSystem.Controls;
-using Clownpiece.CustomClasses;
 
 namespace Clownpiece.Cards.CardsR
 {
@@ -42,9 +43,7 @@ namespace Clownpiece.Cards.CardsR
 
         public override LocalizationOption LoadLocalization()
         {
-            var loc = new GlobalLocalization(BepinexPlugin.embeddedSource);
-            loc.LocalizationFiles.AddLocaleFile(Locale.En, "CardsEn.yaml");
-            return loc;
+            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()

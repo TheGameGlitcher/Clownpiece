@@ -1,60 +1,61 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using Clownpiece.Cards.Templates;
+using Clownpiece.CustomClasses;
+using Clownpiece.Localization;
+using Clownpiece.Status;
+using Cysharp.Threading.Tasks;
 using HarmonyLib;
 using LBoL.Base;
+using LBoL.Base.Extensions;
 using LBoL.ConfigData;
 using LBoL.Core;
 using LBoL.Core.Battle;
 using LBoL.Core.Battle.BattleActions;
 using LBoL.Core.Cards;
+using LBoL.Core.Intentions;
 using LBoL.Core.StatusEffects;
 using LBoL.Core.Units;
-using LBoL.Core.Intentions;
+using LBoL.EntityLib.Cards.Enemy;
 using LBoL.EntityLib.EnemyUnits.Character;
+using LBoL.EntityLib.EnemyUnits.Normal;
 using LBoL.EntityLib.Exhibits.Shining;
 using LBoL.EntityLib.JadeBoxes;
+using LBoL.EntityLib.StatusEffects.Basic;
+using LBoL.EntityLib.StatusEffects.Enemy;
 using LBoL.EntityLib.StatusEffects.Others;
+using LBoL.Presentation;
 using LBoL.Presentation.UI.Panels;
+using LBoL.Presentation.UI.Widgets;
 using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.ReflectionHelpers;
 using LBoLEntitySideloader.Resource;
 using LBoLEntitySideloader.Utils;
+using Spine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
-using System.Text;
-using UnityEngine;
-using LBoL.Base.Extensions;
-using UnityEngine.UI;
-using LBoL.EntityLib.EnemyUnits.Normal;
-using LBoL.EntityLib.StatusEffects.Basic;
-using Spine;
-using LBoL.EntityLib.StatusEffects.Enemy;
-using Clownpiece.Cards.Templates;
-using static Clownpiece.BepinexPlugin;
-using Clownpiece.Status;
 using System.Security.Cryptography;
-using Clownpiece.CustomClasses;
-using static Clownpiece.Boss.BlackFairyBossDef;
+using System.Text;
 using Unity.IO.LowLevel.Unsafe;
-using LBoL.Presentation.UI.Widgets;
-using LBoL.Presentation;
-using LBoL.EntityLib.Cards.Enemy;
+using UnityEngine;
+using UnityEngine.UI;
+using static Clownpiece.BepinexPlugin;
+using static Clownpiece.Boss.BlackFairyBossDef;
 
 namespace Clownpiece.Boss
 {
     public sealed class WhiteFairyBossDef : EnemyUnitTemplate
     {
         public override IdContainer GetId() => nameof(WhiteFairyBoss);
+
         public override LocalizationOption LoadLocalization()
         {
-            var loc = new GlobalLocalization(embeddedSource);
-            loc.LocalizationFiles.AddLocaleFile(Locale.En, "EnemyUnitEn.yaml");
-            return loc;
+            return ClownpieceLocalization.EnemiesUnitBatchLoc.AddEntity(this);
         }
+
         public override EnemyUnitConfig MakeConfig()
         {
             var config = new EnemyUnitConfig(
@@ -112,9 +113,7 @@ namespace Clownpiece.Boss
 
             public override LocalizationOption LoadLocalization()
             {
-                var loc = new GlobalLocalization(embeddedSource);
-                loc.LocalizationFiles.AddLocaleFile(Locale.En, "UnitModelEn.yaml");
-                return loc;
+                return ClownpieceLocalization.UnitModelBatchLoc.AddEntity(this);
             }
 
             public override ModelOption LoadModelOptions()
@@ -183,6 +182,30 @@ namespace Clownpiece.Boss
                 Spell
             }
 
+            public string Dialogue1A => LocalizeProperty("Dialogue1A", true, true);
+            public string Dialogue2A => LocalizeProperty("Dialogue2A", true, true);
+            public string Dialogue3A => LocalizeProperty("Dialogue3A", true, true);
+            public string Dialogue4A => LocalizeProperty("Dialogue4A", true, true);
+            public string Dialogue5A => LocalizeProperty("Dialogue5A", true, true);
+
+            public string Dialogue1B => LocalizeProperty("Dialogue1B", true, true);
+            public string Dialogue2B => LocalizeProperty("Dialogue2B", true, true);
+            public string Dialogue3B => LocalizeProperty("Dialogue3B", true, true);
+            public string Dialogue4B => LocalizeProperty("Dialogue4B", true, true);
+            public string Dialogue5B => LocalizeProperty("Dialogue5B", true, true);
+
+            public string Dialogue1C => LocalizeProperty("Dialogue1C", true, true);
+
+            public string Dialogue1D => LocalizeProperty("Dialogue1D", true, true);
+
+            public string Dialogue1E => LocalizeProperty("Dialogue1E", true, true);
+            public string Dialogue2E => LocalizeProperty("Dialogue2E", true, true);
+            public string Dialogue3E => LocalizeProperty("Dialogue3E", true, true);
+
+            public string Dialogue1F => LocalizeProperty("Dialogue1F", true, true);
+            public string Dialogue2F => LocalizeProperty("Dialogue2F", true, true);
+            public string Dialogue3F => LocalizeProperty("Dialogue3F", true, true);
+
             MoveType NextMove;
             MoveType TempMove;
             EnemyUnit FairyAlly;
@@ -228,22 +251,23 @@ namespace Clownpiece.Boss
                     switch (SpellCounter)
                     {
                         case 0:
-                            yield return PerformAction.Chat(this, "Let's play with this while we can!", 1.50f, 0f, 0f);
+                            yield return PerformAction.Chat(this, Dialogue1A, 1.50f, 0f, 0f);
                             break;
 
                         case 1:
-                            yield return PerformAction.Chat(this, "Let's swap!", 1.50f, 0f, 1.50f);
+                            yield return PerformAction.Chat(this, Dialogue2A, 1.50f, 0f, 1.50f);
                             break;
                             
                         case 2:
-                            yield return PerformAction.Chat(this, "No, no, do it like this!", 1.50f, 0f, 1.50f);
+                            yield return PerformAction.Chat(this, Dialogue3A, 1.50f, 0f, 1.50f);
                             break;
 
                         case 3:
-                            yield return PerformAction.Chat(this, "Seriously, are you even trying? Watch me!", 1.50f, 0f, 1.50f);
+                            yield return PerformAction.Chat(this, Dialogue4A, 1.50f, 0f, 1.50f);
                             break;
+
                         default:
-                            yield return PerformAction.Chat(this, "Give me that!", 1.50f, 0f, 1.50f);
+                            yield return PerformAction.Chat(this, Dialogue5A, 1.50f, 0f, 1.50f);
                             break;
                     }
                 }
@@ -253,35 +277,35 @@ namespace Clownpiece.Boss
                     switch (SpellCounter)
                     {
                         case 0:
-                            yield return PerformAction.Chat(this, "Let's go!\nLet's go!", 1.50f, 0f, 0.4f);
+                            yield return PerformAction.Chat(this, Dialogue1B, 1.50f, 0f, 0.4f);
                             break;
 
                         case 1:
-                            yield return PerformAction.Chat(this, "Sure, we can swap.", 1.50f, 0f, 0.4f);
+                            yield return PerformAction.Chat(this, Dialogue2B, 1.50f, 0f, 0.4f);
                             break;
 
                         case 2:
-                            yield return PerformAction.Chat(this, "Come on, I was just getting started!", 1.50f, 0f, 0.4f);
+                            yield return PerformAction.Chat(this, Dialogue3B, 1.50f, 0f, 0.4f);
                             break;
 
                         case 3:
-                            yield return PerformAction.Chat(this, "I was doing just fine, look at her health!", 1.50f, 0f, 0.4f);
+                            yield return PerformAction.Chat(this, Dialogue4B, 1.50f, 0f, 0.4f);
                             break;
                         default:
-                            yield return PerformAction.Chat(this, "Wait, I'm not done yet!", 1.50f, 0f, 0.4f);
+                            yield return PerformAction.Chat(this, Dialogue5B, 1.50f, 0f, 0.4f);
                             break;
                     }
                 }
 
                 if (args.Effect is UnstableTorchBossSe)
-                    yield return PerformAction.Chat(this, "Let's see what this thing can really do!", 1.50f, 0f, 1.50f);
+                    yield return PerformAction.Chat(this, Dialogue1C, 1.50f, 0f, 1.50f);
             }
 
             private IEnumerable<BattleAction> OnEnemyDied(DieEventArgs args)
             {
                 if (args.Unit is BlackFairyBoss && this.IsAlive)
                 {
-                    yield return PerformAction.Chat(this, "Don't worry, I can handle this!", 1.50f, 0f, 1.50f);
+                    yield return PerformAction.Chat(this, Dialogue1D, 1.50f, 0f, 1.50f);
 
                     if (this.HasStatusEffect<LunaticTorchBossSe>())
                         yield return new RemoveStatusEffectAction(this.GetStatusEffect<LunaticTorchBossSe>());
@@ -326,13 +350,13 @@ namespace Clownpiece.Boss
                     case "冰封噩梦B":
                         if (IsUnstable)
                         {
-                            yield return PerformAction.Chat(this, "Let's go!\nI'm not scared!", 1.3f, 0, 1.3f);
+                            yield return PerformAction.Chat(this, Dialogue1F, 1.3f, 0, 1.3f);
                             yield return new DamageAction(this, base.Battle.Player, DamageInfo.Attack(Damage4 + SpellCounter * 2), gun);
                             yield return new AddCardsToDiscardAction(Library.CreateCards<LBoL.EntityLib.Cards.Enemy.Lunatic>(Count2, false));
                         }
                         else
                         {
-                            yield return PerformAction.Chat(this, "Purple is a cute color... eat it!", 1.3f, 0, 1.3f);
+                            yield return PerformAction.Chat(this, Dialogue1E, 1.3f, 0, 1.3f);
                             yield return new DamageAction(this, base.Battle.Player, DamageInfo.Attack(Damage4 + SpellCounter * 2), gun);
                             yield return new AddCardsToDiscardAction(Library.CreateCards<LBoL.EntityLib.Cards.Enemy.Lunatic>(Count1, false));
                         }
@@ -340,13 +364,13 @@ namespace Clownpiece.Boss
                     case "JunkoLunatic":
                         if (IsUnstable)
                         {
-                            yield return PerformAction.Chat(this, "I won't back down!", 1.3f, 0, 1.3f);
+                            yield return PerformAction.Chat(this, Dialogue2F, 1.3f, 0, 1.3f);
                             yield return new DamageAction(this, base.Battle.Player, DamageInfo.Attack(Damage4 + SpellCounter * 2), gun);
                             yield return new ApplyStatusEffectAction<ManiaBossSe>(base.Battle.Player, 1, 1, 1, null, 0.1f);
                         }
                         else
                         {
-                            yield return PerformAction.Chat(this, "Red should be the most dangerous, right?", 1.3f, 0, 1.3f);
+                            yield return PerformAction.Chat(this, Dialogue2E, 1.3f, 0, 1.3f);
                             yield return new DamageAction(this, base.Battle.Player, DamageInfo.Attack(Damage3 + SpellCounter * 2), gun);
                             yield return new ApplyStatusEffectAction<ManiaBossSe>(base.Battle.Player, 1, 1, 1, null, 0.1f);
                         }
@@ -354,13 +378,13 @@ namespace Clownpiece.Boss
                     case "Junko3B":
                         if (IsUnstable)
                         {
-                            yield return PerformAction.Chat(this, "I'll win for both of us!", 1.3f, 0, 1.3f);
+                            yield return PerformAction.Chat(this, Dialogue3F, 1.3f, 0, 1.3f);
                             yield return new DamageAction(this, base.Battle.Player, DamageInfo.Attack(Damage4 + SpellCounter * 2), gun);
                             yield return new ApplyStatusEffectAction<TurnStartPurify>(base.Battle.Player, 3, 3, 3, null, 0.1f);
                         }
                         else
                         {
-                            yield return PerformAction.Chat(this, "Bet you didn't expect this!", 1.3f, 0, 1.3f);
+                            yield return PerformAction.Chat(this, Dialogue3E, 1.3f, 0, 1.3f);
                             yield return new DamageAction(this, base.Battle.Player, DamageInfo.Attack(Damage3 + SpellCounter * 2), gun);
                             yield return new ApplyStatusEffectAction<TurnStartPurify>(base.Battle.Player, 2, 2, 2, null, 0.1f);
                         }
@@ -392,6 +416,7 @@ namespace Clownpiece.Boss
                     }
 
                     this.RollRNG(0, 2);
+
                     switch (FairyRNG)
                     {
                         case 0:

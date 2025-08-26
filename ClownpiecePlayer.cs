@@ -1,19 +1,20 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using Clownpiece.Localization;
+using Cysharp.Threading.Tasks;
 using LBoL.Base;
-using LBoL.Core;
 using LBoL.ConfigData;
+using LBoL.Core;
 using LBoL.Core.Units;
+using LBoL.Presentation;
 using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
 using LBoLEntitySideloader.Utils;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using static Clownpiece.BepinexPlugin;
 using static Clownpiece.Boss.ClownpieceBossSpawnerDef;
-using System;
-using LBoL.Presentation;
 
 
 
@@ -29,9 +30,7 @@ namespace Clownpiece
 
         public override LocalizationOption LoadLocalization()
         {
-            var loc = new GlobalLocalization(embeddedSource);
-            loc.LocalizationFiles.AddLocaleFile(Locale.En, "PlayerUnitEn.yaml");
-            return loc;
+            return ClownpieceLocalization.PlayerUnitBatchLoc.AddEntity(this);
         }
 
 
@@ -90,8 +89,8 @@ namespace Clownpiece
             UltimateSkillB: "ClownpieceUltB",
             ExhibitA: "TorchOfLunacy",
             ExhibitB: "TorchOfMania",
-            DeckA: new List<string> { "Shoot", "Shoot", "Boundary", "Boundary", "TorchBullet", "TorchBullet", "LunarShield", "LunarShield", "LunarShield", "ButterflyBackup" },
-            DeckB: new List<string> { "Shoot", "Shoot", "Boundary", "Boundary", "LunarSlam", "LunarSlam", "FlameWall", "FlameWall", "FlameWall", "UndyingFlame" },
+            DeckA: new List<string> { "Shoot", "Shoot", "Boundary", "Boundary", "LunarSlam", "LunarSlam", "FlameWall", "FlameWall", "FlameWall", "ButterflyBackup" },
+            DeckB: new List<string> { "Shoot", "Shoot", "Boundary", "Boundary", "TorchBullet", "TorchBullet", "LunarShield", "LunarShield", "LunarShield", "UndyingFlame" },
             DifficultyA: 3,
             DifficultyB: 3
             );
@@ -116,9 +115,7 @@ namespace Clownpiece
 
         public override LocalizationOption LoadLocalization()
         {
-            var loc = new GlobalLocalization(embeddedSource);
-            loc.LocalizationFiles.AddLocaleFile(Locale.En, "UnitModelEn.yaml");
-            return loc;
+            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
         }
 
         public override ModelOption LoadModelOptions()

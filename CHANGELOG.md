@@ -1,3 +1,13 @@
+## Version 0.2.3
+- Fixed the self-debuff duration of Moon Quake and Chaotic Danmaku Dodging lasting an extra turn.
+- Flipped the starting basics of ClownpieceA and ClownpieceB to match the color ratio of vanilla characters.
+- Added Localization class to allow for other languages to be supported.
+- Moved yaml files from Resources to Assets to allow for third-party translations.
+- Reduced the cost of Lunatic Torch Ignition from 1(0) to 0.
+- Added an upgrade effect to Lunatic Torch Ignition in response to lowering the cost to the previous upgraded amount.
+- Added the Clownpiece elite combat music to the Act 1 boss.
+- Changed the boss dialogue to connect to a yaml, allowing the dialogue to be translated as well.
+
 ## Version 0.2.2
 - Fixed Chaotic Draw and Chaotic Graze setting their level to 1 before activating their effect.
 - Changed Monster Clown's card type from Skill to Attack, as intended.

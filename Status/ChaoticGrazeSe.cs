@@ -1,21 +1,22 @@
-﻿using LBoL.Base;
+﻿using Clownpiece.CustomClasses;
+using Clownpiece.Localization;
+using LBoL.Base;
 using LBoL.ConfigData;
-using LBoLEntitySideloader.Attributes;
-using LBoLEntitySideloader.Entities;
-using LBoLEntitySideloader.Resource;
-using LBoLEntitySideloader;
-using System.Collections.Generic;
-using UnityEngine;
-using static Clownpiece.BepinexPlugin;
-using LBoL.Core.Battle.BattleActions;
-using LBoL.Core.Battle;
-using LBoL.Core.StatusEffects;
-using Clownpiece.CustomClasses;
 using LBoL.Core;
-using static UnityEngine.UI.GridLayoutGroup;
+using LBoL.Core.Battle;
+using LBoL.Core.Battle.BattleActions;
+using LBoL.Core.StatusEffects;
 using LBoL.Core.Units;
 using LBoL.EntityLib.StatusEffects.Neutral.Black;
 using LBoL.EntityLib.StatusEffects.Others;
+using LBoLEntitySideloader;
+using LBoLEntitySideloader.Attributes;
+using LBoLEntitySideloader.Entities;
+using LBoLEntitySideloader.Resource;
+using System.Collections.Generic;
+using UnityEngine;
+using static Clownpiece.BepinexPlugin;
+using static UnityEngine.UI.GridLayoutGroup;
 
 namespace Clownpiece.Status
 {
@@ -29,9 +30,7 @@ namespace Clownpiece.Status
         [DontOverwrite]
         public override LocalizationOption LoadLocalization()
         {
-            var loc = new GlobalLocalization(embeddedSource);
-            loc.LocalizationFiles.AddLocaleFile(Locale.En, "StatusEffectEn.yaml");
-            return loc;
+            return ClownpieceLocalization.StatusEffectsBatchLoc.AddEntity(this);
         }
 
         [DontOverwrite]

@@ -1,26 +1,27 @@
 ﻿using Clownpiece.Cards.Templates;
+using Clownpiece.CustomClasses;
+using Clownpiece.Localization;
+using Clownpiece.Status;
+using Cysharp.Threading.Tasks.Triggers;
 using LBoL.Base;
+using LBoL.Base.Extensions;
 using LBoL.ConfigData;
-using LBoL.Core.Battle;
 using LBoL.Core;
+using LBoL.Core.Battle;
+using LBoL.Core.Battle.BattleActions;
+using LBoL.Core.Battle.Interactions;
 using LBoL.Core.Cards;
+using LBoL.Core.Intentions;
+using LBoL.Core.StatusEffects;
+using LBoL.Core.Units;
 using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using LBoL.Core.Battle.BattleActions;
-using LBoL.Core.StatusEffects;
-using Clownpiece.Status;
-using Clownpiece.CustomClasses;
-using Cysharp.Threading.Tasks.Triggers;
 using System.Linq;
-using LBoL.Base.Extensions;
-using LBoL.Core.Battle.Interactions;
-using LBoL.Core.Intentions;
-using LBoL.Core.Units;
+using System.Text;
 
 namespace Clownpiece.Cards.CardsR
 {
@@ -40,9 +41,7 @@ namespace Clownpiece.Cards.CardsR
 
         public override LocalizationOption LoadLocalization()
         {
-            var loc = new GlobalLocalization(BepinexPlugin.embeddedSource);
-            loc.LocalizationFiles.AddLocaleFile(Locale.En, "CardsEn.yaml");
-            return loc;
+            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()

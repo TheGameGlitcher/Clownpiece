@@ -1,51 +1,52 @@
+using Clownpiece.Cards.Templates;
+using Clownpiece.CustomClasses;
+using Clownpiece.Localization;
+using Clownpiece.Status;
 using Cysharp.Threading.Tasks;
 using HarmonyLib;
 using LBoL.Base;
+using LBoL.Base.Extensions;
 using LBoL.ConfigData;
 using LBoL.Core;
 using LBoL.Core.Battle;
 using LBoL.Core.Battle.BattleActions;
 using LBoL.Core.Cards;
+using LBoL.Core.Intentions;
 using LBoL.Core.StatusEffects;
 using LBoL.Core.Units;
-using LBoL.Core.Intentions;
 using LBoL.EntityLib.Cards.Enemy;
 using LBoL.EntityLib.EnemyUnits.Character;
+using LBoL.EntityLib.EnemyUnits.Normal;
+using LBoL.EntityLib.EnemyUnits.Normal.Yinyangyus;
 using LBoL.EntityLib.Exhibits.Shining;
 using LBoL.EntityLib.JadeBoxes;
+using LBoL.EntityLib.StatusEffects.Basic;
+using LBoL.EntityLib.StatusEffects.Enemy;
 using LBoL.EntityLib.StatusEffects.Others;
+using LBoL.Presentation;
 using LBoL.Presentation.UI.Panels;
+using LBoL.Presentation.Units;
 using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.ReflectionHelpers;
 using LBoLEntitySideloader.Resource;
 using LBoLEntitySideloader.Utils;
+using Spine;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
+using System.Security.Cryptography;
 using System.Text;
 using UnityEngine;
-using LBoL.Base.Extensions;
 using UnityEngine.UI;
-using LBoL.EntityLib.EnemyUnits.Normal;
-using LBoL.EntityLib.StatusEffects.Basic;
-using Spine;
-using LBoL.EntityLib.StatusEffects.Enemy;
-using Clownpiece.Cards.Templates;
 using static Clownpiece.BepinexPlugin;
-using Clownpiece.Status;
-using System.Security.Cryptography;
-using Clownpiece.CustomClasses;
-using LBoL.Presentation.Units;
-using LBoL.EntityLib.EnemyUnits.Normal.Yinyangyus;
-using static Clownpiece.Boss.WhiteFairyBossDef;
 using static Clownpiece.Boss.BlackFairyBossDef;
+using static Clownpiece.Boss.WhiteFairyBossDef;
 using static UnityEngine.UI.CanvasScaler;
-using LBoL.Presentation;
-using System.Collections;
 
 namespace Clownpiece.Boss
 {
@@ -53,12 +54,12 @@ namespace Clownpiece.Boss
     public sealed class ClownpieceBossSelectorDef : EnemyUnitTemplate
     {
         public override IdContainer GetId() => nameof(ClownpieceBossSelector);
+
         public override LocalizationOption LoadLocalization()
         {
-            var loc = new GlobalLocalization(embeddedSource);
-            loc.LocalizationFiles.AddLocaleFile(Locale.En, "EnemyUnitEn.yaml");
-            return loc;
+            return ClownpieceLocalization.EnemiesUnitBatchLoc.AddEntity(this);
         }
+
         public override EnemyUnitConfig MakeConfig()
         {
             var config = new EnemyUnitConfig(
@@ -116,9 +117,7 @@ namespace Clownpiece.Boss
 
             public override LocalizationOption LoadLocalization()
             {
-                var loc = new GlobalLocalization(embeddedSource);
-                loc.LocalizationFiles.AddLocaleFile(Locale.En, "UnitModelEn.yaml");
-                return loc;
+                return ClownpieceLocalization.UnitModelBatchLoc.AddEntity(this);
             }
 
             public override ModelOption LoadModelOptions()
