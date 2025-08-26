@@ -133,13 +133,23 @@ namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
             IsTransformed = true;
             TransformTo = typeof(BlackButterfly);
         }
+
         public DamageInfo activeDmg
         {
             get
             {
-                return DamageInfo.Attack(Value1, false);
+                if (Battle != null)
+                {
+                    return DamageInfo.HpLose(Value1 + base.Battle.Player.TotalFirepower, false);
+                }
+
+                else
+                {
+                    return DamageInfo.HpLose(Value1, false);
+                }
             }
         }
+
         protected override void OnEnterBattle(BattleController battle)
         {
             ReactBattleEvent(Battle.EnemyDied, new EventSequencedReactor<DieEventArgs>(OnEnemyDied));
@@ -164,7 +174,7 @@ namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
                 EnemyUnit target = Battle.EnemyGroup.Alives.Sample(GameRun.BattleRng);
                 if (target != null)
                 {
-                    yield return new DamageAction(Battle.Player, Battle.EnemyGroup.Alives, DamageInfo.HpLose(Value1), "BlackFairy4");
+                    yield return new DamageAction(Battle.Player, Battle.EnemyGroup.Alives, activeDmg, "BlackFairy4");
                     yield return new DiscardAction(this);
                 }
             }

@@ -41,6 +41,7 @@ LunaticTime:
 BlackButterfly:
     Name: "Black Butterfly"
     Description: "{FriendS}|Lunacy|: Transform into |Lunatic Black Butterfly|."
+    UpgradedDescription: "{FriendS}|Lunacy|: Transform into |Lunatic Black Butterfly+|."
     ExtraDescription1: "{FriendP}Deal {Damage} damage to the enemy with the least life."
     ExtraDescription2: "{FriendU}Gain {Shield} |Barrier|."
     FlavorText: "Why wasn't she called Black Fairy?"
@@ -82,7 +83,7 @@ LunaticTorchIgnition:
 StatueOfLunacy:
     Name: "Statue of Lunacy"
     Description: "|Lunacy|: Tranform into |Fireworks of Lunacy|.\nGain {Block} |Block| and {Value1} |Reflection|.\nDiscard up to {Value2} card{Value2:plural one='' other='s'}. Gain {Block} |Block| and {Value1} |Reflection| for each card discarded."
-    UpgradedDescription: "|Lunacy|: Tranform into |Fireworks of Lunacy|.\nGain {Shield} |Barrier| and {Value1} |Reflection|.\nDiscard up to {Value2} card{Value2:plural one='' other='s'}. Gain {Shield} |Barrier| and {Value1} |Reflection| for each card discarded."
+    UpgradedDescription: "|Lunacy|: Tranform into |Fireworks of Lunacy+|.\nGain {Shield} |Barrier| and {Value1} |Reflection|.\nDiscard up to {Value2} card{Value2:plural one='' other='s'}. Gain {Shield} |Barrier| and {Value1} |Reflection| for each card discarded."
     FlavorText: "The statue stands tall to all who threaten it."
 
 FireworksOfLunacy:
@@ -105,6 +106,7 @@ GoddessHitFairy:
 GracefulFairyDodging:
     Name: "Graceful Fairy Dodging"
     Description: "|Lunacy|: Transform into |Chaotic Danmaku Dodging|\nGain {Value1} |Graze|.\nDraw {Value2} card{Value2:plural one='' other='s'}.\nGain {Value3} |Reflection|."
+    UpgradedDescription: "|Lunacy|: Transform into |Chaotic Danmaku Dodging+|\nGain {Value1} |Graze|.\nDraw {Value2} card{Value2:plural one='' other='s'}.\nGain {Value3} |Reflection|."
     FlavorText: "Fairies tend to float where ever the wind takes them."
 
 ChaoticDanmakuDodging:
@@ -174,6 +176,7 @@ FairyGearSolid:
 HellFairy:
     Name: "Hell Fairy"
     Description: "{FriendS}|Lunacy|: Transform into |Lunatic Hell Fairy|."
+    UpgradedDescription: "{FriendS}|Lunacy|: Transform into |Lunatic Hell Fairy+|."
     ExtraDescription1: "{FriendP}Deal {Damage} damage to the enemy with the most life {Value2} time{Value2:plural one='' other='s'}."
     ExtraDescription2: "{FriendU}Gain {Value1} |Firepower|."
     FlavorText: "Ironically, some hell fairies are not associated with fire."
@@ -340,6 +343,7 @@ PureLifeforce:
 Adaptation:
     Name: "Adaptation"
     Description: "|Lunacy|: Transform into |Mutation|.\n|Choose|: Gain {Value1} |Lock On| and {Value2} |Graze|, or gain {Block} |Block| and {Value3} |Weak|."
+    UpgradedDescription: "|Lunacy|: Transform into |Mutation+|.\n|Choose|: Gain {Value1} |Lock On| and {Value2} |Graze|, or gain {Block} |Block| and {Value3} |Weak|."
     ExtraDescription1: "Gain {Value1} |Lock On| and {Value2} |Graze|."
     ExtraDescription2: "Gain {Block} |Block| and {Value3} |Weak|."
     FlavorText: "Improvise, adapt, overcome."
@@ -364,6 +368,7 @@ FairySwarm:
 MoonFairy:
     Name: "Moon Fairy"
     Description: "{FriendS}|Lunacy|: Transform into |Lunatic Moon Fairy|."
+    UpgradedDescription: "{FriendS}|Lunacy|: Transform into |Lunatic Moon Fairy+|."
     ExtraDescription1: "{FriendP}Deal {Damage} damage to each enemy."
     ExtraDescription2: "{FriendU}Immediately deal damage.\n{Value1} {Value1:plural one='random card in the hand gains' other='random cards in the hand gain'} |Pure|."
     FlavorText: "The only fairy type native to the Moon before the invasion."
@@ -378,7 +383,7 @@ LunaticMoonFairy:
 ButterflyBackup:
     Name: "Butterfly Backup"
     Description: "|Lunacy|: Transform into |Lunatic Support|.\nAdd {Value1} |Black Butterfl{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
-    UpgradedDescription: "|Lunacy|: Transform into |Lunatic Support|.\nAdd {Value1} |Black Butterfl{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "|Lunacy|: Transform into |Lunatic Support+|.\nAdd {Value1} |Black Butterfl{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
     FlavorText: "Not as strong as -Fairies' Great Rampage- but some support is better than nothing." 
 
 LunaticSupport:
@@ -390,7 +395,7 @@ LunaticSupport:
 HellsNature:
     Name: "Hell's Nature"
     Description: "|Lunacy|: Transform into |Hell's Lunacy|.\nAdd {Value1} |Hell Fair{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
-    UpgradedDescription: "|Lunacy|: Transform into |Hell's Lunacy|.\nAdd {Value1} |Hell Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "|Lunacy|: Transform into |Hell's Lunacy+|.\nAdd {Value1} |Hell Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
     FlavorText: "Technically Hell is a type of nature."
 
 HellsLunacy:
@@ -402,7 +407,7 @@ HellsLunacy:
 LunarSupport:
     Name: "Lunar Support"
     Description: "|Lunacy|: Transform into |Moon of Lunacy|.\nAdd {Value1} |Moon Fair{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
-    UpgradedDescription: "|Lunacy|: Transform into |Moon of Lunacy|.\nAdd {Value1} |Moon Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "|Lunacy|: Transform into |Moon of Lunacy+|.\nAdd {Value1} |Moon Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
     FlavorText: "Fairies used to live on the moon before the invasion."
 
 MoonOfLunacy:
@@ -414,7 +419,7 @@ MoonOfLunacy:
 NaturesDefense:
     Name: "Nature's Defense"
     Description: "|Lunacy|: Transform into |Solar Phalanx|.\nAdd {Value1} |Sunflower Fair{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
-    UpgradedDescription: "|Lunacy|: Transform into |Solar Phalanx|.\nAdd {Value1} |Sunflower Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "|Lunacy|: Transform into |Solar Phalanx+|.\nAdd {Value1} |Sunflower Fair{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
     FlavorText: "Sponsored by Yuuka."
 
 SolarPhalanx:
@@ -426,6 +431,7 @@ SolarPhalanx:
 SunflowerFairy:
     Name: "Sunflower Fairy"
     Description: "{FriendS}|Lunacy|: Transform into |Lunatic Sunflower Fairy|."
+    UpgradedDescription: "{FriendS}|Lunacy|: Transform into |Lunatic Sunflower Fairy+|."
     ExtraDescription1: "{FriendP}Gain {Block} |Block|."
     ExtraDescription2: "{FriendU}Gain {Value1} |Spirit|."
     FlavorText: "Cousins to the Black Butterfies."
@@ -451,6 +457,7 @@ NightmaresOfLunacy:
 DreamWorldFairy:
     Name: "Dream World Fairy"
     Description: "{FriendS}|Lunacy|: Transform into |Lunatic Dream World Fairy|."
+    UpgradedDescription: "{FriendS}|Lunacy|: Transform into |Lunatic Dream World Fairy+|."
     ExtraDescription1: "{FriendP}|Dream| {Value1} card{Value1:plural one='' other='s'}."
     ExtraDescription2: "{FriendU}Return up to {Value2} |Dream Card{Value2:plural one='' other='s'}| from the discard pile to the hand."
     FlavorText: "Even the dreams of fairies are dangerous. This one escaped the Dream World. Who's dream is it?"

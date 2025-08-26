@@ -335,18 +335,6 @@
     </ItemGroup>
 
 
-    <ItemGroup>
-      <EmbeddedResource Include="Assets\CardsEn.yaml" />
-      <EmbeddedResource Include="Assets\EnemyUnitEn.yaml" />
-      <EmbeddedResource Include="Assets\ExhibitsEn.yaml" />
-      <EmbeddedResource Include="Assets\PlayerUnitEn.yaml" />
-      <EmbeddedResource Include="Assets\StatusEffectsEn.yaml" />
-      <EmbeddedResource Include="Assets\UltimateSkillsEn.yaml" />
-      <EmbeddedResource Include="Assets\UnitModelEn.yaml" />
-      <EmbeddedResource Include="Assets\UnitNameEn.yaml" />
-    </ItemGroup>
-
-
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
         <Exec Command="xcopy /F /Y /I &quot;$(TargetPath)&quot; &quot;$(ProjectDir)&quot;&#xD;&#xA;rmdir &quot;$(BepInExFolder)\scripts\cyaneko-$(AssemblyName)\&quot; /S /Q&#xD;&#xA;xcopy /F /Y /I &quot;$(TargetPath)&quot; &quot;$(BepInExFolder)\scripts\cyaneko-$(AssemblyName)\&quot;&#xD;&#xA;xcopy /F /Y /I /E &quot;$(ProjectDir)Assets\&quot; &quot;$(BepInExFolder)\scripts\cyaneko-$(AssemblyName)\&quot;&#xD;&#xA;powershell -command &quot;Compress-Archive -Path '$(TargetPath)', '$(ProjectDir)Assets\*', '$(ProjectDir)manifest.json', '$(ProjectDir)icon.png', '$(ProjectDir)README.md', '$(ProjectDir)CHANGELOG.md' -DestinationPath '$(ProjectDir)$(AssemblyName)-thunderstore.zip' -Force&quot;" />
     </Target>

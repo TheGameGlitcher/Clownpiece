@@ -1,3 +1,10 @@
+## Version 0.2.4
+- Fixed the upgrade effect of Lunatic Torch Ignition triggering when unupgraded.
+- Corrected the transform description of certain cards to show the upgraded lunacy card title.
+- Increased the damage of Hell Sign "Stellar Inferno" from 30 to 45.
+- Fixed Lunatic Black Butterfly's life loss not correctly scaling with Firepower.
+- Fixed Lunatic Black Butterfly's life loss not being considered life loss.
+
 ## Version 0.2.3
 - Fixed the self-debuff duration of Moon Quake and Chaotic Danmaku Dodging lasting an extra turn.
 - Flipped the starting basics of ClownpieceA and ClownpieceB to match the color ratio of vanilla characters.

@@ -135,11 +135,14 @@ namespace Clownpiece.Cards.CardsNone
 
             yield return new ApplyStatusEffectAction<LunaticTorchSe>(base.Battle.Player, Value1, null, null, null, 0f, true);
 
-            yield return new ApplyStatusEffectAction<Firepower>(base.Battle.Player, Value2, null, null, null, 0f, true);
-
-            foreach (EnemyUnit enemy in enemies)
+            if (IsUpgraded)
             {
-                yield return new ApplyStatusEffectAction<Firepower>(enemy, Value3, null, null, null, 0f, true);
+                yield return new ApplyStatusEffectAction<Firepower>(base.Battle.Player, Value2, null, null, null, 0f, true);
+
+                foreach (EnemyUnit enemy in enemies)
+                {
+                    yield return new ApplyStatusEffectAction<Firepower>(enemy, Value3, null, null, null, 0f, true);
+                }
             }
         }
     }

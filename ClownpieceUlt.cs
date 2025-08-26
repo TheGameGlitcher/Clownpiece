@@ -125,7 +125,7 @@ namespace Clownpiece
                 PowerPerLevel: 100,
                 MaxPowerLevel: 2,
                 RepeatableType: UsRepeatableType.OncePerTurn,
-                Damage: 30,
+                Damage: 45,
                 Value1: 0,
                 Value2: 0,
                 Keywords: Keyword.Accuracy,
