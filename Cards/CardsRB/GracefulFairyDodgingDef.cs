@@ -1,7 +1,7 @@
 using Clownpiece.Cards;
 using Clownpiece.Cards.Templates;
 using Clownpiece.CustomClasses;
-using Clownpiece.Localization;
+
 using LBoL.Base;
 using LBoL.Base.Extensions;
 using LBoL.ConfigData;
@@ -43,7 +43,7 @@ namespace Clownpiece.Cards.LunaticCards.NonTeammateCards
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
+            return BepinexPlugin.CardLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()
@@ -108,12 +108,13 @@ namespace Clownpiece.Cards.LunaticCards.NonTeammateCards
             RelativeKeyword: Keyword.None,
             UpgradedRelativeKeyword: Keyword.None,
 
-            RelativeEffects: new List<string>() { "DummyLunacySe", "Reflect" },
-            UpgradedRelativeEffects: new List<string>() { "DummyLunacySe" , "Reflect" },
+            RelativeEffects: new List<string>() { "DummyTorchLinkedSe", "Reflect" },
+            UpgradedRelativeEffects: new List<string>() { "DummyTorchLinkedSe" , "Reflect" },
             RelativeCards: new List<string>() { "ChaoticDanmakuDodging" },
             UpgradedRelativeCards: new List<string>() { "ChaoticDanmakuDodging+" },
 
             Owner: "Clownpiece",
+            Pack: "",
             ImageId: "",
             UpgradeImageId: "",
 
@@ -132,7 +133,7 @@ namespace Clownpiece.Cards.LunaticCards.NonTeammateCards
     {
         public GracefulFairyDodging() : base()
         {
-            CanTransform = true;
+            IsTorchLinked = true;
             TransformTo = typeof(ChaoticDanmakuDodging);
             Value3 = 6;
         }

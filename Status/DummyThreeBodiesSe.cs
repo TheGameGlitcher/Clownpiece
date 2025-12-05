@@ -1,5 +1,4 @@
 ﻿using Clownpiece.CustomClasses;
-using Clownpiece.Localization;
 using LBoL.Base;
 using LBoL.ConfigData;
 using LBoL.Core;
@@ -21,23 +20,23 @@ using static UnityEngine.UI.GridLayoutGroup;
 
 namespace Clownpiece.Status
 {
-    public sealed class DummyLunacySeDef : StatusEffectTemplate
+    public sealed class DummyThreeBodiesSeDef : StatusEffectTemplate
     {
         public override IdContainer GetId()
         {
-            return nameof(DummyLunacySe);
+            return nameof(DummyThreeBodiesSe);
         }
 
         [DontOverwrite]
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.StatusEffectsBatchLoc.AddEntity(this);
+            return BepinexPlugin.StatusEffectLoc.AddEntity(this);
         }
 
         [DontOverwrite]
         public override Sprite LoadSprite()
         {
-            return ResourceLoader.LoadSprite("DummyLunacySe.png", BepinexPlugin.embeddedSource);
+            return ResourceLoader.LoadSprite("DummyThreeBodiesSe.png", BepinexPlugin.embeddedSource);
         }
 
         public override StatusEffectConfig MakeConfig()
@@ -61,7 +60,7 @@ namespace Clownpiece.Status
                             LimitStackType: StackType.Max,
                             ShowPlusByLimit: false,
                             Keywords: Keyword.None,
-                            RelativeEffects: new List<string>() { "LunaticTorchSe" },
+                            RelativeEffects: new List<string>() { },
                             VFX: "Default",
                             VFXloop: "Default",
                             SFX: "Default"
@@ -70,28 +69,8 @@ namespace Clownpiece.Status
         }
     }
 
-    [EntityLogic(typeof(DummyLunacySeDef))]
-    public sealed class DummyLunacySe : ClownStatus
+    [EntityLogic(typeof(DummyThreeBodiesSeDef))]
+    public sealed class DummyThreeBodiesSe : ClownStatus
     {
-        public DummyLunacySe() : base()
-        {
-            Counter = 1;
-        }
-        protected override void OnAdded(Unit unit)
-        {
-            React(new ApplyStatusEffectAction<Firepower>(Owner, new int?(1), null, null, null, 0.2f, false));
-            base.ReactOwnerEvent<UnitEventArgs>(base.Battle.Player.TurnEnding, new EventSequencedReactor<UnitEventArgs>(this.OnPlayerTurnEnding));
-        }
-
-        private IEnumerable<BattleAction> OnPlayerTurnEnding(UnitEventArgs args)
-        {
-            if (base.Battle.BattleShouldEnd)
-                yield break;
-
-            if (Counter % 5 == 0)
-                yield return new ApplyStatusEffectAction<Firepower>(Owner, new int?(1), null, null, null, 0.2f, false);
-
-            Counter++;
-        }
     }
 }

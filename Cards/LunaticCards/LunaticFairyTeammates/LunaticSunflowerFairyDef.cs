@@ -1,27 +1,15 @@
-﻿using Clownpiece.Cards.CardsR;
-using Clownpiece.Cards.FairyTeammates;
-using Clownpiece.Cards.Templates;
+﻿using Clownpiece.Cards.FairyTeammates;
 using Clownpiece.CustomClasses;
-using Clownpiece.Localization;
-using Clownpiece.Status;
 using LBoL.Base;
-using LBoL.Base.Extensions;
 using LBoL.ConfigData;
 using LBoL.Core;
 using LBoL.Core.Battle;
 using LBoL.Core.Battle.BattleActions;
-using LBoL.Core.Battle.Interactions;
-using LBoL.Core.Cards;
-using LBoL.Core.StatusEffects;
-using LBoL.Core.Units;
-using LBoL.EntityLib.Cards.Enemy;
 using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
 {
@@ -41,7 +29,7 @@ namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
+            return BepinexPlugin.CardLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()
@@ -106,12 +94,13 @@ namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
             RelativeKeyword: Keyword.Expel,
             UpgradedRelativeKeyword: Keyword.Expel,
 
-            RelativeEffects: new List<string>() { },
-            UpgradedRelativeEffects: new List<string>() { },
+            RelativeEffects: new List<string>() { "DummyTorchLinkedFairySe" },
+            UpgradedRelativeEffects: new List<string>() { "DummyTorchLinkedFairySe" },
             RelativeCards: new List<string>() { "SunflowerFairy" },
             UpgradedRelativeCards: new List<string>() { "SunflowerFairy+" },
 
             Owner: "Clownpiece",
+            Pack: "",
             ImageId: "",
             UpgradeImageId: "",
 
@@ -130,16 +119,11 @@ namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
     {
         public LunaticSunflowerFairy() : base()
         {
+            IsTorchLinkedFairy = true;
             IsTransformed = true;
             TransformTo = typeof(SunflowerFairy);
         }
-        public DamageInfo activeDmg
-        {
-            get
-            {
-                return DamageInfo.Attack(Value1, false);
-            }
-        }
+ 
         protected override void OnEnterBattle(BattleController battle)
         {
             ReactBattleEvent(Battle.Player.TurnStarted, OnPlayerTurnStarting);

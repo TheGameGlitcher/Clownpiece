@@ -1,5 +1,5 @@
 ﻿using Clownpiece.Cards.CardsNone;
-using Clownpiece.Localization;
+
 using LBoL.Base;
 using LBoL.ConfigData;
 using LBoL.Core;
@@ -30,7 +30,7 @@ namespace Clownpiece.Exhibits
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.ExhibitsBatchLoc.AddEntity(this);
+            return BepinexPlugin.ExhibitLoc.AddEntity(this);
         }
 
         public override ExhibitSprites LoadSprite()

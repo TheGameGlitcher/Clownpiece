@@ -1,6 +1,6 @@
 using Clownpiece.Cards.Templates;
 using Clownpiece.CustomClasses;
-using Clownpiece.Localization;
+
 using Clownpiece.Status;
 using LBoL.Base;
 using LBoL.Base.Extensions;
@@ -39,7 +39,7 @@ namespace Clownpiece.Cards.Templates
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
+            return BepinexPlugin.CardLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()
@@ -104,12 +104,13 @@ namespace Clownpiece.Cards.Templates
             RelativeKeyword: Keyword.None,
             UpgradedRelativeKeyword: Keyword.None,
 
-            RelativeEffects: new List<string>() { "DummyLunacySe" },
-            UpgradedRelativeEffects: new List<string>() { "DummyLunacySe" },
+            RelativeEffects: new List<string>() { "DummyTorchLinkedSe" },
+            UpgradedRelativeEffects: new List<string>() { "DummyTorchLinkedSe" },
             RelativeCards: new List<string>() { "LunaticFriendTemplate" },
             UpgradedRelativeCards: new List<string>() { "LunaticFriendTemplate+" },
 
             Owner: "Clownpiece",
+            Pack: "",
             ImageId: "",
             UpgradeImageId: "",
 
@@ -128,7 +129,7 @@ namespace Clownpiece.Cards.Templates
     {
         public TemplateFriend() : base()
         {
-            CanTransform = true;
+            IsTorchLinked = true;
             TransformTo = typeof(LunaticFriendTemplate);
         }
 

@@ -22,7 +22,6 @@ using LBoL.EntityLib.StatusEffects;
 using Clownpiece.CustomClasses;
 using LBoL.Core.StatusEffects;
 using Clownpiece.Cards.LunaticCards.NonTeammateCards;
-using Clownpiece.Localization;
 
 namespace Clownpiece.Cards.CardsB
 {
@@ -42,7 +41,7 @@ namespace Clownpiece.Cards.CardsB
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
+            return BepinexPlugin.CardLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()
@@ -107,12 +106,13 @@ namespace Clownpiece.Cards.CardsB
             RelativeKeyword: Keyword.Block,
             UpgradedRelativeKeyword: Keyword.Block,
 
-            RelativeEffects: new List<string>() { "DummyLunacySe", "LockedOn", "Graze", "Weak" },
-            UpgradedRelativeEffects: new List<string>() { "DummyLunacySe", "LockedOn", "Graze", "Weak" },
+            RelativeEffects: new List<string>() { "DummyTorchLinkedSe", "LockedOn", "Graze", "Weak" },
+            UpgradedRelativeEffects: new List<string>() { "DummyTorchLinkedSe", "LockedOn", "Graze", "Weak" },
             RelativeCards: new List<string>() { "Mutation" },
             UpgradedRelativeCards: new List<string>() { "Mutation+" },
 
             Owner: "Clownpiece",
+            Pack: "",
             ImageId: "",
             UpgradeImageId: "",
 
@@ -131,7 +131,7 @@ namespace Clownpiece.Cards.CardsB
     {
         public Adaptation() : base()
         {
-            CanTransform = true;
+            IsTorchLinked = true;
             TransformTo = typeof(Mutation);
             Value3 = 2;
         }

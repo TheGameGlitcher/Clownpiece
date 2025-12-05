@@ -23,7 +23,6 @@ using LBoL.Core.StatusEffects;
 using Clownpiece.Status;
 using Clownpiece.CustomClasses;
 using LBoL.EntityLib.Cards.Character.Sakuya;
-using Clownpiece.Localization;
 
 namespace Clownpiece.Cards.CardsB
 {
@@ -43,7 +42,7 @@ namespace Clownpiece.Cards.CardsB
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
+            return BepinexPlugin.CardLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()
@@ -114,6 +113,7 @@ namespace Clownpiece.Cards.CardsB
             UpgradedRelativeCards: new List<string>() { },
 
             Owner: "Clownpiece",
+            Pack: "",
             ImageId: "",
             UpgradeImageId: "",
 

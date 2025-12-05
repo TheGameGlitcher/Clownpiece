@@ -1,0 +1,9 @@
+ClownpieceUltA:
+  Title: ""
+  Content: "루나틱 토치 릴레이"
+  Description: "모든 적에게 피해를 {Damage} 줍니다. |명중|.\n손에 있는 소환된 |동료|의 |f:패시브 능력|을 발동시킵니다."
+
+ClownpieceUltB:
+  Title: "지옥부"
+  Content: "항성의 대연소"
+  Description: "피해를 {Damage} 줍니다. |명중|."

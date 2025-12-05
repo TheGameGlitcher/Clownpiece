@@ -1,29 +1,17 @@
 using Clownpiece.Cards.FairyTeammates;
 using Clownpiece.Cards.LunaticCards.NonTeammateCards;
-using Clownpiece.Cards.Templates;
 using Clownpiece.CustomClasses;
-using Clownpiece.Localization;
 using LBoL.Base;
-using LBoL.Base.Extensions;
 using LBoL.ConfigData;
 using LBoL.Core;
 using LBoL.Core.Battle;
 using LBoL.Core.Battle.BattleActions;
-using LBoL.Core.Battle.Interactions;
-using LBoL.Core.Cards;
-using LBoL.EntityLib.Cards.Character.Cirno;
-using LBoL.EntityLib.Cards.Character.Reimu;
-using LBoL.EntityLib.Cards.Neutral.Blue;
-using LBoL.EntityLib.Cards.Neutral.TwoColor;
-using LBoL.EntityLib.StatusEffects.Basic;
 using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Clownpiece.Cards.CardsB
 {
@@ -43,7 +31,7 @@ namespace Clownpiece.Cards.CardsB
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
+            return BepinexPlugin.CardLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()
@@ -108,12 +96,13 @@ namespace Clownpiece.Cards.CardsB
             RelativeKeyword: Keyword.None,
             UpgradedRelativeKeyword: Keyword.None,
 
-            RelativeEffects: new List<string>() { "DummyLunacySe" },
-            UpgradedRelativeEffects: new List<string>() { "DummyLunacySe" },
+            RelativeEffects: new List<string>() { "DummyTorchLinkedSe" },
+            UpgradedRelativeEffects: new List<string>() { "DummyTorchLinkedSe" },
             RelativeCards: new List<string>() { "LunaticSupport", "BlackButterfly" },
             UpgradedRelativeCards: new List<string>() { "LunaticSupport+", "BlackButterfly+" },
 
             Owner: "Clownpiece",
+            Pack: "",
             ImageId: "",
             UpgradeImageId: "",
 
@@ -132,7 +121,7 @@ namespace Clownpiece.Cards.CardsB
     {
         public ButterflyBackup() : base()
         {
-            CanTransform = true;
+            IsTorchLinked = true;
             TransformTo = typeof(LunaticSupport);
         }
 

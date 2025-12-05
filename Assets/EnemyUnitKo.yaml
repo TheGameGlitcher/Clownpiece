@@ -1,0 +1,83 @@
+WhiteFairyBoss:
+  Name: "해바라기 요정"
+  Title: "쉬운 요정"
+  Move:
+    - "이중 탄막"
+    - "꽃 피는 사격"
+    - "집중 광선"
+    - "눈부신 햇빛"
+    - "빌린 마법"
+    - "불안정한 마법"
+    - "광기의 폭렬"
+    - "광란의 파동"
+    - "정화의 진동"
+
+  Dialogue1A: "지금 즐길 수 있을 때 놀아보자!"
+  Dialogue2A: "바꾸자!"
+  Dialogue3A: "아니, 아니, 이렇게 해야지!"
+  Dialogue4A: "진심이야? 그렇게 못하겠어? 잘 봐, 내가 보여줄게!"
+  Dialogue5A: "그거 내놔!"
+
+  Dialogue1B: "가자!\n가자!"
+  Dialogue2B: "좋아, 바꿔도 돼."
+  Dialogue3B: "뭐야, 이제 막 시작하려고 했는데!"
+  Dialogue4B: "난 잘하고 있었어, 저 체력 좀 봐!"
+  Dialogue5B: "잠깐, 아직 안 끝났어!"
+
+  Dialogue1C: "이게 진짜로 뭘 할 수 있는지 보여주마!"
+
+  Dialogue1D: "걱정 마, 내가 처리할게!"
+
+  Dialogue1E: "보라색은 귀여운 색이지... 먹어라!"
+  Dialogue2E: "빨강이 제일 위험한 거 맞지?"
+  Dialogue3E: "이건 예상 못했을걸!"
+
+  Dialogue1F: "가자!\n난 안 무서워!"
+  Dialogue2F: "물러서지 않아!"
+  Dialogue3F: "우리 둘 다를 위해 이길 거야!"
+
+BlackFairyBoss:
+  Name: "흑호접"
+  Title: "부끄러운 요정"
+  Move:
+    - "이중 탄막"
+    - "꽃 피는 사격"
+    - "집중 광선"
+    - "눈부신 햇빛"
+    - "빌린 마법"
+    - "불안정한 마법"
+    - "광기의 폭렬"
+    - "광란의 파동"
+    - "정화의 진동"
+
+  Dialogue1A: "이건 어떻게 되는 걸까...!"
+  Dialogue2A: "내가 해봐도 돼?"
+  Dialogue3A: "너 지금 제대로 하고 있는 거 맞아...?"
+  Dialogue4A: "이기는 방법 내가 보여줄게!"
+  Dialogue5A: "그거 내놔!"
+
+  Dialogue1B: "조심해..."
+  Dialogue2B: "우릴 둘 다 이길 순 없어!"
+  Dialogue3B: "난 최선을 다하고 있었는데..."
+  Dialogue4B: "적어도 너보단 열심히 하고 있어!"
+  Dialogue5B: "잠깐, 아직 안 끝났어!"
+
+  Dialogue1C: "이게 진짜로 뭘 할 수 있는지 보여주마!"
+
+  Dialogue1D: "좀 더 열심히 해야겠네..."
+
+  Dialogue1E: "제발 잘 됐으면 좋겠다!"
+  Dialogue2E: "이게 제일 위험하다던데!"
+  Dialogue3E: "이 흰 불꽃, 뭔가 이상해 보여..."
+
+  Dialogue1F: "제발, 저리 가!"
+  Dialogue2F: "이 횃불 좀 무서워 보이는데, 뭐 어때!"
+  Dialogue3F: "이젠 절대 질 수 없어!"
+
+ClownpieceBossSpawner:
+  Name: "클라운피스 보스 소환기"
+  Title: "디버그 오브젝트"
+
+ClownpieceBossSelector:
+  Name: "클라운피스 보스 선택기"
+  Title: "디버그 오브젝트"

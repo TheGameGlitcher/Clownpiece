@@ -40,17 +40,16 @@ LunaticTime:
 
 BlackButterfly:
     Name: "Black Butterfly"
-    Description: "{FriendS}|Lunacy|: Transform into |Lunatic Black Butterfly|."
-    UpgradedDescription: "{FriendS}|Lunacy|: Transform into |Lunatic Black Butterfly+|."
-    ExtraDescription1: "{FriendP}Deal {Damage} damage to the enemy with the least life."
-    ExtraDescription2: "{FriendU}Gain {Shield} |Barrier|."
+    Description: "{FriendP}Deal {Damage} damage to the enemy with the least life."
+    ExtraDescription1: "{FriendU}Gain {Shield} |Barrier|."
     FlavorText: "Why wasn't she called Black Fairy?"
 
 LunaticBlackButterfly:
     Name: "Lunatic Black Butterfly"
     Description: "{FriendS}|Expel|: Lose {Value2} life and gain {Shield} |Barrier|."
-    ExtraDescription1: "{FriendP}Deal {Damage} damage to a random enemy."
-    ExtraDescription2: "{FriendA}All enemies lose {activeDmg} life."
+    ExtraDescription1: "{FriendP}Deal {Damage} damage to a random enemy |r:OR| All enemies lose {LifeLoss} life."
+    ExtraDescription2: "{FriendA}Trigger the effect of both |f:Passive Skills|."
+    DetailText: "|Expel| effect only triggers if the |a:Active Skill| is used."
     FlavorText: "Black Butterfly has been driven to lunacy!"
 
 ManiaCleansing:
@@ -175,16 +174,14 @@ FairyGearSolid:
 
 HellFairy:
     Name: "Hell Fairy"
-    Description: "{FriendS}|Lunacy|: Transform into |Lunatic Hell Fairy|."
-    UpgradedDescription: "{FriendS}|Lunacy|: Transform into |Lunatic Hell Fairy+|."
-    ExtraDescription1: "{FriendP}Deal {Damage} damage to the enemy with the most life {Value2} time{Value2:plural one='' other='s'}."
-    ExtraDescription2: "{FriendU}Gain {Value1} |Firepower|."
+    Description: "{FriendP}Deal {Damage} damage to the enemy with the most life {Value2} time{Value2:plural one='' other='s'}."
+    ExtraDescription1: "{FriendU}Gain {Value1} |Firepower|."
     FlavorText: "Ironically, some hell fairies are not associated with fire."
 
 LunaticHellFairy:
     Name: "Lunatic Hell Fairy"
-    Description: "{FriendP}Deal {Damage} damage to a random enemy {Value2} time{Value2:plural one='' other='s'}."
-    ExtraDescription1: "{FriendA}Deal {activeDmg} damage to a random enemy {Value5} time{Value2:plural one='' other='s'}.\nFor every {Value7} unblocked instances of damage, lose {Value6} |Firepower|."
+    Description: "{FriendP}Deal {Damage} damage to a random enemy {Value1} time{Value2:plural one='' other='s'} |r:OR| Deal {Damage2} damage to a random enemy {UpgradedValue} time{UpgradedValue:plural one='' other='s'}."
+    ExtraDescription2: "{FriendA}Trigger the effect of both |f:Passive Skills|.\nFor every {Value5} unblocked instances of damage, lose {Value6} |Firepower|."
     FlavorText: "Hell Fairy has been driven to lunacy!"
 
 QuickPrick:
@@ -382,8 +379,8 @@ LunaticMoonFairy:
 
 ButterflyBackup:
     Name: "Butterfly Backup"
-    Description: "|Lunacy|: Transform into |Lunatic Support|.\nAdd {Value1} |Black Butterfl{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
-    UpgradedDescription: "|Lunacy|: Transform into |Lunatic Support+|.\nAdd {Value1} |Black Butterfl{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    Description: "Add {Value1} |Black Butterfl{Value1:plural one='y' other='ies'}| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
+    UpgradedDescription: "Add {Value1} |Black Butterfl{Value1:plural one='y' other='ies'}+| to the hand. {Value1:plural one='It enters' other='They enter'} the hand summoned."
     FlavorText: "Not as strong as -Fairies' Great Rampage- but some support is better than nothing." 
 
 LunaticSupport:

@@ -1,3 +1,19 @@
+## Version 0.2.5
+Well, this is the end. For now. As of this version, Clownpiece is now deprecated and I will be shifting my focus to other mods. I am leaving the mod up as an archive for my first mod attempt and to allow people to still play her. Maybe one day I'll come back as well.
+
+- Updated card configuration to work with Sideloader v0.9.7850.
+- Cleaned up some code under the hood.
+- Korean localization officially supported. 
+- Fixed a file naming issue between two statuses.
+- Lunacy keyword split into two different keywords; Torch-Linked and Torch-Linked Fairy.
+    - Torch-Linked will replace Lunacy on all non teammate cards, providing the same keyword 
+- Reworked Lunatic Black Butterfly and Lunatic Hell Fairy.
+    - Passive now is a 50/50 between two effects.
+    - Increased damage across the board.
+    - Active now triggers both passive outcomes alongisde another effect instead of being a unique attack.
+- Lunatic Support teammate number increased from 1(2) to 2(3).
+###### "The rest of the file is empty. Perhaps this entry is unfinished?"
+
 ## Version 0.2.4
 - Fixed the upgrade effect of Lunatic Torch Ignition triggering when unupgraded.
 - Corrected the transform description of certain cards to show the upgraded lunacy card title.

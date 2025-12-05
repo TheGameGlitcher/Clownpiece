@@ -1,28 +1,20 @@
-﻿using Clownpiece.Cards.CardsR;
-using Clownpiece.Cards.FairyTeammates;
-using Clownpiece.Cards.Templates;
+﻿using Clownpiece.Cards.FairyTeammates;
 using Clownpiece.CustomClasses;
-using Clownpiece.Localization;
-using Clownpiece.Status;
 using LBoL.Base;
 using LBoL.Base.Extensions;
 using LBoL.ConfigData;
 using LBoL.Core;
 using LBoL.Core.Battle;
 using LBoL.Core.Battle.BattleActions;
-using LBoL.Core.Battle.Interactions;
-using LBoL.Core.Cards;
 using LBoL.Core.StatusEffects;
 using LBoL.Core.Units;
-using LBoL.EntityLib.Cards.Character.Cirno.Friend;
-using LBoL.EntityLib.Cards.Character.Sakuya;
 using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using UnityEngine;
 
 namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
 {
@@ -42,7 +34,7 @@ namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
+            return BepinexPlugin.CardLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()
@@ -73,15 +65,15 @@ namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
             Kicker: null,
             UpgradedKicker: null,
             MoneyCost: null,
-            Damage: 4,
-            UpgradedDamage: 6,
+            Damage: 6,
+            UpgradedDamage: null,
             Block: null,
             UpgradedBlock: null,
             Shield: null,
             UpgradedShield: null,
-            Value1: 4,
-            UpgradedValue1: 6,
-            Value2: 2,
+            Value1: 3,
+            UpgradedValue1: 4,
+            Value2: 4,
             UpgradedValue2: null,
             Mana: null,
             UpgradedMana: null,
@@ -107,12 +99,13 @@ namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
             RelativeKeyword: Keyword.Expel,
             UpgradedRelativeKeyword: Keyword.Expel,
 
-            RelativeEffects: new List<string>() { "Firepower", "FirepowerNegative" },
-            UpgradedRelativeEffects: new List<string>() { "Firepower", "FirepowerNegative" },
+            RelativeEffects: new List<string>() { "DummyTorchLinkedFairySe", "Firepower", "FirepowerNegative" },
+            UpgradedRelativeEffects: new List<string>() { "DummyTorchLinkedFairySe", "Firepower", "FirepowerNegative" },
             RelativeCards: new List<string>() { "HellFairy" },
             UpgradedRelativeCards: new List<string>() { "HellFairy+" },
 
             Owner: "Clownpiece",
+            Pack: "",
             ImageId: "",
             UpgradeImageId: "",
 
@@ -131,19 +124,32 @@ namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
     {
         public LunaticHellFairy() : base()
         {
+            IsTorchLinkedFairy = true;
             IsTransformed = true;
             TransformTo = typeof(HellFairy);
-            Value3 = 2;
-            Value4 = 1;
-            Value5 = 4;
+            Value3 = 4;
+            Value4 = 5;
+            Value5 = 5;
             Value6 = 1;
-            Value7 = 4;
+
         }
-        public DamageInfo activeDmg
+
+        public DamageInfo Damage2
         {
             get
             {
-                return DamageInfo.Attack(Value1, false);
+                return DamageInfo.Attack(Value2, false);
+            }
+        }
+
+        public int UpgradedValue
+        {
+            get
+            {
+                if (IsUpgraded)
+                    return Value4;
+                else
+                    return Value3;
             }
         }
 
@@ -182,14 +188,8 @@ namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
 
                 IsActiveUsed = true;
 
-                for (int atkNum = 1; atkNum <= Value5; atkNum++)
-                {
-                    EnemyUnit target = Battle.EnemyGroup.Alives.Sample(GameRun.BattleRng);
-                    if (target != null)
-                    {
-                        yield return AttackAction(target, Damage, "火激光B");
-                    }
-                }
+                foreach (BattleAction ba in PassiveOne()) yield return ba;
+                foreach (BattleAction ba in PassiveTwo()) yield return ba;
 
                 yield return new DiscardAction(this);
                 IsActiveUsed = false;
@@ -199,14 +199,13 @@ namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
         private IEnumerable<BattleAction> OnPlayerDamageDealt(DamageEventArgs args)
         {
             if (Battle.BattleShouldEnd)
-            {
                 yield break;
-            }
-            if (args.Cause == ActionCause.Card && args.ActionSource == this && IsActiveUsed == true)
+
+            if (args.Cause == ActionCause.Card && args.ActionSource == this && IsActiveUsed)
             {
                 count++;
                 DamageInfo damageInfo = args.DamageInfo;
-                if (damageInfo.Damage > 0f && count >= Value7)
+                if (damageInfo.Damage > 0f && count >= Value5)
                 {
                     yield return DebuffAction<FirepowerNegative>(Battle.Player, Value6);
                     count = 0;
@@ -217,24 +216,57 @@ namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
         public override IEnumerable<BattleAction> GetPassiveActions()
         {
             if (!Summoned || Battle.BattleShouldEnd)
-            {
                 yield break;
-            }
+
             NotifyActivating();
             Loyalty += PassiveCost;
+
             for (int i = 0; i < Battle.FriendPassiveTimes && !Battle.BattleShouldEnd; ++i)
             {
                 yield return PerformAction.Sfx("FairySupport", 0f);
                 yield return PerformAction.Effect(Battle.Player, "LunaticHellFairy", 0f, null, 0f, PerformAction.EffectBehavior.PlayOneShot, 0f);
 
-                for (int atkNum = 1; atkNum <= Value2; atkNum++)
+                switch (base.BattleRng.NextInt(0, 1))
                 {
-                    EnemyUnit target = Battle.EnemyGroup.Alives.Sample(GameRun.BattleRng);
-                    if (target != null)
-                    {
-                        yield return AttackAction(target, activeDmg, "火激光B");
-                    }
+                    case 0:
+                        foreach (BattleAction ba in PassiveOne()) yield return ba;
+                        break;
+
+                    case 1:
+                        foreach (BattleAction ba in PassiveTwo()) yield return ba;
+                        break;
+
+                    default:
+                        throw new ArgumentOutOfRangeException($"{nameof(LunaticHellFairy)}'s chosen passive ID is invalid!");
                 }
+            }
+        }
+
+        public IEnumerable<BattleAction> PassiveOne()
+        {
+            for (int atkNum = 1; atkNum <= Value1; atkNum++)
+            {
+                EnemyUnit target = Battle.EnemyGroup.Alives.Sample(GameRun.BattleRng);
+
+                if (target != null)
+                    yield return AttackAction(target, Damage, "火激光B");
+
+                else
+                    throw new ArgumentNullException("Attack target can not be null!");
+            }
+        }
+
+        public IEnumerable<BattleAction> PassiveTwo()
+        {
+            for (int atkNum = 1; atkNum <= UpgradedValue; atkNum++)
+            {
+                EnemyUnit target = Battle.EnemyGroup.Alives.Sample(GameRun.BattleRng);
+
+                if (target != null)
+                    yield return AttackAction(target, Damage2, "火激光");
+
+                else
+                    throw new ArgumentNullException("Attack target can not be null!");
             }
         }
     }

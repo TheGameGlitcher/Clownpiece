@@ -1,4 +1,5 @@
 ## Character mod for the game Touhou Lost Branch of Legend
+### WARNING: This mod is deprecated!
 
 Credits:
 
@@ -18,4 +19,4 @@ Special Thanks:
 - Intoxicated Kid for helping me make Shiki Eiki summon two enemies correctly
 - Everyone else on the discord who were a part of the design process of this mod. There's too many names to remember, so don't feel left out!
 
-WARNING: This is my first mod and will be kept up for archival purposes. Although I welcome feedback, please do not expect this to be a very high quality mod. I'm doing my best.
+This is my first mod and will be kept up for archival purposes. Although I welcome feedback, please do not expect this to be a very high quality mod. I'm doing my best.

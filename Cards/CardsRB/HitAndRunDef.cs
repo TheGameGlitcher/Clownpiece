@@ -1,7 +1,7 @@
 ﻿using Clownpiece.Cards.CardsB;
 using Clownpiece.Cards.Templates;
 using Clownpiece.CustomClasses;
-using Clownpiece.Localization;
+
 using Clownpiece.Status;
 using Cysharp.Threading.Tasks.Triggers;
 using LBoL.Base;
@@ -43,7 +43,7 @@ namespace Clownpiece.Cards.CardsRB
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
+            return BepinexPlugin.CardLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()
@@ -114,6 +114,7 @@ namespace Clownpiece.Cards.CardsRB
             UpgradedRelativeCards: new List<string>() { },
 
             Owner: "Clownpiece",
+            Pack: "",
             ImageId: "",
             UpgradeImageId: "",
 

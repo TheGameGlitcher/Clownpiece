@@ -131,8 +131,15 @@ namespace Clownpiece
 
         internal static IResourceSource embeddedSource = new EmbeddedSource(Assembly.GetExecutingAssembly());
 
-        // add this for audio loading
         internal static DirectorySource directorySource = new DirectorySource(Clownpiece.PInfo.GUID, "");
+
+        internal static BatchLocalization CardLoc = new BatchLocalization(directorySource, typeof(CardTemplate), "Cards", Locale.En);
+        internal static BatchLocalization EnemyUnitLoc = new BatchLocalization(directorySource, typeof(EnemyUnitTemplate), "EnemyUnit", Locale.En);
+        internal static BatchLocalization ExhibitLoc = new BatchLocalization(directorySource, typeof(ExhibitTemplate), "Exhibits", Locale.En);
+        internal static BatchLocalization PlayerUnitLoc = new BatchLocalization(directorySource, typeof(PlayerUnitTemplate), "PlayerUnit", Locale.En);
+        internal static BatchLocalization StatusEffectLoc = new BatchLocalization(directorySource, typeof(StatusEffectTemplate), "StatusEffects", Locale.En);
+        internal static BatchLocalization UltimateSkillLoc = new BatchLocalization(directorySource, typeof(UltimateSkillTemplate), "UltimateSkills", Locale.En);
+        internal static BatchLocalization UnitModelLoc = new BatchLocalization(directorySource, typeof(UnitModelTemplate), "UnitModel", Locale.En);
 
 
         private void Awake()

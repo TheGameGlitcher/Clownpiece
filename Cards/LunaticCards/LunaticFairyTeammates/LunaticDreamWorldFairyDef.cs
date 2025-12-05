@@ -1,29 +1,18 @@
-﻿using Clownpiece.Cards.CardsR;
-using Clownpiece.Cards.FairyTeammates;
-using Clownpiece.Cards.Templates;
+﻿using Clownpiece.Cards.FairyTeammates;
 using Clownpiece.CustomClasses;
-using Clownpiece.Localization;
-using Clownpiece.Status;
 using LBoL.Base;
-using LBoL.Base.Extensions;
 using LBoL.ConfigData;
 using LBoL.Core;
 using LBoL.Core.Battle;
 using LBoL.Core.Battle.BattleActions;
-using LBoL.Core.Battle.Interactions;
 using LBoL.Core.Cards;
-using LBoL.Core.StatusEffects;
-using LBoL.Core.Units;
-using LBoL.EntityLib.Cards.Character.Marisa;
 using LBoL.EntityLib.Cards.Enemy;
 using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
 {
@@ -43,7 +32,7 @@ namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
+            return BepinexPlugin.CardLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()
@@ -108,12 +97,13 @@ namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
             RelativeKeyword: Keyword.Dream,
             UpgradedRelativeKeyword: Keyword.Dream,
 
-            RelativeEffects: new List<string>() { },
-            UpgradedRelativeEffects: new List<string>() { },
+            RelativeEffects: new List<string>() { "DummyTorchLinkedFairySe" },
+            UpgradedRelativeEffects: new List<string>() { "DummyTorchLinkedFairySe" },
             RelativeCards: new List<string>() { "DreamWorldFairy", "Nightmare" },
             UpgradedRelativeCards: new List<string>() { "DreamWorldFairy+", "Nightmare" },
 
             Owner: "Clownpiece",
+            Pack: "",
             ImageId: "",
             UpgradeImageId: "",
 
@@ -132,9 +122,16 @@ namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
     {
         public LunaticDreamWorldFairy() : base()
         {
+            IsTorchLinkedFairy = true;
             IsTransformed = true;
             TransformTo = typeof(BlackButterfly);
         }
+
+        private LunaticBlackButterfly LunaticBlackButterfly = new LunaticBlackButterfly();
+        private LunaticSunflowerFairy LunaticSunflowerFairy = new LunaticSunflowerFairy();
+        private LunaticHellFairy LunaticHellFairy = new LunaticHellFairy();
+        private LunaticMoonFairy LunaticMoonFairy = new LunaticMoonFairy();
+
         public DamageInfo activeDmg
         {
             get

@@ -1,24 +1,18 @@
 ﻿using Clownpiece.Cards.CardsB;
-using Clownpiece.Cards.Templates;
 using Clownpiece.CustomClasses;
-using Clownpiece.Localization;
 using LBoL.Base;
 using LBoL.ConfigData;
 using LBoL.Core;
 using LBoL.Core.Battle;
 using LBoL.Core.Battle.BattleActions;
 using LBoL.Core.Battle.Interactions;
-using LBoL.Core.Cards;
 using LBoL.Core.StatusEffects;
-using LBoL.EntityLib.StatusEffects.Basic;
 using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Clownpiece.Cards.LunaticCards.NonTeammateCards
 {
@@ -38,7 +32,7 @@ namespace Clownpiece.Cards.LunaticCards.NonTeammateCards
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
+            return BepinexPlugin.CardLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()
@@ -103,12 +97,13 @@ namespace Clownpiece.Cards.LunaticCards.NonTeammateCards
             RelativeKeyword: Keyword.None,
             UpgradedRelativeKeyword: Keyword.None,
 
-            RelativeEffects: new List<string>() { "DummyLunacySe" },
-            UpgradedRelativeEffects: new List<string>() { "DummyLunacySe" },
+            RelativeEffects: new List<string>() { "DummyTorchLinkedSe" },
+            UpgradedRelativeEffects: new List<string>() { "DummyTorchLinkedSe" },
             RelativeCards: new List<string>() { "Adaptation" },
             UpgradedRelativeCards: new List<string>() { "Adaptation+" },
 
             Owner: "Clownpiece",
+            Pack: "",
             ImageId: "",
             UpgradeImageId: "",
 
@@ -127,6 +122,7 @@ namespace Clownpiece.Cards.LunaticCards.NonTeammateCards
     {
         public Mutation() : base()
         {
+            IsTorchLinked = true;
             IsTransformed = true;
             TransformTo = typeof(Adaptation);
             Value3 = 2;

@@ -1,6 +1,6 @@
 ﻿using Clownpiece.Cards.Templates;
 using Clownpiece.CustomClasses;
-using Clownpiece.Localization;
+
 using Clownpiece.Status;
 using LBoL.Base;
 using LBoL.Base.Extensions;
@@ -45,7 +45,7 @@ namespace Clownpiece.Cards.CardsRWU
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
+            return BepinexPlugin.CardLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()
@@ -116,6 +116,7 @@ namespace Clownpiece.Cards.CardsRWU
             UpgradedRelativeCards: new List<string>() { "HecatiaOtherworld+", "HecatiaEarth+" },
 
             Owner: "Clownpiece",
+            Pack: "",
             ImageId: "",
             UpgradeImageId: "",
 

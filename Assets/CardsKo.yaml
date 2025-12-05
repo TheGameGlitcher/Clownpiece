@@ -1,0 +1,528 @@
+FirstCard:
+  Name: 첫 카드
+  Description: "피해를 {Damage}씩 {Value1}번 줍니다."
+  FlavorText: "내가 만든 첫 번째 모드 카드! 만세!"
+
+TemplateFriend:
+  Name: 동료 템플릿
+  Description: "코드 복사/붙여넣기용 테스트 카드입니다."
+  FlavorText: "이걸 어떻게 읽고 있는 거지?!"
+
+LunaticFriendTemplate:
+  Name: 광기의 동료 템플릿
+  Description: "코드 복사/붙여넣기용 테스트 카드입니다."
+  FlavorText: "이걸 어케 읽고 있는 거람?!"
+
+TorchBullet:
+  Name: 횃불 탄환
+  Description: "피해를 {Damage} 줍니다."
+  FlavorText: "불꽃 탄환은 누구에게든 아픔을 줍니다."
+
+LunarShield:
+  Name: 달의 방패
+  Description: "방어를 {Block} 얻습니다."
+  FlavorText: "달이라면 어떤 것도 막아낼 수 있죠. 달인(月人)과는 다릅니다."
+
+LunarSlam:
+  Name: 달의 강타
+  Description: "피해를 {Damage} 줍니다."
+  FlavorText: "달에 맞으면... 아프겠지."
+
+FlameWall:
+    Name: "불꽃 벽"
+    Description: "방어를 {Block} 얻습니다."
+    FlavorText: "동물들을 쫓기엔 횃불을 흔드는 게 최고."
+
+LunaticTime:
+  Name: 지금은 광기타임!
+  Description: "현재는 사실상 자리채움 카드입니다."
+  FlavorText: "이 카드는 폐기 예정이지만... 언젠간 무언가가 될지도?"
+
+BlackButterfly:
+  Name: 흑호접
+  Description: "{FriendS}|광기|: |광기의 흑호접|으로 변신합니다."
+  UpgradedDescription: "{FriendS}|광기|: |광기의 흑호접+|으로 변신합니다."
+  ExtraDescription1: "{FriendP}체력이 가장 낮은 적에게 피해를 {Damage} 줍니다."
+  ExtraDescription2: "{FriendU}|보호막|을 {Shield} 얻습니다."
+  FlavorText: "왜 이름이 '검은 요정'이 아닌 걸까?"
+
+LunaticBlackButterfly:
+  Name: 광기의 흑호접
+  Description: "{FriendS}|퇴치|: 체력을 {Value2} 잃고 |보호막|을 {Shield} 얻습니다."
+  ExtraDescription1: "{FriendP}무작위 적에게 피해를 {Damage} 줍니다."
+  ExtraDescription2: "{FriendA}모든 적에게 피해를 {activeDmg} 줍니다."
+  FlavorText: "검은 나비가 광기에 빠졌습니다!"
+
+ManiaCleansing:
+  Name: 광란 정화
+  Description: "|광기의 횃불| 효과를 제거하고 역전시킵니다."
+  FlavorText: "혼란스러우면 되돌리기 버튼을 누르세요!"
+
+IntimidatingFlame:
+  Name: 위압의 불꽃
+  Description: "방어를 {Block} 얻습니다.\n자신에게 |허약|을 {Value1} 주고, 모든 적에게 |일시 화력 저하|를 {Value2} 줍니다."
+  FlavorText: "불은 거대한 포식자도 두렵게 만듭니다."
+
+MoonQuake:
+  Name: 월진
+  Description: "모든 적에게 피해를 {Damage} 주고 |취약|을 {Value2} 줍니다.\n자신에게 |취약|을 {Value1} 줍니다."
+  FlavorText: "달도 지진이 난답니다."
+
+UnderFloorboards:
+  Name: 마루 밑에서
+  Description: "레이무 카드 {Value1}장 중 1장을 선택하여 손에 추가합니다. 해당 카드는 |일시적으로| 비용이 {Mana}입니다."
+  UpgradedDescription: "레이무 카드 {Value1}장 중 1장을 선택하여 손에 추가합니다. 해당 카드는 |일시적으로| 비용이 {Mana}입니다.\n|음양옥|을 손에 추가합니다."
+  FlavorText: "마루 밑에서 배울 수 있는 게 의외로 많다. 요정 따라하기."
+
+LunaticTorchIgnition:
+  Name: 광기의 횃불 점화
+  Description: "|광기의 횃불|을 얻습니다."
+  UpgradedDescription: "|광기의 횃불|을 얻습니다.\n|화력|을 {Value2} 얻습니다.\n모든 적들이 |화력|을 {Value3} 얻습니다."
+  FlavorText: "광기의 불꽃을 지피는 것은 당신의 책임입니다."
+
+StatueOfLunacy:
+  Name: 광기의 석상
+  Description: |-
+    |광기|: |광기의 불꽃놀이|로 변신합니다.
+    방어를 {Block} 얻고 |반사|를 {Value1} 얻습니다.
+    카드를 최대 {Value2}장 버립니다. 카드 1장당 방어를 {Block}, |반사|를 {Value1} 얻습니다.
+  UpgradedDescription: |-
+    |광기|: |광기의 불꽃놀이+|로 변신합니다.
+    |보호막|을 {Shield} 얻고 |반사|를 {Value1} 얻습니다.
+    카드를 최대 {Value2}장 버립니다. 카드 1장당 |보호막|을 {Shield}, |반사|를 {Value1} 얻습니다.
+  FlavorText: 이 석상은 위협을 받으면 더욱 우뚝 섭니다.
+
+FireworksOfLunacy:
+  Name: 광기의 불꽃놀이
+  Description: |-
+    체력을 {Value1} 잃습니다. 피해를 {Damage}씩 두 번 줍니다.
+    카드를 최대 {Value2}장 버립니다. 카드 1장당 피해를 한 번 더 줍니다.
+  UpgradedDescription: |-
+    체력을 {Value1} 잃습니다. 피해를 {Damage}씩 두 번 줍니다.
+    카드를 최대 {Value2}장 버립니다. 버린 카드 1장당 피해를 한 번 더 줍니다.
+  FlavorText: 어둠 속에서 만 개의 태양보다 밝게 터진다.
+
+BusySchedule:
+  Name: 바쁜 일정
+  Description: |-
+    방어를 {NewBlock} 얻습니다.
+    이번 턴 동안 사용한 카드마다 얻는 방어가 {Value1} 증가합니다.
+  FlavorText: 지옥을 유지하는 건 정말 힘든 일이죠.
+
+GoddessHitFairy:
+  Name: 신이 강림한 요정
+  Description: |-
+    피해를 {Damage} 줍니다.
+    |록온|을 {Value1} 줍니다.
+  UpgradedDescription: |-
+    피해를 {Damage} 줍니다.
+    |록온|을 {Value1} 줍니다. 대상에게 |취약|이 있다면 |록온|을 {Value2} 더 줍니다.
+  FlavorText: 여긴 내가 처리하지요, 각하.
+
+GracefulFairyDodging:
+  Name: 요정의 우아한 회피
+  Description: |-
+    |광기|: |혼돈의 탄막 회피|로 변경됩니다.
+    |그레이즈|를 {Value1} 얻습니다.
+    카드를 {Value2}장 뽑습니다.
+    |반사|를 {Value3} 얻습니다.
+  UpgradedDescription: |-
+    |광기|: |혼돈의 탄막 회피+|로 변경됩니다.
+    |그레이즈|를 {Value1} 얻습니다.
+    카드를 {Value2}장 뽑습니다.
+    |반사|를 {Value3} 얻습니다.
+  FlavorText: 요정은 바람 따라 부유하니까요.
+
+ChaoticDanmakuDodging:
+  Name: 혼돈의 탄막 회피
+  Description: |-
+    |연약| {Value1} 및 |취약| {Value1}을 얻습니다.
+    |그레이즈|를 {Value2} 얻고 카드를 {Value3}장 뽑습니다.
+  UpgradedDescription: |-
+    |연약| {Value1} 및 |취약| {Value1}을 얻습니다.
+    |그레이즈|를 {Value2} 얻고 카드를 {Value3}장 뽑습니다.
+    다음 턴 시작 시 |그레이즈|를 {Value4} 얻고 카드를 {Value4}장 뽑습니다.
+  FlavorText: 저 아이에게 계획 같은 게 있을 리가...
+
+HecatiaOtherworld:
+  Name: 삼신 헤카티아
+  Description: "{FriendS}|이계의 육체|\n{FriendP} |화력|을 {Value1} 얻습니다."
+  ExtraDescription3: "{FriendU}모든 적에게 피해를 {Damage} 줍니다. |명중|"
+  ExtraDescription1: "{FriendA}육체를 전환합니다."
+  FlavorText: "이계의 여신인 헤카티아는 사실상 환상향과 꿈의 세계도 지배합니다."
+
+HecatiaMoon:
+  Name: 삼신 헤카티아
+  Description: "{FriendS}|달의 육체|\n{FriendP} 손에서 카드를 최대 {Value1}장 |소멸|시킵니다."
+  ExtraDescription3: "{FriendU}손에서 카드를 {Value2}장까지 |소멸|시킵니다. |소멸|된 카드가 {Value3}장 이상이면, 모든 적에게 피해를 {newDmg}씩 {Value4}회 줍니다. 이 피해는 |소멸|된 카드마다 {Value6} 증가합니다."
+  ExtraDescription1: "{FriendA}육체를 전환합니다."
+  FlavorText: "달의 여신인 만큼, 월인들이 그녀를 눈치채지 못한 것도 무리는 아닙니다."
+
+HecatiaEarth:
+  Name: 삼신 헤카티아
+  Description: "{FriendS}|지상의 육체|\n{FriendP} {Mana}를 얻습니다."
+  ExtraDescription3: "{FriendU}|보호막|을 {newShield} 얻습니다. 이 값은 남은 마나 1개당 {Value1}씩 증가합니다."
+  ExtraDescription1: "{FriendA}육체를 전환합니다."
+  FlavorText: "지상의 여신이기에 바깥 세계도 지배합니다. 저 옷은 현대 상점에서 산 걸까요?"
+
+Blindside:
+  Name: 맹공격
+  Description: "|허약|과 |취약|을 각각 {Value1} 줍니다."
+  UpgradedDescription: "|허약|과 |취약|을 각각 {Value1} 줍니다.\n카드를 {Value2}장 뽑습니다."
+  FlavorText: "그냥 요정일 뿐인데, 뭘 어쩌겠어?"
+
+EmbodimentOfImpurity:
+  Name: 불순의 구현
+  Description: "모든 적에게 피해를 {Damage} 줍니다.\n|영구 순화|를 {Value1} 얻습니다.\n이번 턴에 <sprite=\"ManaSprite\" name=\"C\">를 사용할 때마다 |반사|를 {Value2} 얻습니다."
+  FlavorText: "준코의 정화는 클라운피스를 생명력 그 자체로 바꾸었다. 만약 그녀를 만지고 지옥에 떨어진다면…?"
+
+UndyingFlame:
+  Name: 꺼지지 않는 불꽃
+  Description: "피해를 {Damage} 줍니다.\n|취약|을 {Value1} 줍니다.\n뽑을 카드 더미에서 무작위 공격 카드를 {Value2}장 손에 넣고, 해당 카드는 |일시적으로| 비용이 {Mana}가 됩니다."
+  FlavorText: "불꽃의 정령들이여, 그들을 재로 만들어라!"
+
+BerserkLifeforce:
+  Name: 광폭한 생명력
+  Description: "모든 유닛이 |화력은 정의!|를 얻습니다."
+  FlavorText: "성조기를 위협하는 최고의 적, 순혈의 붉음."
+
+Racetrack:
+  Name: 경주로
+  Description: "카드를 {Value1}장 버립니다.\n카드를 {Value2}장 뽑고, 해당 카드들의 비용이 |일시적으로| {Mana} 감소합니다."
+  FlavorText: "어디로 가지? 브라질? 디트로이트?"
+
+AFairysPurity:
+  Name: 요정의 순수함
+  Description: "손에서 카드를 최대 {Value1}장 |소멸|시킵니다.\n|부적|을 {Value2} 얻습니다."
+  UpgradedDescription: "손, 뽑을 카드 더미, 버린 카드 더미에서 카드를 최대 {Value1}장 |소멸|시킵니다.\n|부적|을 {Value2} 얻습니다."
+  FlavorText: "요정의 순수함은 달보다도 이질적이다."
+
+FairyGearSolid:
+  Name: 요정기어 솔리드
+  Description: "카드를 {Value1}장 뽑습니다. {PlayerName}가 |허약| 상태라면 1장 더 뽑습니다.\n{PlayerName}가 |취약| 상태라면 |그레이즈|를 {Value2} 얻습니다."
+  FlavorText: "상자 아래 숨는 게 마루 밑보다 낫지."
+
+HellFairy:
+  Name: 지옥 요정
+  Description: "{FriendS}|광기|: |광기의 지옥 요정|으로 변경됩니다."
+  UpgradedDescription: "{FriendS}|광기|: |광기의 지옥 요정+|으로 변경됩니다."
+  ExtraDescription1: "{FriendP}체력이 가장 높은 적에게 피해를 {Damage}씩 {Value2}번 줍니다."
+  ExtraDescription2: "{FriendU}|화력|을 {Value1} 얻습니다."
+  FlavorText: "역설적으로, 지옥 요정 중 일부는 불과 관계없습니다."
+
+LunaticHellFairy:
+  Name: 광기의 지옥 요정
+  Description: "{FriendP}무작위 적에게 피해를 {Damage}씩 {Value2}번 줍니다."
+  ExtraDescription1: "{FriendA}무작위 적에게 피해를 {activeDmg}씩 {Value5}번 줍니다.\n막히지 않은 피해가 {Value7}번 이상 발생하면 |화력|을 {Value6} 잃습니다."
+  FlavorText: "지옥 요정이 광기에 빠졌습니다!"
+
+QuickPrick:
+  Name: 빠른 찌르기
+  Description: "피해를 {Damage}씩 {Value1}번 줍니다.\n대상에게 |취약|이 있다면 추가로 한 번 더 피해를 줍니다."
+  FlavorText: "블루스 클루스? 처음 듣는걸?"
+
+ManicBurst:
+  Name: 광란의 폭발
+  Description: "모든 적에게 |광란|을 {Value1} 줍니다."
+  FlavorText: "디버프 받느니 차라리 죽겠어!"
+
+FlamesOfMania:
+  Name: 광란의 불꽃
+  Description: "|광기의 불꽃|을 얻습니다."
+  FlavorText: "당신의 |광란|에 |광란|을 추가했습니다!"
+
+PurestFairyEssence:
+  Name: 요정의 가장 순수한 정수
+  Description: "|순화|를 {Value1} 얻습니다.\n방어를 {Block} 얻습니다.\n다음 턴 시작 전까지, 자신을 공격한 첫 적에게 |중독| {Value2} 및 |록온| {Value3}을 줍니다."
+  FlavorText: "달도 이 정수를 감당 못했는데, 당신은 가능할까요?"
+
+ResidualImpurity:
+  Name: 잔재된 불순물
+  Description: "피해를 {Damage} 줍니다.\n막히지 않은 피해량만큼 |중독|을 줍니다.\n디버프를 받을 때, 버린 카드 더미에서 {SelfName}을 손으로 되돌립니다."
+  FlavorText: "수도는 전염병에 무방비였다. 요정이 퍼뜨린."
+
+TorchPureFlame:
+  Name: 횃불의 순수한 불꽃
+  Description: "|영구 순화|를 {Value1} 얻습니다.\n피해를 줄 때마다 |중독|과 |록온|을 {Value2} 줍니다."
+  FlavorText: "그녀의 횃불빛이 불순한 자들을 지옥으로 인도하길."
+
+InnerStrength:
+  Name: 내면의 힘
+  Description: "|화력|을 {Value1} 얻습니다.\n아래 상태 중 하나라도 있다면 그마다 |화력|을 추가로 {Value2} 얻습니다:\n|허약|, |취약|, |록온|, |순화|"
+  FlavorText: "죽지 않았단 건, 넌 죽일 수 없는 자라는 뜻이야."
+
+HiddenApollo:
+  Name: 숨겨진 아폴로
+  Description: "손에 있는 카드를 |소멸|시킵니다.\n|소멸|한 카드 수만큼 다음 턴에 카드를 뽑고 |일시 화력|을 그 수만큼 얻습니다."
+  FlavorText: "달의 어두운 면에는 환상의 선물이 숨겨져 있다."
+
+FairyParkour:
+  Name: 요정 파쿠르
+  Description: "카드를 {Value1}장 뽑습니다.\n손에 있는 카드가 {Value2}장 미만이면 |그레이즈|를 {Value3} 얻습니다."
+  FlavorText: "날개를 쓰는 건 반칙이지!"
+
+LunaticEmbrace:
+  Name: 광기의 포옹
+  Description: "{PlayerName}의 턴 시작 시, 카드를 {Value1}장 뽑습니다. |일시적으로| 비용이 {Mana}입니다."
+  FlavorText: "미쳤다고 예절까지 버려야 해?"
+
+HellsInferno:
+  Name: 지옥의 화염
+  Description: "|화염|을 {Value1}장 손에 추가합니다."
+  UpgradedDescription: "|화염|을 {Value1}장 손에 추가합니다.\n카드를 {Value2}장 뽑습니다."
+  FlavorText: "지옥의 열기는 이 요정에겐 땀도 안 나!"
+
+MonsterClown:
+  Name: 괴물 광대
+  Description: "피해를 {Damage} 줍니다.\n|허약|, |취약|, |록온|, |중독|, |일시 화력 저하|를 {Value1} 줍니다."
+  UpgradedDescription: "피해를 {Damage}씩 {Value2}번 줍니다.\n|허약|, |취약|, |록온|, |중독|, |일시 화력 저하|를 {Value1} 줍니다."
+  FlavorText: "광대는 너무 무서워서 인간도 도망간다."
+
+GoddessDivineProtection:
+  Name: 여신의 가호
+  Description: "방어를 {Block} 얻습니다.\n|부적|을 {Value1} 얻습니다.\n방어가 다음 턴이 되도 사라지지 않습니다."
+  FlavorText: "이 축복은 나의 시종에게 내린 것이다."
+
+AsteroidLanding:
+  Name: 소행성 낙하
+  Description: "손에서 카드를 최대 {Value2}장 |소멸|시킵니다.\n피해를 {Damage} 줍니다.\n|취약|을 {Value1} 얻습니다."
+  FlavorText: "공룡을 멸종시킨 건? 나야!!!"
+
+HakureiMartialArts:
+  Name: 하쿠레이류 무술
+  Description: 피해를 {Damage} 줍니다.
+    {PlayerName}가 |일시 화력|을 가지고 있다면 방어를 {Block} 얻습니다.
+  FlavorText: 무녀의 싸움은 겸손과 야만을 동시에 가르쳐줍니다.
+
+StareIntoTheFlame:
+  Name: 불꽃 응시
+  Description: |-
+    |광란|을 {Value1} 줍니다.
+    |록온|을 {Value2} 줍니다.
+  FlavorText: 황홀한 광기!
+
+SanityIsOverrated:
+  Name: 정신은 과대평가됐다
+  Description: 모든 적에게 |광란|을 {Value1} 줍니다.
+    |그레이즈| {Value3}과 |정전기| {Value2}를 얻습니다.
+  FlavorText: 우리의 시간은 끝나간다...
+
+HellsCalling:
+  Name: 지옥의 부름
+  Description: |-
+    |광란|을 {Value1} 줍니다.
+    방어를 {Block} 얻습니다.
+  FlavorText: 불꽃이 밤을 울린다.
+
+EnterTheColosseum:
+  Name: 지옥 투기장 입장
+  Description: |-
+    |일시 화력| {Value2}, |록온| {Value3}을 얻습니다.
+    |광란| {Value1} 및 |록온| {Value4}를 줍니다.
+  FlavorText: 이 긴장감 넘치는 분위기야말로 지옥에 어울리지!
+
+MindBreak:
+  Name: 정신 붕괴
+  Description: 피해를 {Damage} 줍니다.
+    |광란| {Value1} 및 |일시 화력 저하| {Value2}를 줍니다.
+  FlavorText: 슬픔에 빠져버려라!
+
+SenseAggression:
+  Name: 살기의 감지
+  Description: 카드를 {Value1}장 뽑습니다.
+    적이 공격하고자 한다면 방어를 {Block} 얻습니다.
+  FlavorText: 감각이 꿈틀거린다...
+
+Bloodlust:
+  Name: 피의 갈망
+  Description: |-
+    |취약|을 {Value3} 주고, 자신에게 |취약| {Value4}를 줍니다.
+    카드를 {Value1}장 뽑습니다.
+    적이 공격하고자 한다면 |일시 화력|을 {Value2} 얻습니다.
+  FlavorText: 이제 마음껏 날뛰자!
+
+ContinuousWarfare:
+  Name: 끊임없는 전쟁
+  Description: 피해를 {Damage} 줍니다.
+    |록온|을 {Value1} 줍니다.
+    |화력|을 {Value2} 얻습니다.
+    적이 공격하고자 한다면 {SelfName}을 버린 카드 더미에 섞어넣습니다.
+  FlavorText: 종이 인형에서 해변의 시체로.
+
+HitAndRun:
+  Name: 치고 빠지기
+  Description: 피해를 {Damage} 줍니다.
+    적이 공격을하려한다면 |그레이즈|를 {Value1} 얻습니다.
+  FlavorText: 장난치고 도망치는 게 요정의 철칙이지.
+
+WhatDoesntKillYou:
+  Name: 나를 죽이지 못하는 고통은
+  Description: |-
+    {PlayerName}가 디버프를 받을 때마다 카드를 {Value1}장 뽑습니다.
+  FlavorText: 엄밀히 말하면 요정은 죽지 않거든요.
+
+GreaterFairyEnergy:
+  Name: 대요정 에너지
+  Description: 턴 종료 시 |괴이| 1장을 버린 카드 더미에 추가합니다. 이 카드는 |보충|을 가집니다.
+  UpgradedDescription: 턴 종료 시 |채홍| 1장을 버린 카드 더미에 추가합니다. 이 카드는 |보충|을 가집니다.
+  FlavorText: 이 요정은 진짜 거대한 에너지를 품고 있다.
+
+Terrorize:
+  Name: 공포 유발
+  Description: 체력을 {Value1} 잃고 모든 적에게 |취약| {Value2}를 줍니다.
+    {PlayerName}의 턴 시작 시 이 효과를 반복합니다.
+  FlavorText: 또 다른 홍차선이 부두에 충돌했다고요?
+
+Mockery:
+  Name: 조롱
+  Description: |-
+    |록온|을 {Value1} 얻습니다.
+    카드를 {Value2}장 뽑습니다. 이 카드들의 비용이 |일시적으로| {Mana}만큼 감소합니다.
+  FlavorText: 크윽... 나 저 얼음 요정 아니거든!
+
+StarAndStripe:
+  Name: 별과 줄무늬
+  Description: 모든 적에게 피해를 {Damage}씩 {Value1}번 줍니다.
+    이 카드가 |소멸|되면 체력을 {Value2} 잃습니다.
+  FlavorText: 별들 사이에 줄무늬가 있다고 상상해 봐요. 그리고 그게 있다고 믿어요.
+
+PureLifeforce:
+  Name: 순수한 생명력
+  Description: 손에 있는 카드를 {Value1}장 선택합니다.
+    해당 카드는 전투가 끝날 때까지 비용이 {Mana}가 되고 이후 버려집니다.
+  FlavorText: 달의 유일한 약점은 요정... 아니면 우주인.
+
+Adaptation:
+  Name: 적응
+  Description: |-
+    |광기|: |변이+|로 변경됩니다.
+    |선택|: |록온| {Value1}, |그레이즈| {Value2}를 얻거나 또는 방어 {Block}, |허약| {Value3}을 얻습니다.
+  ExtraDescription1: |-
+    |록온| {Value1}, |그레이즈| {Value2}를 얻습니다.
+  ExtraDescription2: 방어 {Block}, |허약| {Value3}을 얻습니다.
+  FlavorText: 즉흥, 적응, 극복.
+
+Mutation:
+  Name: 변이
+  Description: "|선택|: 피해를 {Damage}씩 {Value2}번 주고 |록온| {Value1}을 얻거나,\n방어를 {Block} 얻고 |허약| {Value3}, |그레이즈| {Value4}를 얻습니다."
+  ExtraDescription1: "피해를 {Damage}씩 {Value2}번 주고 |록온| {Value1}을 얻습니다."
+  ExtraDescription2: "방어를 {Block} 얻고 |허약| {Value3}, |그레이즈| {Value4}를 얻습니다."
+  FlavorText: "헤카티아 왈, 방사능은 가까이 가지 말라고. 이유가 뭘까?"
+
+ForgottenMaid:
+  Name: 잊혀진 메이드
+  Description: "{Value2}명의 동료 중 {Value1}명을 {Value3}번 손에 추가합니다.\n추가된 동료는 소환된 상태로 손에 들어옵니다."
+  FlavorText: "신사 주변에서 얻게 되는 인맥이란 놀랍지."
+
+FairySwarm:
+  Name: 요정 떼
+  Description: "피해를 {Damage} 줍니다.\n손에 있는 모든 동료가 |지원력|을 {Value1} 얻습니다."
+  FlavorText: "함께라면 여신에게도 맞설 수 있다.\n(라는 소문)"
+
+MoonFairy:
+  Name: 달 요정
+  Description: "{FriendS}|광기|: |광기의 달 요정|으로 변신합니다."
+  UpgradedDescription: "{FriendS}|광기|: |광기의 달 요정+|으로 변신합니다."
+  ExtraDescription1: "{FriendP}모든 적에게 피해를 {Damage} 줍니다."
+  ExtraDescription2: "{FriendU}즉시 피해를 줍니다.\n손에 있는 무작위 카드 {Value1}장을 |정화|합니다."
+  FlavorText: "침공 전, 달의 유일한 토착 요정."
+
+LunaticMoonFairy:
+  Name: 광기의 달 요정
+  Description: "{FriendS}|영구 순화| 스택 또는 |정화|된 카드 1장당 {SelfName}의 피해가 {Value1} 증가합니다 (소멸 제외)."
+  ExtraDescription1: "{FriendP}모든 적에게 피해를 {newDmg} 줍니다."
+  ExtraDescription2: "{FriendA}손을 |정화|합니다. 이로 인해 |정화|된 카드 {Value2}장당 |영구 순화| {Value3}을 얻습니다."
+  FlavorText: "달 요정이 광기에 빠졌습니다!"
+
+ButterflyBackup:
+  Name: 나비 지원군
+  Description: "|광기|: |광기의 지원군|으로 변경됩니다.\n|흑호접|을 {Value1}장 손에 추가합니다. 소환된 상태로 손에 들어옵니다."
+  UpgradedDescription: "|광기|: |광기의 지원군+|으로 변경됩니다.\n|흑호접+|을 {Value1}장 손에 추가합니다. 소환된 상태로 손에 들어옵니다."
+  FlavorText: "-요정 대난투-보단 약하지만, 없는 것보단 낫지."
+
+LunaticSupport:
+  Name: 광기의 지원군
+  Description: "|광기의 흑호접|을 {Value1}장 손에 추가합니다. 소환된 상태로 손에 들어옵니다."
+  UpgradedDescription: "|광기의 흑호접+|을 {Value1}장 손에 추가합니다. 소환된 상태로 손에 들어옵니다."
+  FlavorText: "광기는 더 많은 요정을 불러야 하지만, 유저의 정신 건강을 위해 수를 줄였습니다."
+
+HellsNature:
+  Name: 지옥의 자연
+  Description: "|광기|: |지옥의 광기|로 변경됩니다.\n|지옥 요정|을 {Value1}장 손에 추가합니다. 소환된 상태로 손에 들어옵니다."
+  UpgradedDescription: "|광기|: |지옥의 광기+|로 변신합니다.\n|지옥 요정+|을 {Value1}장 손에 추가합니다. 소환된 상태로 손에 들어옵니다."
+  FlavorText: "사실 지옥도 일종의 자연이다."
+
+HellsLunacy:
+  Name: 지옥의 광기
+  Description: "|광기의 지옥 요정|을 {Value1}장 손에 추가합니다. 소환된 상태로 손에 들어옵니다."
+  UpgradedDescription: "|광기의 지옥 요정+|을 {Value1}장 손에 추가합니다. 소환된 상태로 손에 들어옵니다."
+  FlavorText: "지옥 요정이 광기에 빠질 수 있다니?"
+
+LunarSupport:
+  Name: 달의 지원
+  Description: "|광기|: |광기의 달|로 변신합니다.\n|달 요정|을 {Value1}장 손에 추가합니다. 소환된 상태로 손에 들어옵니다."
+  UpgradedDescription: "|광기|: |광기의 달+|로 변신합니다.\n|달 요정+|을 {Value1}장 손에 추가합니다. 소환된 상태로 손에 들어옵니다."
+  FlavorText: "요정들은 달 침공 전까지 그곳에 살고 있었다."
+
+MoonOfLunacy:
+  Name: 광기의 달
+  Description: "|광기의 달 요정|을 {Value1}장 손에 추가. 소환된 상태로 손에 들어옵니다."
+  UpgradedDescription: "|광기의 달 요정+|을 {Value1}장 손에 추가. 소환된 상태로 손에 들어옵니다."
+  FlavorText: "달 요정에게도 혼돈은 있다. 달을 되찾아라!"
+
+NaturesDefense:
+  Name: 자연의 수호
+  Description: "|광기|: |태양의 전열|로 변신합니다.\n|해바라기 요정|을 {Value1}장 손에 추가합니다. 소환된 상태로 손에 들어옵니다."
+  UpgradedDescription: "|광기|: |태양의 전열+|로 변신합니다.\n|해바라기 요정+|을 {Value1}장 손에 추가합니다. 소환된 상태로 손에 들어옵니다."
+  FlavorText: "유카 제공."
+
+SolarPhalanx:
+  Name: 태양의 전열
+  Description: "|광기의 해바라기 요정|을 {Value1}장 손에 추가합니다. 소환된 상태로 손에 들어옵니다."
+  UpgradedDescription: "|광기의 해바라기 요정+|을 {Value1}장 손에 추가합니다. 소환된 상태로 손에 들어옵니다."
+  FlavorText: "이야, 이 정도면 진짜 방어지!"
+
+SunflowerFairy:
+  Name: 해바라기 요정
+  Description: "{FriendS}|광기|: |광기의 해바라기 요정|으로 변경됩니다."
+  UpgradedDescription: "{FriendS}|광기|: |광기의 해바라기 요정+|으로 변경됩니다."
+  ExtraDescription1: "{FriendP}방어를 {Block} 얻습니다."
+  ExtraDescription2: "{FriendU}|영력|을 {Value1} 얻습니다."
+  FlavorText: "흑호접과 사촌 사이랍니다."
+
+LunaticSunflowerFairy:
+  Name: 광기의 해바라기 요정
+  Description: "{FriendP}방어를 {Block} 얻습니다."
+  ExtraDescription1: "{FriendA}|보호막|을 전부 잃고 그 절반만큼 |방어|를 얻습니다."
+  FlavorText: "흑호접과 해바라기 요정이 내 걸 뭔가 빌려갔다. 잘 되면 좋겠는데."
+
+DreamsOfPlaytime:
+  Name: 놀이의 꿈
+  Description: "|꿈 세계의 요정|을 {Value1}장 손에 추가합니다. 소환된 상태로 손에 들어옵니다."
+  UpgradedDescription: "|꿈 세계의 요정+|을 {Value1}장 손에 추가합니다. 소환된 상태로 손에 들어옵니다."
+  FlavorText: "꿈에서도 놀면 피곤하지 않을까?"
+
+NightmaresOfLunacy:
+  Name: 광기의 악몽
+  Description: "|광기의 꿈 세계의 요정|을 {Value1}장 손에 추가합니다. 소환된 상태로 손에 들어옵니다."
+  UpgradedDescription: "|광기의 꿈 세계의 요정+|을 {Value1}장 손에 추가합니다. 소환된 상태로 손에 들어옵니다."
+  FlavorText: "어떤 악몽도 날 못 놀래켜! 나는 헤카티아가 아끼는 지옥 요정이니까!"
+
+DreamWorldFairy:
+  Name: 꿈 세계의 요정
+  Description: "{FriendS}|광기|: |광기의 꿈의 세계 요정|으로 변경됩니다."
+  UpgradedDescription: "{FriendS}|광기|: |광기의 꿈의 세계 요정+|으로 변경됩니다."
+  ExtraDescription1: "{FriendP}|꿈결| {Value1}"
+  ExtraDescription2: "{FriendU}버린 카드 더미에서 |꿈결| 카드를 최대 {Value2}장 손에 되돌립니다."
+  FlavorText: "요정의 꿈조차 위험해. 이 아이는 꿈 세계에서 도망쳐 나왔어. 누구의 꿈이었을까?"
+
+LunaticDreamWorldFairy:
+  Name: 광기의 꿈 세계의 요정
+  Description: "{FriendP}|꿈결| {Value1}"
+  ExtraDescription1: "{FriendA}뽑을 카드 더미에 있는 카드 수의 절반을 |꿈결|시킵니다.\n|꿈결| 카드가 {Value2}장 이상이라면 |악몽| 1장을 버린 카드 더미에 추가합니다."
+  FlavorText: "이 요정이 누군지는 중요하지 않아. 어쨌든 날 도와주고 있으니까!"
+
+MixedMadness:
+  Name: 뒤섞인 광기
+  Description: "|광기의 횃불|을 얻습니다.\n|광기의 횃불|이 활성화되어 있다면 카드를 {Value3}장 뽑습니다.\n|광란| {Value2} 부여."
+  FlavorText: "불꽃을 섞는 건 위험하다고 헤카티아 씨가 그랬어요."

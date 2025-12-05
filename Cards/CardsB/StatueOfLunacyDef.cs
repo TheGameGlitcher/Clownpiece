@@ -1,7 +1,7 @@
 using Clownpiece.Cards.LunaticCards.NonTeammateCards;
 using Clownpiece.Cards.Templates;
 using Clownpiece.CustomClasses;
-using Clownpiece.Localization;
+
 using LBoL.Base;
 using LBoL.Base.Extensions;
 using LBoL.ConfigData;
@@ -41,7 +41,7 @@ namespace Clownpiece.Cards.CardsB
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
+            return BepinexPlugin.CardLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()
@@ -106,12 +106,13 @@ namespace Clownpiece.Cards.CardsB
             RelativeKeyword: Keyword.Block,
             UpgradedRelativeKeyword: Keyword.Shield,
 
-            RelativeEffects: new List<string>() { "DummyLunacySe" },
-            UpgradedRelativeEffects: new List<string>() { "DummyLunacySe" },
+            RelativeEffects: new List<string>() { "DummyTorchLinkedSe" },
+            UpgradedRelativeEffects: new List<string>() { "DummyTorchLinkedSe" },
             RelativeCards: new List<string>() { "FireworksOfLunacy" },
             UpgradedRelativeCards: new List<string>() { "FireworksOfLunacy+" },
 
             Owner: "Clownpiece",
+            Pack: "",
             ImageId: "",
             UpgradeImageId: "",
 
@@ -130,7 +131,7 @@ namespace Clownpiece.Cards.CardsB
     {
         public StatueOfLunacy() : base()
         {
-            CanTransform = true;
+            IsTorchLinked = true;
             TransformTo = typeof(FireworksOfLunacy);
         }
 

@@ -1,5 +1,4 @@
 ﻿using Clownpiece.CustomClasses;
-using Clownpiece.Localization;
 using LBoL.Base;
 using LBoL.ConfigData;
 using LBoL.Core;
@@ -16,8 +15,6 @@ using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
 using System.Collections.Generic;
 using UnityEngine;
-using static Clownpiece.BepinexPlugin;
-using static UnityEngine.UI.GridLayoutGroup;
 
 namespace Clownpiece.Status
 {
@@ -31,7 +28,7 @@ namespace Clownpiece.Status
         [DontOverwrite]
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.StatusEffectsBatchLoc.AddEntity(this);
+            return BepinexPlugin.StatusEffectLoc.AddEntity(this);
         }
 
         [DontOverwrite]

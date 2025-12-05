@@ -1,29 +1,19 @@
-﻿using Clownpiece.Cards.CardsR;
-using Clownpiece.Cards.FairyTeammates;
-using Clownpiece.Cards.Templates;
+﻿using Clownpiece.Cards.FairyTeammates;
 using Clownpiece.CustomClasses;
-using Clownpiece.Localization;
 using Clownpiece.Status;
 using LBoL.Base;
-using LBoL.Base.Extensions;
 using LBoL.ConfigData;
 using LBoL.Core;
 using LBoL.Core.Battle;
 using LBoL.Core.Battle.BattleActions;
-using LBoL.Core.Battle.Interactions;
 using LBoL.Core.Cards;
 using LBoL.Core.StatusEffects;
-using LBoL.Core.Units;
-using LBoL.EntityLib.Cards.Character.Cirno.Friend;
-using LBoL.EntityLib.Cards.Character.Sakuya;
 using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
 {
@@ -43,7 +33,7 @@ namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
+            return BepinexPlugin.CardLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()
@@ -108,12 +98,13 @@ namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
             RelativeKeyword: Keyword.Purified,
             UpgradedRelativeKeyword: Keyword.Purified,
 
-            RelativeEffects: new List<string>() { },
-            UpgradedRelativeEffects: new List<string>() { },
+            RelativeEffects: new List<string>() { "DummyTorchLinkedFairySe" },
+            UpgradedRelativeEffects: new List<string>() { "DummyTorchLinkedFairySe" },
             RelativeCards: new List<string>() { "MoonFairy" },
             UpgradedRelativeCards: new List<string>() { "MoonFairy+" },
 
             Owner: "Clownpiece",
+            Pack: "",
             ImageId: "",
             UpgradeImageId: "",
 
@@ -132,6 +123,7 @@ namespace Clownpiece.Cards.LunaticCards.LunaticFairyTeammates
     {
         public LunaticMoonFairy() : base()
         {
+            IsTorchLinkedFairy = true;
             IsTransformed = true;
             TransformTo = typeof(MoonFairy);
             Value3 = 1;

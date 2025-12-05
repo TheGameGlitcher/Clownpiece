@@ -1,8 +1,5 @@
 ﻿using Clownpiece.Cards.LunaticCards.LunaticFairyTeammates;
-using Clownpiece.Cards.Templates;
 using Clownpiece.CustomClasses;
-using Clownpiece.Localization;
-using Clownpiece.Status;
 using LBoL.Base;
 using LBoL.Base.Extensions;
 using LBoL.ConfigData;
@@ -11,17 +8,12 @@ using LBoL.Core.Battle;
 using LBoL.Core.Battle.BattleActions;
 using LBoL.Core.Battle.Interactions;
 using LBoL.Core.Cards;
-using LBoL.Core.StatusEffects;
 using LBoL.Core.Units;
-using LBoL.EntityLib.Cards.Character.Cirno.Friend;
-using LBoL.EntityLib.Cards.Character.Sakuya;
 using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 
 namespace Clownpiece.Cards.FairyTeammates
@@ -42,7 +34,7 @@ namespace Clownpiece.Cards.FairyTeammates
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
+            return BepinexPlugin.CardLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()
@@ -107,12 +99,13 @@ namespace Clownpiece.Cards.FairyTeammates
             RelativeKeyword: Keyword.Shield,
             UpgradedRelativeKeyword: Keyword.Shield,
 
-            RelativeEffects: new List<string>() { "DummyLunacySe" },
-            UpgradedRelativeEffects: new List<string>() { "DummyLunacySe" },
+            RelativeEffects: new List<string>() { "DummyTorchLinkedFairySe" },
+            UpgradedRelativeEffects: new List<string>() { "DummyTorchLinkedFairySe" },
             RelativeCards: new List<string>() { "LunaticBlackButterfly" },
             UpgradedRelativeCards: new List<string>() { "LunaticBlackButterfly+" },
 
             Owner: "Clownpiece",
+            Pack: "",
             ImageId: "",
             UpgradeImageId: "",
 
@@ -131,7 +124,7 @@ namespace Clownpiece.Cards.FairyTeammates
     {
         public BlackButterfly() : base()
         {
-            CanTransform = true;
+            IsTorchLinkedFairy = true;
             TransformTo = typeof(LunaticBlackButterfly);
         }
 

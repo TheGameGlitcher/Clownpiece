@@ -1,30 +1,16 @@
-﻿using Clownpiece.Cards;
-using Clownpiece.Cards.Templates;
-using Clownpiece.CustomClasses;
-using Clownpiece.Localization;
+﻿using Clownpiece.CustomClasses;
 using Clownpiece.Status;
 using LBoL.Base;
-using LBoL.Base.Extensions;
 using LBoL.ConfigData;
 using LBoL.Core;
 using LBoL.Core.Battle;
 using LBoL.Core.Battle.BattleActions;
-using LBoL.Core.Battle.Interactions;
-using LBoL.Core.Cards;
 using LBoL.Core.StatusEffects;
-using LBoL.Core.Units;
-using LBoL.EntityLib.Cards.Character.Cirno;
-using LBoL.EntityLib.Cards.Neutral.Blue;
-using LBoL.EntityLib.Cards.Neutral.TwoColor;
-using LBoL.EntityLib.StatusEffects.Basic;
 using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Clownpiece.Cards.LunaticCards.NonTeammateCards
 {
@@ -44,7 +30,7 @@ namespace Clownpiece.Cards.LunaticCards.NonTeammateCards
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
+            return BepinexPlugin.CardLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()
@@ -109,12 +95,13 @@ namespace Clownpiece.Cards.LunaticCards.NonTeammateCards
             RelativeKeyword: Keyword.None,
             UpgradedRelativeKeyword: Keyword.None,
 
-            RelativeEffects: new List<string>() { "DummyLunacySe", "Fragil", "Vulnerable", "Graze" },
-            UpgradedRelativeEffects: new List<string>() { "DummyLunacySe", "Fragil", "Vulnerable", "Graze" },
+            RelativeEffects: new List<string>() { "DummyTorchLinkedSe", "Fragil", "Vulnerable", "Graze" },
+            UpgradedRelativeEffects: new List<string>() { "DummyTorchLinkedSe", "Fragil", "Vulnerable", "Graze" },
             RelativeCards: new List<string>() { "GracefulFairyDodging" },
             UpgradedRelativeCards: new List<string>() { "GracefulFairyDodging+" },
 
             Owner: "Clownpiece",
+            Pack: "",
             ImageId: "",
             UpgradeImageId: "",
 
@@ -133,6 +120,7 @@ namespace Clownpiece.Cards.LunaticCards.NonTeammateCards
     {
         public ChaoticDanmakuDodging() : base()
         {
+            IsTorchLinked = true;
             IsTransformed = true;
             TransformTo = typeof(GracefulFairyDodging);
             Value3 = 3;

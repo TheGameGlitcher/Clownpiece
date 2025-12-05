@@ -1,4 +1,4 @@
-﻿using Clownpiece.Localization;
+﻿
 using Cysharp.Threading.Tasks;
 using LBoL.Base;
 using LBoL.ConfigData;
@@ -30,7 +30,7 @@ namespace Clownpiece
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.PlayerUnitBatchLoc.AddEntity(this);
+            return BepinexPlugin.PlayerUnitLoc.AddEntity(this);
         }
 
 
@@ -115,7 +115,7 @@ namespace Clownpiece
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
+            return BepinexPlugin.CardLoc.AddEntity(this);
         }
 
         public override ModelOption LoadModelOptions()

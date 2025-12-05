@@ -1,4 +1,4 @@
-﻿using Clownpiece.Localization;
+﻿
 using Clownpiece.Status;
 using JetBrains.Annotations;
 using LBoL.Base;
@@ -32,7 +32,7 @@ namespace Clownpiece.Exhibits
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.ExhibitsBatchLoc.AddEntity(this);
+            return BepinexPlugin.ExhibitLoc.AddEntity(this);
         }
 
         public override ExhibitSprites LoadSprite()

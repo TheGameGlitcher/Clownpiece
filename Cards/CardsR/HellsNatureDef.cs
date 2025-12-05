@@ -2,7 +2,7 @@ using Clownpiece.Cards.FairyTeammates;
 using Clownpiece.Cards.LunaticCards.NonTeammateCards;
 using Clownpiece.Cards.Templates;
 using Clownpiece.CustomClasses;
-using Clownpiece.Localization;
+
 using LBoL.Base;
 using LBoL.Base.Extensions;
 using LBoL.ConfigData;
@@ -44,7 +44,7 @@ namespace Clownpiece.Cards.CardsR
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
+            return BepinexPlugin.CardLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()
@@ -109,12 +109,13 @@ namespace Clownpiece.Cards.CardsR
             RelativeKeyword: Keyword.None,
             UpgradedRelativeKeyword: Keyword.None,
 
-            RelativeEffects: new List<string>() { "DummyLunacySe" },
-            UpgradedRelativeEffects: new List<string>() { "DummyLunacySe" },
+            RelativeEffects: new List<string>() { "DummyTorchLinkedSe" },
+            UpgradedRelativeEffects: new List<string>() { "DummyTorchLinkedSe" },
             RelativeCards: new List<string>() { "HellsLunacy", "HellFairy" },
             UpgradedRelativeCards: new List<string>() { "HellsLunacy+", "HellFairy+" },
 
             Owner: "Clownpiece",
+            Pack: "",
             ImageId: "",
             UpgradeImageId: "",
 
@@ -133,7 +134,7 @@ namespace Clownpiece.Cards.CardsR
     {
         public HellsNature() : base()
         {
-            CanTransform = true;
+            IsTorchLinked = true;
             TransformTo = typeof(HellsLunacy);
         }
 

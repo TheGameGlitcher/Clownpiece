@@ -1,6 +1,6 @@
 ﻿using Clownpiece.Cards.Templates;
 using Clownpiece.CustomClasses;
-using Clownpiece.Localization;
+
 using Cysharp.Threading.Tasks.Triggers;
 using HarmonyLib;
 using LBoL.Base;
@@ -35,7 +35,7 @@ namespace Clownpiece.Status
         [DontOverwrite]
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.StatusEffectsBatchLoc.AddEntity(this);
+            return BepinexPlugin.StatusEffectLoc.AddEntity(this);
         }
 
         [DontOverwrite]

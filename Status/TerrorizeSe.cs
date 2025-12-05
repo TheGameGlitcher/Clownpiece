@@ -1,7 +1,7 @@
 ﻿using Clownpiece.Cards.CardsR;
 using Clownpiece.Cards.Templates;
 using Clownpiece.CustomClasses;
-using Clownpiece.Localization;
+
 using Clownpiece.Status;
 using LBoL.Base;
 using LBoL.Base.Extensions;
@@ -40,7 +40,7 @@ namespace Clownpiece.Status
         [DontOverwrite]
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.StatusEffectsBatchLoc.AddEntity(this);
+            return BepinexPlugin.StatusEffectLoc.AddEntity(this);
         }
 
         [DontOverwrite]

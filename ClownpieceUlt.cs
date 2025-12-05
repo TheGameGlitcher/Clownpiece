@@ -1,4 +1,4 @@
-using Clownpiece.Localization;
+
 using Clownpiece.Status;
 using LBoL.Base;
 using LBoL.ConfigData;
@@ -27,7 +27,7 @@ namespace Clownpiece
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.UltimateSkillsBatchLoc.AddEntity(this);
+            return BepinexPlugin.UltimateSkillLoc.AddEntity(this);
         }
 
         public override Sprite LoadSprite()
@@ -108,7 +108,7 @@ namespace Clownpiece
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.UltimateSkillsBatchLoc.AddEntity(this);
+            return BepinexPlugin.UltimateSkillLoc.AddEntity(this);
         }
 
         public override Sprite LoadSprite()

@@ -1,7 +1,7 @@
 ﻿using Clownpiece.Cards.LunaticCards.NonTeammateCards;
 using Clownpiece.Cards.Templates;
 using Clownpiece.CustomClasses;
-using Clownpiece.Localization;
+
 using Clownpiece.Status;
 using LBoL.Base;
 using LBoL.Base.Extensions;
@@ -43,7 +43,7 @@ namespace Clownpiece.Cards.CardsB
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.CardsBatchLoc.AddEntity(this);
+            return BepinexPlugin.CardLoc.AddEntity(this);
         }
 
         public override CardConfig MakeConfig()
@@ -108,12 +108,13 @@ namespace Clownpiece.Cards.CardsB
             RelativeKeyword: Keyword.Block,
             UpgradedRelativeKeyword: Keyword.Block,
 
-            RelativeEffects: new List<string>() { "DummyLunacySe", "ManiaSe" },
-            UpgradedRelativeEffects: new List<string>() { "DummyLunacySe", "ManiaSe" },
+            RelativeEffects: new List<string>() { "DummyTorchLinkedSe", "ManiaSe" },
+            UpgradedRelativeEffects: new List<string>() { "DummyTorchLinkedSe", "ManiaSe" },
             RelativeCards: new List<string>() { },
             UpgradedRelativeCards: new List<string>() { },
 
             Owner: "Clownpiece",
+            Pack: "",
             ImageId: "",
             UpgradeImageId: "",
 

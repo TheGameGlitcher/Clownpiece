@@ -8,11 +8,6 @@ LunaticLightSe:
     Brief: "Magical light shines over everyone.\nEnemies gain {Value1} |Firepower| every {Value2} turns."
     Description: "Magical light shines over everyone.\n{OwnerName} gains {Value1} |Firepower| every {Value2} turns."
 
-DummyLunacySe:
-    Name: "Lunacy"
-    Brief: "While {PlayerName} has |Lunatic Torch|:\nBathed |Lunatic Light|, all cards become more powerful but more risky.\nTeammate |a:Active Skills| will be used |r:without orders!|"
-    Description: "While {PlayerName} has |Lunatic Torch|:\nBathed |Lunatic Light|, all cards become more powerful but more risky.\nTeammate |a:Active Skills will be used |r:without orders!|"
-
 DummyThreeBodiesSe:
     Name: "Three Bodies"
     Brief: "|Hecatia, Goddess of Hell| can freely swap between Otherworld, Moon and Earth bodies. |Unity| is shared between bodies."
@@ -129,3 +124,13 @@ UnstableTorchBossSe:
 ManiaBossSe:
     Name: "Mania"
     Description: "{PlayerName} can't play defense cards {Duration:plural one='until end of turn' other='for the next % turns'}."
+
+DummyTorchLinkedSe:
+    Name: "Torch-Linked"
+    Brief: "While {PlayerName} has |Lunatic Torch|, all cards are bathed in |Lunatic Light|.\n|Torch-Linked| cards are transformed under the light of madness."
+    Description: "While {PlayerName} has |Lunatic Torch|, all cards are bathed in |Lunatic Light|.\n|Torch-Linked| cards are transformed under the light of madness."
+
+DummyTorchLinkedFairySe:
+    Name: "Torch-Linked Fairy"
+    Brief: "While {PlayerName} has |Lunatic Torch|, |Fairy Teammates| become lunatic!\n|f:Passive Skills| are unpredictable and |a:Active Skills| will be used |r:without orders!|"
+    Description: "While {PlayerName} has |Lunatic Torch|, |Fairy Teammates| become lunatic!\n|f:Passive Skills| are unpredictable and |a:Active Skills| will be used |r:without orders!|"

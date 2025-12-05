@@ -1,0 +1,15 @@
+Clownpiece:
+  Default: "클라운피스"
+  Short: "클라운피스"
+
+ClownpieceBossSelector:
+  Default: "클라운피스?"
+  Short: "클라운피스?"
+
+WhiteFairyBoss:
+  Default: "해바라기 요정"
+  Short: "해바라기 요정"
+
+BlackFairyBoss:
+  Default: "흑호접"
+  Short: "흑호접"

@@ -1,0 +1,131 @@
+LunaticTorchSe:
+  Name: "광기의 횃불"
+  Brief: "{PlayerName}의 횃불이 광기의 불꽃을 뿜습니다. 전장은 |광기의 빛|으로 물듭니다!"
+  Description: "{PlayerName}의 횃불이 광기의 불꽃을 뿜습니다. 전장은 |광기의 빛|으로 물듭니다!"
+
+LunaticLightSe:
+  Name: "광기의 빛"
+  Brief: "마법의 빛이 모두를 비춥니다.\n적은 {Value2}턴마다 |화력|을 {Value1} 얻습니다."
+  Description: "마법의 빛이 모두를 비춥니다.\n{OwnerName}는 {Value2}턴마다 |화력|을 {Value1} 얻습니다."
+
+DummyLunacySe:
+  Name: "광기"
+  Brief: "{PlayerName}가 |광기의 횃불|을 가진 동안:\n|광기의 빛| 아래에서 모든 카드가 더 강해지지만 더 위험해집니다.\n동료의 |a:액티브 스킬|이 |r:자동으로 발동됩니다!|"
+  Description: "{PlayerName}가 |광기의 횃불|을 가진 동안:\n|광기의 빛| 아래에서 모든 카드가 더 강해지지만 더 위험해집니다.\n동료의 |a:액티브 스킬이| |r:자동으로 발동됩니다!|"
+
+DummyThreeBodiesSe:
+  Name: "삼신 일체"
+  Brief: "|지옥의 여신 헤카티아|는 이계, 달, 지상 세 가지 육체를 자유롭게 전환할 수 있습니다. |지원력|은 육체 간에 공유됩니다."
+  Description: "|지옥의 여신 헤카티아|는 이계, 달, 지상 세 가지 육체를 자유롭게 전환할 수 있습니다. |지원력|은 육체 간에 공유됩니다."
+
+ChaoticDrawSe:
+  Name: "다음 턴 드로우"
+  Brief: "{OwnerName}의 턴 시작 시, 카드를 {Level}장 뽑습니다."
+  Description: "{OWnerName}의 턴 시작 시, 카드를 {Level}장 뽑습니다."
+
+ChaoticGrazeSe:
+  Name: "다음 턴 그레이즈"
+  Brief: "{OwnerName}의 턴 시작 시, |그레이즈|를 {Level} 얻습니다."
+  Description: "{OwnerName}의 턴 시작 시, |그레이즈|를 {Level} 얻습니다."
+
+EmbodimentOfImpuritySe:
+  Name: "불순의 구현"
+  Brief: '이번 턴에 <sprite="ManaSprite" name="C">를 사용할 때마다 |반사|를 X 얻습니다.'
+  Description: '이번 턴에 <sprite="ManaSprite" name="C">를 사용할 때마다 |반사|를 {Level} 얻습니다.'
+
+MightMakesRightSe:
+  Name: "화력은 정의!"
+  Brief: "{OwnerName}의 |화력|은 다른 어떤 유닛보다도 낮아지지 않습니다."
+  Description: "{OwnerName}의 |화력|은 다른 어떤 유닛보다도 낮아지지 않습니다."
+
+ManiaSe:
+  Name: "광란"
+  Brief: "{OwnerName}는 광기에 휩싸여 공격 행동만 하게 됩니다!"
+  Description: "{OwnerName}는 광기에 휩싸여 {Level}턴 동안 공격 행동만 하게 됩니다!"
+  FlavorText: "이거 코딩하기 개빡셌음"
+
+ManicFlameSe:
+  Name: "광기의 불꽃"
+  Brief: "{PlayerName}의 횃불이 광란의 기운으로 더욱 타오릅니다! 모든 |광란| 효과는 이제 |r:영구적|입니다!"
+  Description: "{PlayerName}의 횃불이 광란의 기운으로 더욱 타오릅니다! 모든 |광란| 효과는 이제 |r:영구적|입니다!"
+  FlavorText: "이거 코딩하기 개빡셌음"
+
+PermaManiaSe:
+  Name: "영구 광란"
+  Brief: "{OwnerName}는 광기에 휩싸여 공격 행동만 하게 됩니다!"
+  Description: "{OwnerName}는 광기에 휩싸여 공격 행동만 하게 됩니다!"
+  FlavorText: "이거 코딩하기 개빡셌음"
+
+LockOnTouchSe:
+  Name: "접촉 표적"
+  Brief: "{PlayerName}의 다음 턴까지, {PlayerName}를 처음 공격한 적에게 |록온|을 X 부여합니다."
+  Description: "{PlayerName}의 다음 턴까지, {PlayerName}를 처음 공격한 적에게 |록온|을 {Count} 부여합니다."
+
+PoisonTouchSe:
+  Name: "접촉 중독"
+  Brief: "{PlayerName}의 다음 턴까지, {PlayerName}를 처음 공격한 적에게 |중독|을 X 부여합니다."
+  Description: "{PlayerName}의 다음 턴까지, {PlayerName}를 처음 공격한 적에게 |중독|을 {Count} 부여합니다."
+
+PurifyNextTurnSe:
+  Name: "소독 완료"
+  Brief: "{PlayerName}의 다음 턴 시작 시 |순화| X.\n다음 턴 종료 시 이 효과는 제거됩니다."
+  Description: "{PlayerName}의 다음 턴 시작 시 |순화| {Level}.\n다음 턴 종료 시 이 효과는 제거됩니다."
+
+PermaPurifySe:
+  Name: "영구 순화"
+  Brief: "{PlayerName}의 턴 시작 시 |순화| X.\n|r:사라지지 않습니다.|"
+  Description: "{PlayerName}의 턴 시작 시 |순화| {Level}."
+
+TorchPureFlameSe:
+  Name: "순수한 횃불의 불꽃"
+  Brief: "{PlayerName}가 피해를 줄 때마다, |중독| X 및 |록온|을 X 부여합니다."
+  Description: "{PlayerName}가 피해를 줄 때마다, |중독| {Level} 및 |록온|을 {Level} 부여합니다."
+
+LunaticEmbraceSe:
+  Name: "광기의 포옹"
+  Brief: "{PlayerName}의 턴 시작 시 카드를 X장 뽑습니다. 그 카드는 |일시적으로| 비용이 {Mana}가 됩니다."
+  Description: "{PlayerName}의 턴 시작 시 카드를 {Level}장 뽑습니다. 해당 카드{Level}는 |일시적으로| 비용이 {Mana}가 됩니다."
+
+WhatDoesntKillYouSe:
+  Name: "날 죽이지 못하는 고통은"
+  Brief: "{PlayerName}가 디버프를 받을 때마다 카드를 X장 뽑습니다."
+  Description: "{PlayerName}가 디버프를 받을 때마다 카드를 {Level}장 뽑습니다."
+
+GreaterFairyEnergyBSe:
+  Name: "대요정 에너지"
+  Brief: "{PlayerName}의 턴 종료 시, |괴이|를 버린 카드 더미에 1장 추가합니다. 해당 카드는 |보충|을 가집니다."
+  Description: "{PlayerName}의 턴 종료 시, {Level} |괴이| 카드를 {Level}장 버린 카드 더미에 추가합니다. 해당 카드는 |보충|을 가집니다."
+
+GreaterFairyEnergyPSe:
+  Name: "대요정 에너지"
+  Brief: "{PlayerName}의 턴 종료 시, |채홍|을 버린 카드 더미에 1장 추가합니다. 해당 카드는 |보충|을 가집니다."
+  Description: "{PlayerName}의 턴 종료 시, |채홍|을 {Level}장 버린 카드 더미에 추가합니다. 해당 카드는 |보충|을 가집니다."
+
+TerrorizeSe:
+  Name: "공포 유발"
+  Brief: "{PlayerName}의 턴 시작 시 체력을 {Value1} 잃고,\n모든 적에게 |취약|을 {Value2} 부여합니다."
+  Description: "{PlayerName}의 턴 시작 시 체력을 {Value1} 잃고,\n모든 적에게 |취약|을 {Value2} 부여합니다."
+
+LunaticTorchBossSe:
+  Name: "광기의 횃불"
+  Description: "도난당한 횃불이 괴이한 빛을 뿜습니다. 모든 적이 |광기|에 빠집니다."
+
+ManicTorchBossSe:
+  Name: "광기의 횃불 -광란-"
+  Description: "도난당한 횃불이 괴이한 빛을 뿜습니다. 모든 적이 |광기|에 빠집니다."
+
+PureTorchBossSe:
+  Name: "광기의 횃불 -정화-"
+  Description: "도난당한 횃불이 괴이한 빛을 뿜습니다. 모든 적이 |광기|에 빠집니다."
+
+LunaticBossSe:
+  Name: "광기"
+  Description: "마법의 빛이 모두를 비춥니다. {OwnerName}는 광기에 빠져 행동이 증폭됩니다.\n{PlayerName}의 턴 시작 시 {Mana}를 얻습니다."
+
+UnstableTorchBossSe:
+  Name: "불안정한 광기의 횃불"
+  Description: "도난당한 횃불의 빛이 불안정해졌습니다. 모든 적이 |광기|에 빠집니다.\n{PlayerName}의 턴 시작 시 {Mana}를 얻습니다."
+
+ManiaBossSe:
+  Name: "광란"
+  Description: "{PlayerName}는 {Duration}턴동안 방어 카드를 사용할 수 없습니다."

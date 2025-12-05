@@ -1,6 +1,6 @@
 ﻿using Clownpiece.Cards.Templates;
 using Clownpiece.CustomClasses;
-using Clownpiece.Localization;
+
 using Clownpiece.Status;
 using Cysharp.Threading.Tasks;
 using HarmonyLib;
@@ -40,7 +40,6 @@ using System.Reflection.Emit;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
-using static Clownpiece.BepinexPlugin;
 using static Clownpiece.Boss.WhiteFairyBossDef;
 
 namespace Clownpiece.Boss
@@ -51,7 +50,7 @@ namespace Clownpiece.Boss
 
         public override LocalizationOption LoadLocalization()
         {
-            return ClownpieceLocalization.EnemiesUnitBatchLoc.AddEntity(this);
+            return BepinexPlugin.EnemyUnitLoc.AddEntity(this);
         }
 
         public override EnemyUnitConfig MakeConfig()
@@ -111,7 +110,7 @@ namespace Clownpiece.Boss
 
             public override LocalizationOption LoadLocalization()
             {
-                return ClownpieceLocalization.UnitModelBatchLoc.AddEntity(this);
+                return BepinexPlugin.UnitModelLoc.AddEntity(this);
             }
 
             public override ModelOption LoadModelOptions()
@@ -120,7 +119,7 @@ namespace Clownpiece.Boss
             }
 
 
-            public override UniTask<Sprite> LoadSpellSprite() => ResourceLoader.LoadSpriteAsync("SpellCard.png", directorySource, ppu: 336);
+            public override UniTask<Sprite> LoadSpellSprite() => ResourceLoader.LoadSpriteAsync("SpellCard.png", BepinexPlugin.directorySource, ppu: 336);
 
 
             public override UnitModelConfig MakeConfig()
